@@ -1,0 +1,97 @@
+{
+  "id": "alaa_roucadi",
+  "full_name": "Alaa Eddine Roucadi",
+  "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+  "resume_file": "Alaa_Eddine_Roucadi_Resume_v12.md",
+  "contact_email": "alaaeddineroucadi@gmail.com",
+  "linkedin_url": "https://www.linkedin.com/in/alaaeddineroucadi/",
+  "mobility": {
+    "base_location": "Nice, France",
+    "remote_preference": "100% Remote across Europe/EMEA",
+    "travel_tolerance": "Periodic travel for quarterly kickoffs, PI planning, and key client milestones",
+    "unacceptable_commutes": [
+      "Vienna",
+      "Munich",
+      "Frankfurt",
+      "Zurich",
+      "multi-day weekly on-site commutes"
+    ]
+  },
+  "languages": {
+    "fluent_languages": [
+      "English (Fluent / C1+ professional working proficiency)",
+      "French (Bilingual / Native)",
+      "Arabic (Native)"
+    ],
+    "blocker_languages": [
+      "German",
+      "Dutch",
+      "Scandinavian languages",
+      "Italian"
+    ]
+  },
+  "commercials": {
+    "freelance_tjm_eur": "800 - 1,000 EUR / day",
+    "permanent_salary_eur": "110k - 130k EUR base + bonus",
+    "currency": "EUR"
+  },
+  "scope": {
+    "primary_titles": [
+      "AI Delivery Lead & Operating Model Architect",
+      "Senior AI Product & Delivery Manager",
+      "AI Center of Excellence Lead",
+      "Head of AI Platform Delivery"
+    ],
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "anti_roles": [
+      "individual contributor (IC) junior or mid Python developer"
+    ],
+    "core_domains": [
+      "Tier-1 Banking",
+      "Corporate Finance / Factoring",
+      "Large Scale Agile",
+      "SaaS Marketplaces"
+    ]
+  },
+  "proof_metrics": [
+    {
+      "category": "Scale",
+      "label": "Banking CoE Scale",
+      "evidence": "Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "keywords": [
+        "7 squad",
+        "50 engineer",
+        "3 tribe"
+      ]
+    },
+    {
+      "category": "Innovation",
+      "label": "Agentic SDLC & Tooling",
+      "evidence": "Shipped Atlassian Rovo AI Agents and Claude Code with Spec-Driven Development (SDD) guardrails.",
+      "keywords": [
+        "rovo",
+        "claude code",
+        "spec-driven",
+        "sdd"
+      ]
+    },
+    {
+      "category": "Tooling IP",
+      "label": "Alignify Custom Jira App",
+      "evidence": "Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery.",
+      "keywords": [
+        "alignify"
+      ]
+    },
+    {
+      "category": "Governance",
+      "label": "EU AI Act Risk Gates",
+      "evidence": "Enforced hands-on EU AI Act risk classification and Responsible AI production release gates.",
+      "keywords": [
+        "eu ai act",
+        "responsible ai",
+        "governance gate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+import os
+import subprocess
+import fitz  # PyMuPDF
+
+HTML_CONTENT = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alaa Eddine Roucadi — Resume v12 (Production Master)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 10mm 12mm 10mm 12mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 8.8pt;
+            line-height: 1.32;
+            color: #1e293b;
+            background-color: #ffffff;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1.5pt solid #0f172a;
+            padding-bottom: 4px;
+            margin-bottom: 7px;
+        }
+
+        .candidate-name {
+            font-size: 18pt;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            color: #0f172a;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .candidate-title {
+            font-size: 9.4pt;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 3px;
+        }
+
+        .contact-info {
+            font-size: 8.1pt;
+            color: #475569;
+            font-weight: 400;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-sep {
+            margin: 0 4px;
+            color: #cbd5e1;
+        }
+
+        .section {
+            margin-bottom: 7.5px;
+        }
+
+        .section-title {
+            font-size: 9.1pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #0f172a;
+            border-bottom: 1pt solid #cbd5e1;
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
+
+        .summary-text {
+            font-size: 8.6pt;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .exec-grid {
+            margin-bottom: 4px;
+        }
+
+        .exec-item {
+            font-size: 8.4pt;
+            color: #334155;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        .exec-item strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .role-block {
+            margin-bottom: 6.5px;
+            page-break-inside: avoid;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .company-name {
+            font-size: 9.1pt;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .location-dates {
+            font-size: 8.1pt;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .role-title {
+            font-size: 8.8pt;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 2px;
+        }
+
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 13px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 1.5px;
+            font-size: 8.4pt;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .bullet-list strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .env-line {
+            font-size: 8.0pt;
+            color: #475569;
+            margin-top: 1.5px;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: table;
+            width: 100%;
+        }
+
+        .skills-row {
+            display: table-row;
+        }
+
+        .skills-cat {
+            display: table-cell;
+            font-weight: 700;
+            color: #0f172a;
+            width: 26%;
+            padding-bottom: 2px;
+            font-size: 8.2pt;
+            vertical-align: top;
+        }
+
+        .skills-val {
+            display: table-cell;
+            color: #334155;
+            width: 74%;
+            padding-bottom: 2px;
+            font-size: 8.2pt;
+            vertical-align: top;
+        }
+
+        .cert-list {
+            font-size: 8.2pt;
+            color: #334155;
+            line-height: 1.32;
+        }
+
+        .edu-item {
+            font-size: 8.2pt;
+            color: #334155;
+            margin-bottom: 1.5px;
+        }
+
+        .lang-interests {
+            font-size: 8.2pt;
+            color: #334155;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="candidate-name">Alaa Eddine Roucadi</div>
+    <div class="candidate-title">AI-Driven Agile Coach & Delivery Lead | Agentic SDLC & Operating Model Transformation</div>
+    <div class="contact-info">
+        Nice, France (Open to Full Remote Europe/EMEA)
+        <span class="contact-sep">•</span> +33 06-32-76-87-64
+        <span class="contact-sep">•</span> <a href="mailto:alaaeddineroucadi@gmail.com">alaaeddineroucadi@gmail.com</a>
+        <span class="contact-sep">•</span> <a href="https://www.linkedin.com/in/alaaeddineroucadi/">linkedin.com/in/alaaeddineroucadi</a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+        AI-Driven Agile Coach and Delivery Lead with 10+ years bridging product delivery, scaled organizational operating models, and AI-native SDLC transformation across Tier-1 banking, insurance, and tech ecosystems. Currently embedded in an enterprise Banking AI Center of Excellence — spearheading Atlassian Rovo agentic workflows across the development lifecycle, governing responsible agentic coding tool adoption (Claude Code) through Spec-Driven Development (SDD) and quality guardrails, and classifying AI use cases against EU AI Act risk profiles. Proven track record establishing portfolio and flow telemetry (including shipping the internal Jira app Alignify), optimizing delivery value streams, and scaling multi-squad operating models (SAFe, LeSS, Spotify Model) to transition AI product streams from PoC into reliable production without unverified technical overclaiming.
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Core Competencies & Value Proposition</div>
+    <div class="exec-grid">
+        <div class="exec-item"><strong>• AI-Augmented SDLC & Agentic Workflows:</strong> Rollout and operational integration of Atlassian Rovo agents across Jira workflows, Definition-of-Ready (DoR) gates, and backlog refinement.</div>
+        <div class="exec-item"><strong>• AI Governance & Engineering Hygiene:</strong> Guardrail frameworks for agentic coding tools (Claude Code), enforcing Spec-Driven Development (SDD), mandatory peer review disciplines, automated test gates, and EU AI Act risk tiering.</div>
+        <div class="exec-item"><strong>• Strategic Portfolio & Flow Telemetry:</strong> Custom Jira governance architecture (Alignify) providing real-time cross-tribe dependency mapping, synchronization cadence, flow metrics, and delivery forecasting.</div>
+        <div class="exec-item"><strong>• Large-Scale Operating Model Transformation:</strong> Multi-tribe Agile-at-scale governance (SAFe, LeSS, Spotify Model), joint Program Increment (PI) planning, Value Stream Mapping, and continuous delivery maturity coaching.</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="role-block">
+        <div class="role-header">
+            <span class="company-name">Wemanity (Enterprise Banking Mandate)</span>
+            <span class="location-dates">Remote | Sep 2024 – Present</span>
+        </div>
+        <div class="role-title">AI-Driven Agile Coach & Consultant | AI Excellence Center</div>
+        <ul class="bullet-list">
+            <li><strong>Orchestrated delivery governance across 3 banking tribes</strong> (<code>Data & IA Tribe</code>, <code>Digital Enablers Tribe</code>, <code>Supply Chain Finance Tribe</code>), supporting <strong>7 squads (~50 engineers, Data Scientists, and POs)</strong> across <strong>3 core AI product streams</strong> (fraud detection ML, financial forecasting, and GenAI sales copilot).</li>
+            <li><strong>Spearheaded the rollout and operational integration of Atlassian Rovo AI Agents</strong> across the Jira SDLC, deploying task-specific agents for Definition-of-Ready compliance scoring, missing acceptance criteria detection, and automated ticket validation checkpoints — eliminating manual gatekeeping bottlenecks and streamlining sprint preparation.</li>
+            <li><strong>Deployed Rovo Agents as an AI co-pilot for Product Owners</strong>, assisting in backlog refinement, acceptance criteria structuring, and user story elaboration to accelerate refinement cycle times and raise story quality entering sprint planning.</li>
+            <li><strong>Established governance frameworks and quality guardrails for team usage of agentic coding tools (Claude Code)</strong>, enforcing Spec-Driven Development (SDD), small incremental pull requests, mandatory human peer reviews, and automated test checkpoints to prevent defect leakage and unreviewed AI-generated risk.</li>
+            <li><strong>Evaluated and prioritized agentic use cases</strong> across the engineering lifecycle, focusing automation efforts strictly on high-impact delivery bottlenecks while advising leadership against automating low-value workflows that added unnecessary complexity.</li>
+            <li><strong>Facilitated EU AI Act Risk Governance workshops</strong>, classifying model use cases against regulatory risk tiers and establishing operational release-gate criteria for data privacy, model bias, security, and human-in-the-loop verification before production rollout.</li>
+            <li><strong>Architected and deployed "Alignify" (custom internal Jira app)</strong>, eliminating manual cross-tribe status reporting overhead while providing leadership with real-time dependency visibility, synchronization cadence, and delivery forecasting.</li>
+        </ul>
+        <div class="env-line"><strong>Environment:</strong> Agentic SDLC Governance, Atlassian Rovo Platform, Claude Code, Spec-Driven Development (SDD), EU AI Act Risk Tiering, Azure AI Foundry, Alignify (Custom Jira App), Jira Cloud Administration, Miro, Confluence.</div>
+    </div>
+
+    <div class="role-block">
+        <div class="role-header">
+            <span class="company-name">Wemanity (Enterprise Banking Mandate)</span>
+            <span class="location-dates">Remote | Dec 2021 – Sep 2024</span>
+        </div>
+        <div class="role-title">Agile Transformation Consultant | Senior Agile Coach</div>
+        <ul class="bullet-list">
+            <li><strong>Led Agile-at-scale operating model transformation across 2 banking tribes</strong> (Data & Digital Enablers Tribe: Data Lake, Data Warehouse, RPA, Notification Engines; Supply Chain Finance Tribe: Confirming & Factoring), redesigning cross-squad cadence and multi-team governance through joint PI Planning, Increment Reviews, and Inspect & Adapt ceremonies.</li>
+            <li><strong>Administered the Jira Cloud backbone for Agile@Scale (SAFe + Spotify Model)</strong>, structuring portfolio hierarchy, epic roadmaps, and cross-team dependency mapping across 7 squads.</li>
+            <li><strong>Governed data lake accessibility and pipeline standards</strong> underpinning centralized data warehousing, enabling downstream feature teams to build reporting universes and analytics on clean, compliant, and governed data models.</li>
+            <li><strong>Scaled engineering practice maturity org-wide</strong>, establishing internal Communities of Practice and delivering coaching programs on modern Agile delivery, Kanban flow management, OKRs, and delivery predictability.</li>
+        </ul>
+        <div class="env-line"><strong>Environment:</strong> Scaled Agile (SAFe + Spotify Model), Data Lake & Warehouse Governance, RPA, Supply Chain Finance, Jira Cloud Administration, Confluence, Miro, Planview.</div>
+    </div>
+
+    <div class="role-block">
+        <div class="role-header">
+            <span class="company-name">Axel Springer (SeLoger)</span>
+            <span class="location-dates">Paris, France | Sep 2019 – Dec 2021</span>
+        </div>
+        <div class="role-title">Agile Delivery Lead / Scrum Master</div>
+        <ul class="bullet-list">
+            <li><strong>Spearheaded Agile delivery and cloud migration for high-traffic real estate multi-diffusion platforms</strong>, supporting <strong>20,000+ partner real estate agencies nationwide</strong> without business disruption to live rental operations across <strong>2 engineering teams</strong>.</li>
+            <li><strong>Directed the architectural transition from monolith to containerized microservices on AWS</strong>, collaborating with tech leads and Product Owners to ensure resilient infrastructure and high platform availability.</li>
+            <li><strong>Diagnosed and resolved systemic delivery bottlenecks</strong> by implementing the Spotify Squads Health Check model across squads, removing recurring dependencies and materially improving team autonomy and self-management.</li>
+            <li><strong>Instituted delivery predictability and velocity tracking</strong> (sprint burndown, cycle time), steadily improving commitment reliability and release forecasting over successive sprints.</li>
+            <li><strong>Redesigned cross-functional quality practice</strong> via a "3 Amigos" (Dev / QA / Product) model, substantially reducing defect leakage into production.</li>
+        </ul>
+        <div class="env-line"><strong>Environment:</strong> Scrum of Scrums, BDD, TDD, XP (Code Review, Refactoring, CI/CD), Clean Architecture, .NET Core, C#, Web API, Microservices, AWS (EC2, S3, Lambda), Docker, GitHub, TeamCity, Octopus.</div>
+    </div>
+
+    <div class="role-block">
+        <div class="role-header">
+            <span class="company-name">SwissCaution</span>
+            <span class="location-dates">Nyon, Switzerland | Jun 2018 – Sep 2019</span>
+        </div>
+        <div class="role-title">Scrum Master & Agile Coach</div>
+        <ul class="bullet-list">
+            <li><strong>Directed multi-team delivery alignment</strong> by facilitating Large-Scale Scrum (LeSS) across <strong>3 cross-functional teams</strong> building a B2C rent-guarantee platform, streamlining backlog refinement and cross-team dependencies.</li>
+            <li><strong>Coached development teams on TDD and Hexagonal Architecture</strong>, instilling clean code craftsmanship, automated testing rigor, and lowering post-release regression rates.</li>
+            <li><strong>Accelerated shared domain understanding org-wide</strong> through Event Storming and Mob Programming workshops engaging developers, QA, and business stakeholders.</li>
+            <li><strong>Sustained consistent delivery cadence and sprint reliability</strong> by facilitating core Scrum ceremonies.</li>
+        </ul>
+        <div class="env-line"><strong>Environment:</strong> LeSS, TDD, XP (Pair Programming, Mob Programming, Refactoring, CI/CD), Hexagonal Architecture, .NET Core, C#, Web API, Vue.js, JavaScript, Jenkins, Kibana, Docker Swarm.</div>
+    </div>
+
+    <div class="role-block">
+        <div class="role-header">
+            <span class="company-name">Amadeus & Capgemini</span>
+            <span class="location-dates">Sophia Antipolis, France | Oct 2013 – Jun 2018</span>
+        </div>
+        <div class="role-title">Scrum Master, Technical Delivery Lead & Software Engineering Lead</div>
+        <ul class="bullet-list">
+            <li><strong>Amadeus (2016–2018):</strong> Led end-to-end sprint delivery for a 9-person squad (7 developers, 2 QA) building Property Management System (PMS) integrations. Facilitated Scrum of Scrums across 4 teams, resolving cross-system dependencies and reducing delivery lead time.</li>
+            <li><strong>Capgemini (2013–2015):</strong> Led a 4-person engineering team, designing automated CI/CD pipelines and architectural modernization (SPAs, REST APIs). Contributed to technical RFP responses and commercial proposals (avant-vente).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Certifications & Executive Education</div>
+    <div class="cert-list">
+        <strong>Professional Certifications (Obtained):</strong> ICAgile Certified Coach (ICP-ACC) • ICAgile Facilitator (ICP-ATF) • The Agile Company (Facilitating Growth in Agile Teams) • OKR Foundation Certified • AI for Product Management (Mind The Product) • Generative AI for Business (Microsoft Azure OpenAI)
+    </div>
+    <div class="cert-list" style="margin-top: 1.5px;">
+        <strong>Executive Education & AI Governance (Planned / In Progress):</strong> CentraleSupélec Exed (RNCP 37630 Bloc 2: Management de Projet & Transformation - <em>Planned</em>) • IAPP Certified Artificial Intelligence Governance Professional (AIGP - <em>In Progress</em>) • FinOps Certified Practitioner (FOCP - <em>In Progress</em>)
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Education & Technical Ecosystem</div>
+    <div class="edu-item">
+        <strong>Education:</strong> Master 2 IT Management (IAE Lyon, 2013) • Engineering Degree in Software Engineering (INSA Toulouse / ENSA Marrakech, 2012)
+    </div>
+    <div class="skills-grid" style="margin-top: 2px;">
+        <div class="skills-row">
+            <div class="skills-cat">AI & Agentic SDLC</div>
+            <div class="skills-val">Atlassian Rovo Platform, Claude Code Co-Pilots, Spec-Driven Development (SDD), EU AI Act Risk Governance, Responsible AI Guardrails, Azure AI Foundry</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-cat">Scaled Agile & Delivery</div>
+            <div class="skills-val">SAFe, LeSS, Spotify Model, Scrum of Scrums, BDD, TDD, Clean Architecture, Hexagonal Architecture, Value Stream Mapping, OKRs</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-cat">Tools & Platforms</div>
+            <div class="skills-val">Jira Cloud Administration, Alignify (Custom Jira App), Confluence, Miro, Planview, AWS, .NET Core, Python, Vue.js, Docker, CI/CD</div>
+        </div>
+    </div>
+    <div class="lang-interests" style="margin-top: 2px;">
+        <strong>Languages:</strong> French (Native/Bilingual), Arabic (Native/Bilingual), English (Fluent - TOEIC & Edinburgh Certified) • <strong>Interests:</strong> Agile Meetups, Coding Dojo Organizer
+    </div>
+</div>
+
+</body>
+</html>
+"""
+
+def generate_pdf():
+    html_path = os.path.abspath("resume_v12_template.html")
+    pdf_path = os.path.abspath("resume/Alaa_Eddine_Roucadi_Resume_v12.pdf")
+    
+    if os.path.exists(pdf_path):
+        try:
+            os.remove(pdf_path)
+            print(f"[CLEANUP] Deleted existing PDF at {pdf_path}")
+        except Exception as e:
+            print(f"[CLEANUP WARNING] Could not delete {pdf_path}: {e}")
+
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(HTML_CONTENT)
+    
+    print(f"HTML template written to {html_path}")
+    
+    # Run Edge headless to render PDF
+    cmd = [
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        "--headless=new",
+        "--disable-gpu",
+        "--no-pdf-header-footer",
+        f"--print-to-pdf={pdf_path}",
+        f"file:///{html_path.replace('\\', '/')}"
+    ]
+    
+    print("Executing Edge PDF generation command...")
+    subprocess.run(cmd, check=True)
+    
+    if os.path.exists(pdf_path):
+        print(f"[SUCCESS] PDF v12 successfully generated at: {pdf_path}")
+        doc = fitz.open(pdf_path)
+        print(f"Total Pages in PDF: {len(doc)}")
+    else:
+        print("[ERROR] Failed to generate PDF!")
+
+if __name__ == "__main__":
+    generate_pdf()

@@ -1,0 +1,205 @@
+{
+  "cand_6f234c": {
+    "profile_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "target_roles": [
+      "AI Delivery Lead & Operating Model Architect",
+      "Senior AI Product & Delivery Manager",
+      "AI Center of Excellence Lead",
+      "Head of AI Platform Delivery"
+    ],
+    "core_competencies": [
+      "Tier-1 Banking",
+      "Corporate Finance / Factoring",
+      "Large Scale Agile",
+      "SaaS Marketplaces",
+      "Banking CoE Scale",
+      "Agentic SDLC & Tooling",
+      "Alignify Custom Jira App",
+      "EU AI Act Risk Gates"
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "readiness_status": "ACTIVE_VERIFIED",
+    "verified_proof_metrics": [
+      {
+        "label": "Banking CoE Scale",
+        "evidence": "Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+        "category": "Scale"
+      },
+      {
+        "label": "Agentic SDLC & Tooling",
+        "evidence": "Shipped Atlassian Rovo AI Agents and Claude Code with Spec-Driven Development (SDD) guardrails.",
+        "category": "Innovation"
+      },
+      {
+        "label": "Alignify Custom Jira App",
+        "evidence": "Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery.",
+        "category": "Tooling IP"
+      },
+      {
+        "label": "EU AI Act Risk Gates",
+        "evidence": "Enforced hands-on EU AI Act risk classification and Responsible AI production release gates.",
+        "category": "Governance"
+      }
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "mobility": {
+      "base_location": "Nice, France",
+      "remote_preference": "100% Remote across Europe/EMEA"
+    },
+    "consent_broadcast_enabled": true,
+    "verified_composite_score": 88.0,
+    "last_evaluated_jd": null,
+    "indexed_at": "2026-09-17T18:01:59.597566+00:00"
+  },
+  "cand_sarah_audit": {
+    "profile_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "target_roles": [
+      "Director of Internal Audit",
+      "Head of Tech Compliance & Risk",
+      "Chief Audit Executive"
+    ],
+    "core_competencies": [
+      "SOX 404",
+      "ITGC Controls",
+      "Internal Audit",
+      "Risk Automation",
+      "Fintech Compliance"
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "readiness_status": "ACTIVE_VERIFIED",
+    "verified_proof_metrics": [
+      {
+        "label": "SOX Automation",
+        "evidence": "Automated 42% of manual SOX testing, saving \u20ac1.2M in annual external audit fees.",
+        "category": "Efficiency"
+      },
+      {
+        "label": "Audit Committee Governance",
+        "evidence": "Delivered 28 clean regulatory audit opinions across Tier-1 banks.",
+        "category": "Governance"
+      }
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "mobility": {
+      "base_location": "Paris, France",
+      "remote_preference": "Hybrid (1-2 days onsite)"
+    },
+    "consent_broadcast_enabled": true,
+    "verified_composite_score": 91.0,
+    "last_evaluated_jd": null,
+    "indexed_at": "2026-09-17T18:01:59.108843+00:00"
+  },
+  "cand_julien_fractional": {
+    "profile_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "target_roles": [
+      "Fractional CTO",
+      "Tech Advisor",
+      "Interim VP Engineering"
+    ],
+    "core_competencies": [
+      "Steerco Advisory",
+      "System Architecture",
+      "Team Scaling",
+      "Cloud Migration"
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "readiness_status": "ACTIVE_VERIFIED",
+    "verified_proof_metrics": [
+      {
+        "label": "Startup Scaling",
+        "evidence": "Scaled 3 B2B SaaS startups from Seed to Series B ($15M ARR exit).",
+        "category": "Growth"
+      },
+      {
+        "label": "Retainer Governance",
+        "evidence": "Governs technical roadmaps across 3 concurrent high-growth clients under structured retainers.",
+        "category": "Governance"
+      }
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "mobility": {
+      "base_location": "Remote Europe",
+      "remote_preference": "100% Remote"
+    },
+    "consent_broadcast_enabled": true,
+    "verified_composite_score": 93.0,
+    "last_evaluated_jd": null,
+    "indexed_at": "2026-09-17T18:01:59.108870+00:00"
+  },
+  "cand_lucas_ai": {
+    "profile_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "target_roles": [
+      "Junior AI Engineer",
+      "Applied LLM Developer",
+      "Python Backend Engineer"
+    ],
+    "core_competencies": [
+      "Python",
+      "FastAPI",
+      "LLM Benchmarking",
+      "RAG Systems",
+      "Docker"
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "readiness_status": "ACTIVE_VERIFIED",
+    "verified_proof_metrics": [
+      {
+        "label": "Live Deployments",
+        "evidence": "Shipped open-source LLM eval harness with 1,200 GitHub stars and automated CI/CD.",
+        "category": "Engineering"
+      },
+      {
+        "label": "Learning Velocity",
+        "evidence": "Built production FastAPI microservices handling 50k requests/day.",
+        "category": "Scale"
+      }
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "mobility": {
+      "base_location": "Lyon, France",
+      "remote_preference": "100% Remote / Flexible"
+    },
+    "consent_broadcast_enabled": true,
+    "verified_composite_score": 86.0,
+    "last_evaluated_jd": null,
+    "indexed_at": "2026-09-17T18:01:59.108897+00:00"
+  }
+}

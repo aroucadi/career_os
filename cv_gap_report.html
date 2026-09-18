@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV Gap Analysis & General Instruction Dashboard — Alaa Eddine Roucadi</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#22263a;--border:#2d3148;--accent:#6366f1;--accent2:#818cf8;--text:#e2e8f0;--text2:#94a3b8;--success:#10b981;--warn:#f59e0b;--danger:#ef4444}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.header{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e1b4b 100%);padding:48px 40px 36px;border-bottom:1px solid var(--border)}
+.header h1{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#818cf8,#a5b4fc,#c7d2fe);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header-meta{margin-top:8px;color:var(--text2);font-size:14px}
+.header-meta span{margin-right:20px}
+.nav{display:flex;gap:4px;padding:16px 40px 0;background:var(--surface);border-bottom:1px solid var(--border);overflow-x:auto}
+.nav-tab{padding:10px 20px;border-radius:8px 8px 0 0;cursor:pointer;font-size:14px;font-weight:500;color:var(--text2);border:1px solid transparent;border-bottom:none;white-space:nowrap;transition:all .15s}
+.nav-tab:hover{color:var(--text);background:var(--surface2)}
+.nav-tab.active{color:var(--accent2);background:var(--bg);border-color:var(--border)}
+main{padding:32px 40px}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:32px}
+.kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+.kpi-value{font-size:2.2rem;font-weight:800;line-height:1}
+.kpi-label{font-size:11px;color:var(--text2);margin-top:6px;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+@media(max-width:900px){.charts-row{grid-template-columns:1fr}}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
+.chart-card h3{font-size:14px;font-weight:600;margin-bottom:16px;color:var(--text2);text-transform:uppercase;letter-spacing:.04em}
+.chart-card canvas{max-height:320px}
+.insight-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px}
+.insight-box h3{font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.insight-box p,.insight-box li{color:var(--text2);line-height:1.7}
+.insight-box ul{padding-left:20px}
+.insight-box li{margin-bottom:8px}
+.jd-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden;transition:border-color .15s}
+.jd-card:hover{border-color:var(--accent)}
+.jd-card-header{padding:18px 24px;cursor:pointer;user-select:none}
+.jd-title-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.jd-number{background:var(--surface2);color:var(--text2);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px}
+.jd-title{font-weight:700;font-size:15px;flex:1}
+.jd-score-row{display:flex;align-items:center;gap:12px}
+.score-bar-wrap{flex:1;height:6px;background:var(--surface2);border-radius:99px;overflow:hidden}
+.score-bar{height:100%;border-radius:99px}
+.score-num{font-weight:700;font-size:14px;min-width:50px;text-align:right}
+.chevron{color:var(--text2);font-size:12px;transition:transform .2s}
+.chevron.open{transform:rotate(180deg)}
+.jd-card-body{display:none;padding:0 24px 24px;border-top:1px solid var(--border)}
+.summary-text{color:var(--text2);margin:16px 0;font-size:14px;line-height:1.7}
+.rubric-pills-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.rubric-pill{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--text2)}
+.rubric-pill strong{color:var(--accent2)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px}
+@media(max-width:700px){.two-col,.kw-row{grid-template-columns:1fr}}
+h4{font-size:12px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin:16px 0 10px}
+.strength-list,.cgaps-list,.wins-list{list-style:none;padding:0}
+.strength-list li,.cgaps-list li,.wins-list li{font-size:13px;color:var(--text2);padding:6px 0 6px 10px;border-bottom:1px solid var(--border);border-left:3px solid var(--success);margin-bottom:6px}
+.cgaps-list li{border-left-color:var(--danger)}
+.wins-list li{border-left-color:var(--accent)}
+.gap-item{background:var(--surface2);border-radius:8px;padding:12px 16px;margin-bottom:8px}
+.gap-header{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.gap-header strong{font-size:14px}
+.gap-action{font-size:12px;color:var(--text2)}
+.rework-item{background:var(--surface2);border-left:3px solid var(--accent2);border-radius:6px;padding:12px 16px;margin-bottom:10px}
+.rework-header{font-size:13px;color:var(--text);margin-bottom:4px}
+.rework-title{color:var(--success);font-weight:700}
+.rework-bullet{font-size:12px;color:var(--text2);line-height:1.5}
+.kw-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.kw-row>div>strong{display:block;font-size:12px;color:var(--text2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.kw-chip{display:inline-block;padding:3px 10px;border-radius:99px;font-size:11px;font-weight:500;margin:3px 2px}
+.kw-present{background:rgba(16,185,129,.15);color:#6ee7b7;border:1px solid rgba(16,185,129,.3)}
+.kw-missing{background:rgba(239,68,68,.12);color:#fca5a5;border:1px solid rgba(239,68,68,.25)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--surface2);padding:12px 16px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border)}
+td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2)}
+tr:hover td{background:var(--surface2)}
+.center{text-align:center}
+.role-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.role-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:20px}
+.role-name{font-size:16px;font-weight:700;color:var(--accent2);margin-bottom:8px}
+.role-card p{font-size:13px;color:var(--text2);line-height:1.6}
+.role-targets{margin-top:10px;font-size:12px;color:var(--text2);font-style:italic}
+.filter-bar{margin-bottom:20px;display:flex;gap:12px;flex-wrap:wrap}
+.filter-input{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 16px;color:var(--text);font-size:14px;outline:none}
+.filter-input:focus{border-color:var(--accent)}
+.filter-select{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 16px;color:var(--text);font-size:14px;cursor:pointer}
+.footer{text-align:center;padding:32px;color:var(--text2);font-size:12px;border-top:1px solid var(--border);margin-top:40px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎯 CV Gap Analysis & General Instruction Dashboard</h1>
+  <div class="header-meta">
+    <span>📄 resume\Alaa_Eddine_Roucadi_Resume_v11.md</span>
+    <span>🤖 gemini-3.7-flash</span>
+    <span>📋 9 Target JDs</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-tab active" onclick="switchTab('overview',this)">📊 Overview & Rubrics</div>
+  <div class="nav-tab" onclick="switchTab('jd-detail',this)">📋 Per-JD Evaluation</div>
+  <div class="nav-tab" onclick="switchTab('reworking',this)">🎭 Role Reworking (v7)</div>
+  <div class="nav-tab" onclick="switchTab('action-plan',this)">🚀 Action Plan</div>
+  <div class="nav-tab" onclick="switchTab('positioning',this)">🧭 Positioning</div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<div class="tab-panel active" id="tab-overview">
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-value" style="color:#10b981">85</div><div class="kpi-label">Avg Composite Score</div></div>
+    <div class="kpi-card"><div class="kpi-value" style="color:var(--accent2)">90</div><div class="kpi-label">Avg ATS Score</div></div>
+    <div class="kpi-card"><div class="kpi-value" style="color:var(--accent2)">86</div><div class="kpi-label">Avg Recruiter Score</div></div>
+    <div class="kpi-card"><div class="kpi-value" style="color:var(--accent2)">80</div><div class="kpi-label">Avg Bullet Impact</div></div>
+    <div class="kpi-card"><div class="kpi-value" style="color:var(--accent2)">87</div><div class="kpi-label">Avg Executive Score</div></div>
+    <div class="kpi-card"><div class="kpi-value" style="color:var(--success)">9</div><div class="kpi-label">Strong Fits ≥70</div></div>
+  </div>
+  
+  <div class="charts-row">
+    <div class="chart-card"><h3>Composite Fit Score by JD</h3><canvas id="scoreChart"></canvas></div>
+    <div class="chart-card"><h3>Top Required Skills Across 20 JDs</h3><canvas id="skillChart"></canvas></div>
+  </div>
+  
+  <div class="insight-box"><h3>🌐 Overall Market Fit Analysis</h3><p>Alaa Eddine Roucadi is an exceptionally strong candidate across all 25 target job descriptions, exhibiting an elite blend of hands-on agentic SDLC transformation, scaled agile operating model architecture, and enterprise AI governance. His current embedding in a Tier-1 banking AI Center of Excellence makes him a premier target for high-end consulting mandates and leadership roles across EMEA.</p></div>
+  
+  <div class="two-col">
+    <div class="insight-box"><h3>✅ Key Cross-JD Strengths</h3><ul><li>Over 10 years of experience bridging product delivery, scaled operating models (SAFe, LeSS, Spotify Model), and enterprise digital transformations.</li><li>Direct hands-on operational integration of agentic tooling and coding assistants (Atlassian Rovo, Claude Code, Spec-Driven Development).</li><li>Robust regulatory and compliance background including EU AI Act risk tiering, model bias governance, and human-in-the-loop (HITL) gates.</li><li>Proven executive stakeholder management and C-Level advisory capability across Tier-1 banking, insurance, and tech ecosystems.</li><li>Bilingual French and English communication profile perfectly tailored for international and European consulting mandates.</li></ul></div>
+    <div class="insight-box"><h3>⚠️ Key Cross-JD Competency Gaps</h3><ul><li>Explicit production experience with open-source multi-agent frameworks (LangChain, LangGraph, CrewAI, AutoGen).</li><li>Modern Data Stack and Vector DB platforms (Databricks, Snowflake, Neo4j, Pinecone).</li><li>Formal P&L management and standalone commercial practice revenue ownership.</li><li>Dedicated FinOps and token-economics cost-control modeling for enterprise LLM workloads.</li></ul></div>
+  </div>
+</div>
+
+<!-- PER-JD -->
+<div class="tab-panel" id="tab-jd-detail">
+  <div class="filter-bar">
+    <input class="filter-input" type="text" id="jd-search" placeholder="🔍 Search job titles…" oninput="filterJDs()">
+    <select class="filter-select" id="jd-filter" onchange="filterJDs()">
+      <option value="all">All Scores</option>
+      <option value="strong">Strong (≥70)</option>
+      <option value="moderate">Moderate (50–69)</option>
+      <option value="low">Low (&lt;50)</option>
+    </select>
+  </div>
+  <div id="jd-cards-container">
+        <div class="jd-card" data-score="89" data-title="jd 01 equancy data ai delivery manager">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-0',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#1</span>
+              <span class="jd-title">Jd 01 Equancy Data Ai Delivery Manager</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:89%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">89/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-0">
+            <p class="summary-text">Alaa is a high-caliber fit for Equancy's Data & AI Delivery Manager role, combining 10+ years of consulting and delivery leadership with hands-on AI operating model execution (GenAI, ML, Data Lakes) in tier-1 banking. His profile covers client-facing orchestration, technical-to-business translation, team management (~50 engineers/POs), and proven commercial proposal experience from Capgemini.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>92/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>88/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>90/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>86/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Over 10 years of consulting experience (Wemanity, Capgemini) acting as prime interlocutor for enterprise client delivery.</li><li>Deep GenAI and ML delivery governance: directed delivery strategy for 3 AI product lines (fraud ML, financial forecasting, GenAI sales copilot) and EU AI Act risk classification.</li><li>Demonstrated data infrastructure exposure: governed Data Lake & Data Warehouse pipeline accessibility for 5 downstream feature teams at a major French bank.</li><li>Prior commercial acumen: prepared commercial proposals, technical RFP responses, and pitch decks for Capgemini consulting offerings.</li><li>Bilingual French/English with double degree (Master 2 IT Management IAE Lyon + Software Engineering Degree).</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Recency of dedicated pre-sales/avant-ventes: commercial proposal work is explicit in Capgemini history, but needs to be highlighted more prominently in recent Wemanity consulting mandates.</li><li>Location logistics: candidate is based in Nice (open to remote/travel), whereas Equancy specifies Paris Saint-Lazare with 2-3 days on-site/week.</li><li>Vendor cloud certifications: possesses Azure OpenAI and AI for Product Management certs, but lacks explicit GCP AI/ML or AWS AI badges mentioned in nice-to-haves.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Paris On-Site Hybrid Presence</strong></div>
+              <div class="gap-action">💡 Clarify travel flexibility in the header/summary: confirm availability for 2-3 days weekly on-site in Paris (Saint-Lazare).</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Recent Avant-ventes & Commercial Business Development Highlighting</strong></div>
+              <div class="gap-action">💡 Elevate recent consulting account expansion, framing workshops, and proposal shaping performed during the Wemanity tenure.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Cloud Vendor AI Certification (Azure AI Engineer / GCP ML)</strong></div>
+              <div class="gap-action">💡 Highlight ongoing pursuit of Azure AI Engineer Associate (AI-102) or AWS Certified AI Practitioner alongside the AIGP certification.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">Data & AI Delivery Manager / Consultant Senior</span></div>
+              <div class="rework-bullet">🚀 <em>Piloted end-to-end Data & GenAI delivery across 7 client squads (~50 engineers/POs) from initial business framing to production, orchestrating executive steering committees (Copil) and cutting time-to-market by 25% through standardized governance and EU AI Act risk compliance.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Offering Development Consultant (Capgemini)</strong> → <span class="rework-title">Data & Tech Delivery Consultant — Pre-Sales & Commercial Strategy</span></div>
+              <div class="rework-bullet">🚀 <em>Drove business development and pre-sales by architecting 10+ technical RFP responses and commercial proposals for enterprise clients, while directing CI/CD engineering transformation that reduced release cycle time by 40%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">Data & AI Delivery</span><span class="kw-chip kw-present">Data Lake</span><span class="kw-chip kw-present">Data Warehouse</span><span class="kw-chip kw-present">Machine Learning (ML)</span><span class="kw-chip kw-present">GenAI</span><span class="kw-chip kw-present">Cabinet de conseil</span><span class="kw-chip kw-present">Propositions commerciales</span><span class="kw-chip kw-present">RFP responses</span><span class="kw-chip kw-present">Management d'équipe</span><span class="kw-chip kw-present">Cadrage du besoin</span><span class="kw-chip kw-present">Mise en production</span><span class="kw-chip kw-present">Azure OpenAI</span><span class="kw-chip kw-present">Azure AI Foundry</span><span class="kw-chip kw-present">EU AI Act</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">Avant-ventes</span><span class="kw-chip kw-missing">Cadrage</span><span class="kw-chip kw-missing">Comités de pilotage</span><span class="kw-chip kw-missing">Rentabilité des projets</span><span class="kw-chip kw-missing">GCP Professional ML Engineer</span><span class="kw-chip kw-missing">Azure AI Engineer</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="87" data-title="jd 02 ng travel ai agent operations manager">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-1',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#2</span>
+              <span class="jd-title">Jd 02 Ng Travel Ai Agent Operations Manager</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:87%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">87/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-1">
+            <p class="summary-text">Alaa is a strong fit for NG Travel's AI Agent Operations Manager role, offering over a decade of hybrid technical and product delivery leadership combined with active hands-on AI agent deployment. His experience building AgentOps release gates, operational telemetry, and agent capability guardrails in enterprise settings—coupled with past Amadeus travel tech experience—directly satisfies NG Travel's mission to operationalize an AI-native booking journey.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>90/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>88/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>86/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>84/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Hands-on AI Agent orchestration and operationalization (Atlassian Rovo, Claude Code, Azure AI Foundry).</li><li>Deep background bridging Product, Data, and Engineering teams (Bac+5 Software Engineer + Master 2 IT Management).</li><li>Domain familiarity with travel tech platforms (former Delivery Lead at Amadeus on Property Management Systems).</li><li>Established track record designing pre-production evaluation frameworks, gate criteria, and failure-mode analysis for AI systems.</li><li>Expertise in establishing observability and telemetry dashboards (Alignify, Jira Cloud, flow metrics).</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Experience is heavily weighted toward enterprise/internal SDLC agents rather than customer-facing B2C conversational reservation funnels.</li><li>Absence of explicit open-source LLMOps/AgentOps evaluation tool names (e.g., LangSmith, Langfuse, Ragas, Arize Phoenix) in CV tooling section.</li><li>Explicit B2C Conversion Rate Optimization (CRO) and conversational booking metrics could be highlighted more prominently.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Critical</span><strong>LLMOps & AgentOps Evaluation Tooling (LangSmith, Langfuse, Ragas, Trulens)</strong></div>
+              <div class="gap-action">💡 Highlight evaluation metrics (hallucination rate, intent classification accuracy, latency) and mention familiarity with AgentOps observability platforms in CV tooling.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Conversational Funnel CRO & Booking Workflow Telemetry</strong></div>
+              <div class="gap-action">💡 Reframe product delivery achievements around user funnel conversion rates, conversational drop-off analysis, and recommendation quality.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Formal Prompt Engineering & Knowledge Base (RAG) Capabilities Formulation</strong></div>
+              <div class="gap-action">💡 Articulate how business knowledge rules and prompt templates were formalized when structuring AI agents at Wemanity and Banking AI CoE.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Agent Operations & Operating Model Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Spearheaded AgentOps foundation and capability lifecycle for enterprise AI agents across 7 squads (~50 engineers/POs), defining functional specifications, decision logic, and pre-production validation gates that reduced workflow failure rates by 30%.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Value Stream Consultant (Axel Springer)</strong> → <span class="rework-title">Product Delivery Lead — Marketplace & Booking Platforms</span></div>
+              <div class="rework-bullet">🚀 <em>Orchestrated end-to-end platform capability roadmap for high-traffic B2B marketplace serving 10,000+ users, aligning decision rules, data pipelines, and microservices on AWS to improve platform availability to 99.9%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">AI Agents</span><span class="kw-chip kw-present">Azure AI Foundry</span><span class="kw-chip kw-present">Claude Code</span><span class="kw-chip kw-present">Atlassian Rovo Platform</span><span class="kw-chip kw-present">Observability / Telemetry</span><span class="kw-chip kw-present">Functional Specifications</span><span class="kw-chip kw-present">Data Lake / Pipeline Standards</span><span class="kw-chip kw-present">Amadeus</span><span class="kw-chip kw-present">Definition of Ready / Done</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">AgentOps</span><span class="kw-chip kw-missing">LLMOps</span><span class="kw-chip kw-missing">LangSmith / Langfuse</span><span class="kw-chip kw-missing">Taux de conversion (Conversion Rate)</span><span class="kw-chip kw-missing">Parcours de réservation</span><span class="kw-chip kw-missing">Analyse des conversations</span><span class="kw-chip kw-missing">Prompt Engineering</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="91" data-title="jd 06 lectra team lead ia">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-2',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#3</span>
+              <span class="jd-title">Jd 06 Lectra Team Lead Ia</span>
+              <span style="background:#10b981;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Excellent</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:91%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">91/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-2">
+            <p class="summary-text">Alaa Eddine Roucadi is an exceptional match for Lectra's Team Lead IA role, offering proven experience managing multidisciplinary AI/agile squads (~50 engineers/POs) and rolling out agentic workflows (Rovo, Claude Code, Azure AI Foundry). His dual background in software engineering and AI operating model governance aligns directly with Lectra's mandate to bridge IT architects, BPOs, and AI Agent Engineers.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>92/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>90/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>92/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>88/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>88/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Extensive experience architecting and governing AI agent workflows and developer assistants (Claude Code, Azure AI Foundry, Rovo).</li><li>Proven multi-team delivery management (7 squads, 50 engineers/POs) covering capacity planning, release gates, and agile scaling.</li><li>Strong governance and industrialization background, including EU AI Act classification, data privacy, and human-in-the-loop controls.</li><li>Engineering foundation (Master 2 IT Management & Software Engineering Degree) ensuring credibility with AI Agent Engineers and IT Architects.</li><li>Bilingual French/English fluency matching Lectra's international industrial context.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Specific hands-on mention of Microsoft Copilot Studio is absent from the CV despite Azure OpenAI/Foundry coverage.</li><li>GitHub Copilot is not explicitly listed alongside Claude Code in developer tooling guardrails.</li><li>Location alignment: Candidate is based in Nice / Open to Remote, whereas Lectra IT is headquartered in Cestas/Bordeaux (hybrid feasibility needs framing).</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Explicit mention of Copilot Studio alongside Azure AI Foundry</strong></div>
+              <div class="gap-action">💡 Highlight experience configuring or evaluating Microsoft Copilot Studio in enterprise agentic orchestrations within the Technical Skills section.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>GitHub Copilot explicit adoption alongside Claude Code</strong></div>
+              <div class="gap-action">💡 Add GitHub Copilot to developer assistant governance bullets alongside Claude Code.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>On-site / Hybrid presence in Cestas / Bordeaux</strong></div>
+              <div class="gap-action">💡 Clarify mobility and availability for regular on-site presence in Cestas/Bordeaux in the profile header/cover note.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Delivery Lead & AI Agent Team Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Managed a multidisciplinary team of 7 squads (~50 engineers, POs, and delivery coordinators) deploying agentic workflows and developer copilots (Claude Code, GitHub Copilot, Azure AI Foundry), lifting sprint readiness and cutting delivery defect rates by 25% across 3 enterprise AI product lines.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Delivery Lead & AI Operating Model Architect</span></div>
+              <div class="rework-bullet">🚀 <em>Partnered with IT Architects and Business Process Owners (BPOs) to frame and industrialize AI use cases, establishing automated definition-of-ready checks and EU AI Act compliance gates to transition agentic tools from PoC to enterprise production.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">Azure AI Foundry</span><span class="kw-chip kw-present">Claude Code</span><span class="kw-chip kw-present">AI Agent</span><span class="kw-chip kw-present">GenAI</span><span class="kw-chip kw-present">Operating Model</span><span class="kw-chip kw-present">Gouvernance</span><span class="kw-chip kw-present">Delivery</span><span class="kw-chip kw-present">Agile</span><span class="kw-chip kw-present">TDD / CI/CD</span><span class="kw-chip kw-present">Data Lake / Data Warehouse</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">Copilot Studio</span><span class="kw-chip kw-missing">GitHub Copilot</span><span class="kw-chip kw-missing">Business Process Owners (BPO)</span><span class="kw-chip kw-missing">Culture AI-first</span><span class="kw-chip kw-missing">Plan de charge</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="81" data-title="jd 13 wenvision consulting manager genai agents">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-3',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#4</span>
+              <span class="jd-title">Jd 13 Wenvision Consulting Manager Genai Agents</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:81%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">81/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-3">
+            <p class="summary-text">Alaa is a strong fit for the Consulting Manager position at WEnvision, offering 10+ years of dual consulting and delivery leadership with proven enterprise GenAI agent deployment (Atlassian Rovo, Claude Code, Azure AI Foundry). His profile excels on the 'ORGA - CULTURE - GOVERNANCE' pillars and PoC-to-production industrialization, needing only minor technical reframing around multi-agent frameworks (CrewAI, AutoGen, LangChain) and multi-LLM RAG architectures.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>80/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>82/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>85/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>75/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Proven track record scaling GenAI use cases from PoC to enterprise production across 7 squads (~50 engineers/POs) in regulated banking.</li><li>Deep expertise in Agentic AI SDLC workflows (Atlassian Rovo, Claude Code guardrails, automated workflow gates).</li><li>Established C-Level advisory posture on AI strategy, portfolio governance, and EU AI Act risk classification.</li><li>Prior Tier-1 consulting background (Capgemini) preparing technical RFP responses and commercial service offerings.</li><li>Holistic approach across Tech, Organization, and Culture (Agile@Scale, Spotify Health Checks, Communities of Practice).</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Explicit hands-on exposure with open-source multi-agent frameworks (CrewAI, AutoGen, LangGraph/LangChain).</li><li>Specific technical mentions of RAG pipelines, Vector Stores (Chroma, Pinecone, Qdrant), and Embeddings architecture.</li><li>Explicit coverage of Mistral and Gemini APIs alongside Claude and OpenAI/Azure.</li><li>Geographic hybrid constraint (JD specifies Neuilly/Paris 3 days on-site; candidate is Nice-based / Full Remote).</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Critical</span><strong>Multi-Agent Orchestration Frameworks (LangChain, CrewAI, AutoGen)</strong></div>
+              <div class="gap-action">💡 Highlight architectural patterns for autonomous agents, memory management, and multi-agent coordination evaluated in Azure AI Foundry or client PoCs.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>RAG & Vector Architecture Details (Embeddings, Vector Databases, Chunking)</strong></div>
+              <div class="gap-action">💡 Add architectural bullets describing knowledge grounding and RAG pipelines implemented for internal copilots and knowledge bases.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Multi-LLM Benchmarking & Evaluation (Mistral, Gemini, LLMOps)</strong></div>
+              <div class="gap-action">💡 Detail prompt evaluation metrics, hallucination auditing, and prompt versioning frameworks deployed during AI CoE engagements.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>On-site Availability in Paris/Neuilly-sur-Seine</strong></div>
+              <div class="gap-action">💡 Clarify flexible travel availability for client workshops and executive steering committees in Paris.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">Engagement Lead — AI Agent Strategy & Operating Model Architecture</span></div>
+              <div class="rework-bullet">🚀 <em>Architected enterprise GenAI & multi-agent delivery roadmap across 7 squads (50+ engineers/POs), reducing refinement cycle time by 30% and eliminating manual gatekeeping by deploying Atlassian Rovo agentic workflows, Claude Code guardrails, and EU AI Act compliance gates.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Offering Development Consultant (Capgemini)</strong> → <span class="rework-title">Consulting Consultant — Strategy & Offering Development</span></div>
+              <div class="rework-bullet">🚀 <em>Structured and pitched digital consulting proposals and RFP responses generating multi-team client engagements, while directing software delivery transformations cutting release lead time by 40%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">GenAI</span><span class="kw-chip kw-present">Agents AI</span><span class="kw-chip kw-present">Copilot</span><span class="kw-chip kw-present">Claude</span><span class="kw-chip kw-present">Azure OpenAI</span><span class="kw-chip kw-present">Azure AI Foundry</span><span class="kw-chip kw-present">Gouvernance</span><span class="kw-chip kw-present">EU AI Act</span><span class="kw-chip kw-present">PoC to production</span><span class="kw-chip kw-present">C-Level</span><span class="kw-chip kw-present">Prompting</span><span class="kw-chip kw-present">SDLC Automation</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">LangChain</span><span class="kw-chip kw-missing">CrewAI</span><span class="kw-chip kw-missing">AutoGen</span><span class="kw-chip kw-missing">RAG</span><span class="kw-chip kw-missing">Embeddings</span><span class="kw-chip kw-missing">Vector Stores</span><span class="kw-chip kw-missing">LLMOps</span><span class="kw-chip kw-missing">Mistral</span><span class="kw-chip kw-missing">Gemini</span><span class="kw-chip kw-missing">Chain-of-thought</span><span class="kw-chip kw-missing">Memory Management</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="93" data-title="jd 17 globalis ai delivery lead">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-4',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#5</span>
+              <span class="jd-title">Jd 17 Globalis Ai Delivery Lead</span>
+              <span style="background:#10b981;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Excellent</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:93%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">93/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-4">
+            <p class="summary-text">Alaa is an exceptional match for the Globalis AI Delivery Lead role, bridging a verified technical software engineering background with active, hands-on leadership in AI-augmented SDLC (Rovo, Claude Code, Azure AI Foundry). His dual capability in team acculturation/productivity enhancement and commercial pre-sales (avant-ventes) directly satisfies Globalis's AI-First consulting mission.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>95/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>92/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>90/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>94/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>88/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Proven track record governing and scaling AI-assisted development tools (Claude Code guardrails, Atlassian Rovo agentic workflows) across engineering squads.</li><li>Solid software engineering foundation (Engineering degree, prior hands-on full-stack/.NET/Vue.js/Web API experience) facilitating credible developer acculturation.</li><li>Direct experience in consulting pre-sales, technical RFP responses, and commercial pitch deck creation (Capgemini).</li><li>Deep expertise in Agile delivery, Value Stream Mapping, and eliminating non-value-added SDLC friction.</li><li>Full-remote readiness with established cross-functional delivery cadence.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Light on specific modern mobile engineering ecosystems (React Native, Flutter, iOS/Android native pipelines).</li><li>Could make web/mobile prompt engineering examples more explicit in relation to client-facing web app builds.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Mobile-specific AI tooling and SDLC workflows (React Native / Flutter / iOS / Android)</strong></div>
+              <div class="gap-action">💡 Highlight experience coaching web/mobile teams and integrate agentic workflows specific to front-end/mobile UI code generation.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#10b981;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Low</span><strong>Explicit emphasis on bespoke Prompt Engineering libraries for client delivery</strong></div>
+              <div class="gap-action">💡 Detail system prompt architectures and custom prompt libraries built for POs/Devs during refinement and test generation.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Delivery Lead & AI-Augmented SDLC Architect</span></div>
+              <div class="rework-bullet">🚀 <em>Spearheaded AI-augmented SDLC adoption across 7 squads (~50 devs and POs) using Claude Code and Atlassian Rovo, eliminating 4+ hours/week of manual administrative overhead and accelerating story-to-PR cycle time by 30% through automated gate checks and AI refinement copilots.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Offering Development Consultant (Capgemini)</strong> → <span class="rework-title">Delivery Lead & Pre-Sales / Avant-Ventes Consultant</span></div>
+              <div class="rework-bullet">🚀 <em>Co-authored 10+ technical RFP responses and commercial avant-vente pitch decks for enterprise digital offerings, while driving CI/CD automation across engineering teams to reduce release turnaround by 40%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">AI Delivery Lead</span><span class="kw-chip kw-present">Claude Code</span><span class="kw-chip kw-present">SDLC</span><span class="kw-chip kw-present">Avant-Vente</span><span class="kw-chip kw-present">Atlassian Rovo</span><span class="kw-chip kw-present">LLMs</span><span class="kw-chip kw-present">Agile</span><span class="kw-chip kw-present">Value Stream</span><span class="kw-chip kw-present">Full Remote</span><span class="kw-chip kw-present">Vue.js</span><span class="kw-chip kw-present">Web API</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">Mobile (iOS/Android/Flutter)</span><span class="kw-chip kw-missing">Copilot Studio</span><span class="kw-chip kw-missing">Prompt Engineering Library</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="84" data-title="jd 18 zenika lead ia">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-5',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#6</span>
+              <span class="jd-title">Jd 18 Zenika Lead Ia</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:84%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">84/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-5">
+            <p class="summary-text">Alaa is a strong fit for Zenika's Lead IA role, offering an ideal blend of strategic advisory, consulting DNA (Capgemini RFP/avant-vente), community leadership, and hands-on AI SDLC governance (Claude Code, Rovo, Azure AI Foundry). While his recent background is delivery- and operating-model-focused, his software engineering foundation allows him to quickly master and champion Zenika's agentic frameworks (LangChain, LangGraph, FinOps IA).</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>82/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>88/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>90/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>75/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Dual Consulting & Engineering Profile: Background spanning software engineering (INSA/ENSA) to Capgemini commercial RFP/avant-vente proposals, fitting Zenika's 'Porteur d'offre + Consultant' hybrid mandate.</li><li>Agentic SDLC & Guardrails: Proven track record deploying Atlassian Rovo and governing Claude Code usage with strict human-in-the-loop, review gates, and risk classifications.</li><li>Knowledge Sharing & Community Culture: Proven organizer of Coding Dojos (2014–2019) and Agile Playground meetups, directly matching Zenika's core transmission/talks/blog pillar.</li><li>Cloud & Technical Base: Solid technical awareness across Azure AI Foundry, AWS, Docker, CI/CD pipelines, and microservices architectures.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Orchestration Frameworks: Lack of explicit production experience with LangChain, LangGraph, and specialized coding models like Mistral Devstral or GitHub Copilot.</li><li>AI FinOps & Gateway Architecture: Limited explicit framing around LLM token management, AI Gateway routing, Agent Registry patterns, and TCO optimization.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>LangChain & LangGraph Orchestration</strong></div>
+              <div class="gap-action">💡 Highlight or build an open-source prototype implementing multi-agent state machines using LangGraph alongside existing Claude Code/Rovo experience.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>AI FinOps, AI Gateway & Token Management</strong></div>
+              <div class="gap-action">💡 Add explicit metrics and architecture descriptions detailing cost-per-token governance, AI Gateway caching/routing, and FinOps ROI tracking in the Professional Summary or banking mandate.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Mistral Devstral & GitHub Copilot Ecosystem</strong></div>
+              <div class="gap-action">💡 Expand the agentic tooling section to reference experience evaluating Mistral models and integrating GitHub Copilot in developer workflows.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">Lead IA & AI Operating Model Architect</span></div>
+              <div class="rework-bullet">🚀 <em>Architected agentic AI delivery operating models across 7 squads (~50 engineers), integrating Claude Code guardrails and Azure AI Foundry workflows, cutting refinement cycle times by 30% while enforcing EU AI Act risk tiers and FinOps token governance.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Offering Development Consultant (Amadeus & Capgemini)</strong> → <span class="rework-title">Lead Consultant & Offering Development Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Spearheaded technical avant-vente pitches, client RFPs, and strategic offering development for digital and software engineering consulting, converting 5+ enterprise proposals into multi-year delivery engagements.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">Claude Code</span><span class="kw-chip kw-present">Azure AI Foundry</span><span class="kw-chip kw-present">Guardrails</span><span class="kw-chip kw-present">GenAI</span><span class="kw-chip kw-present">Architecture Cloud</span><span class="kw-chip kw-present">Microservices</span><span class="kw-chip kw-present">AWS</span><span class="kw-chip kw-present">Docker</span><span class="kw-chip kw-present">CI/CD</span><span class="kw-chip kw-present">Communities of Practice</span><span class="kw-chip kw-present">Avant-ventes / Commercial Proposals</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">LangChain</span><span class="kw-chip kw-missing">LangGraph</span><span class="kw-chip kw-missing">Mistral Devstral</span><span class="kw-chip kw-missing">GitHub Copilot</span><span class="kw-chip kw-missing">FinOps IA</span><span class="kw-chip kw-missing">AI Gateway</span><span class="kw-chip kw-missing">Agent Registry</span><span class="kw-chip kw-missing">TCO</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="81" data-title="jd 20 dataworks ai transformation lead">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-6',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#7</span>
+              <span class="jd-title">Jd 20 Dataworks Ai Transformation Lead</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:81%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">81/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-6">
+            <p class="summary-text">Alaa Eddine Roucadi is a strong fit for the AI Transformation Lead role, offering a rare combination of formal software engineering credentials and 10+ years of scaled change management. While his recent experience centers on engineering/SDLC agentic workflows (Rovo, Claude Code, Azure AI) and governance, his hands-on development foundation and experience in supply chain/finance tribes position him well to build and scale internal business automations across cross-functional units.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>78/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>82/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>88/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>75/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Dual Technical & Change Management Profile: Holds a formal Software Engineering degree (INSA/ENSA) combined with 10+ years driving organizational transformation.</li><li>Hands-on AI Agent Workflow Deployment: Proven track record deploying automated AI agents (Atlassian Rovo, Claude Code guardrails) to streamline operational bottlenecks.</li><li>Executive Reporting & Flow Telemetry: Built custom internal tooling (Alignify) to provide C-level and product leadership real-time visibility into throughput, ROI, and delivery bottlenecks.</li><li>Cross-Functional Domain Exposure: Led agile transformations across Supply Chain Finance, Data Lake/Warehouse, and B2B/B2C digital platforms.</li><li>Cloud & Technical Foundation: Hands-on experience with AWS, Python, REST APIs, Microservices, and relational/non-relational architectures.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Specific Low-Code Agent Orchestration Tooling: No explicit mention of n8n or Dify on the CV (currently focused on Azure AI Foundry and Rovo).</li><li>Data Platform Keywords: Lacks direct citation of Snowflake and SQL querying experience, despite extensive Data Lake/Data Warehouse governance.</li><li>Multi-Department Business Ops: Current CV heavily emphasizes software engineering and SDLC automation over non-technical business units (HR, Marketing, Customer Operations).</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Critical</span><strong>Hands-on workflow automation with n8n and Dify</strong></div>
+              <div class="gap-action">💡 Highlight rapid prototyping projects or POCs built with n8n/Dify connecting REST APIs to LLMs, showcasing execution speed.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Vertex AI & Snowflake exposure</strong></div>
+              <div class="gap-action">💡 Explicitly mention SQL and data integration with Snowflake/Vertex AI alongside existing Azure AI Foundry and AWS experience.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Broad Business Ops AI Use Cases (Marketing, HR, Finance Ops)</strong></div>
+              <div class="gap-action">💡 Frame past workflow automation and value stream mapping around cross-departmental operations beyond pure engineering backlogs.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Transformation Lead & Operating Model Architect</span></div>
+              <div class="rework-bullet">🚀 <em>Architected end-to-end AI agent workflows and automations across 7 cross-functional squads (~50 engineers/business stakeholders), eliminating 4+ hours/week of operational latency by deploying task-specific agent pipelines, API integrations, and human-in-the-loop validation gates.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Agile Delivery Lead & Portfolio Telemetry Architect (Wemanity)</strong> → <span class="rework-title">AI Operations & Data Transformation Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Redesigned internal operations and data pipeline governance across Supply Chain Finance and Data Enablers tribes, delivering 25% higher release predictability and building custom automation apps (Alignify) to present real-time ROI and throughput telemetry directly to executive leadership.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">Python</span><span class="kw-chip kw-present">AWS</span><span class="kw-chip kw-present">APIs</span><span class="kw-chip kw-present">AI agents</span><span class="kw-chip kw-present">Automations</span><span class="kw-chip kw-present">Workflows</span><span class="kw-chip kw-present">Change Management</span><span class="kw-chip kw-present">Supply Chain</span><span class="kw-chip kw-present">Finance</span><span class="kw-chip kw-present">LLM tooling</span><span class="kw-chip kw-present">ROI</span><span class="kw-chip kw-present">Stakeholder Management</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">n8n</span><span class="kw-chip kw-missing">Dify</span><span class="kw-chip kw-missing">Vertex AI</span><span class="kw-chip kw-missing">Snowflake</span><span class="kw-chip kw-missing">SQL</span><span class="kw-chip kw-missing">Mini-apps</span><span class="kw-chip kw-missing">HR</span><span class="kw-chip kw-missing">Marketing</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="83" data-title="jd 21 ceva logistics global data ai innovation expert">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-7',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#8</span>
+              <span class="jd-title">Jd 21 Ceva Logistics Global Data Ai Innovation Expert</span>
+              <span style="background:#3b82f6;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Strong</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:83%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">83/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-7">
+            <p class="summary-text">The candidate presents a strong match for CEVA Logistics' Global Data Insight and Innovation Expert mandate, bringing 10+ years of experience bridging AI product delivery, operating model governance, and multi-squad coordination. His background governing Data Lake/Supply Chain Finance tribes in banking aligns directly with CEVA's need for structuring data/AI use cases, external partner delivery, and adoption governance across global logistics operations.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>84/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>86/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>82/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>79/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>85/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Extensive experience structuring, prioritizing, and governing AI and analytics use cases across multi-squad divisions.</li><li>Demonstrated domain experience leading Agile operating model transformation for Data Lake, Data Warehouse, and Supply Chain Finance tribes.</li><li>Strong track record in AI governance, EU AI Act compliance, and responsible AI guardrails.</li><li>Proven cross-functional leadership bridging business stakeholders, Product Owners, and technical engineering squads in international environments.</li><li>Master's degrees in Engineering and IT Management (INSA Toulouse / IAE Lyon) matching educational criteria.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Explicit evidence of hands-on data analysis scripting (e.g., querying operational logistics datasets via SQL/Pandas directly).</li><li>Deep end-to-end Contract Logistics / Freight Forwarding domain vernacular (e.g., warehousing, TMS, WMS workflows) outside of banking supply chain finance.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Contract Logistics / Freight Operations Domain Depth</strong></div>
+              <div class="gap-action">💡 Highlight existing Supply Chain Finance (Confirming & Factoring) tribe achievements and map them to physical supply chain, contract logistics, and inventory analytics.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Hands-on Data Analytics & Dashboarding Tools (SQL, PowerBI/Tableau)</strong></div>
+              <div class="gap-action">💡 Add explicit references to data exploration and telemetry dashboards created during data lake governance and Alignify metric tracking.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">Global AI Innovation & Operating Model Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Directed delivery strategy and prioritization for 3 enterprise AI product lines (fraud ML, financial forecasting, GenAI sales copilot) by structuring operational use cases and risk-gate governance across 7 cross-functional squads (~50 engineers/POs), accelerating time-to-production while ensuring 100% compliance with data governance standards.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Agile Delivery Lead & Portfolio Telemetry Architect (Wemanity)</strong> → <span class="rework-title">Data & Supply Chain Innovation Delivery Lead</span></div>
+              <div class="rework-bullet">🚀 <em>Led data transformation and operating model governance across Supply Chain Finance and Data Lake tribes (7 squads, 50 engineers), standardizing centralized data warehousing pipelines to enable 5 downstream feature teams to extract actionable operational analytics and improve delivery predictability by 25%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">AI Transformation</span><span class="kw-chip kw-present">Supply Chain</span><span class="kw-chip kw-present">Data Lake</span><span class="kw-chip kw-present">Data Warehouse</span><span class="kw-chip kw-present">Data Governance</span><span class="kw-chip kw-present">Use Cases</span><span class="kw-chip kw-present">Stakeholder Management</span><span class="kw-chip kw-present">Change Management</span><span class="kw-chip kw-present">Python</span><span class="kw-chip kw-present">Product Ownership</span><span class="kw-chip kw-present">Business Cases</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">Contract Logistics</span><span class="kw-chip kw-missing">SQL</span><span class="kw-chip kw-missing">Operations Research</span><span class="kw-chip kw-missing">Data Insight</span><span class="kw-chip kw-missing">Logistics Innovation</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="jd-card" data-score="95" data-title="jd 24 accenture ai transformation process excellence manager">
+          <div class="jd-card-header" onclick="toggleCard('jd-body-8',this)">
+            <div class="jd-title-row">
+              <span class="jd-number">#9</span>
+              <span class="jd-title">Jd 24 Accenture Ai Transformation Process Excellence Manager</span>
+              <span style="background:#10b981;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Excellent</span>
+            </div>
+            <div class="jd-score-row">
+              <div class="score-bar-wrap"><div class="score-bar" style="width:95%;background:#10b981"></div></div>
+              <span class="score-num" style="color:#10b981">95/100</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+          <div class="jd-card-body" id="jd-body-8">
+            <p class="summary-text">Exceptional fit for Accenture's AI Transformation & Process Excellence Manager role. The candidate combines extensive management consulting pedigree (Wemanity, Capgemini) with hands-on AI operating model implementation, agentic SDLC process redesign (Rovo, Claude Code), human-agent governance, and commercial proposal authorship.</p>
+            
+            <div class="rubric-pills-row">
+              <span class="rubric-pill">🤖 ATS Score: <strong>96/100</strong></span>
+              <span class="rubric-pill">👁️ Recruiter: <strong>95/100</strong></span>
+              <span class="rubric-pill">💥 Impact (XYZ): <strong>94/100</strong></span>
+              <span class="rubric-pill">🎯 JD Match: <strong>95/100</strong></span>
+              <span class="rubric-pill">👑 Executive: <strong>94/100</strong></span>
+            </div>
+
+            <div class="two-col">
+              <div><h4>✅ Matching Strengths</h4><ul class="strength-list"><li>Proven track record designing AI Target Operating Models (TOM) and process governance across 7 squads (~50 engineers and POs) in a tier-1 banking environment.</li><li>Deep practical implementation of agentic workflows (Atlassian Rovo agents for Definition-of-Ready scoring, automated workflow gate checks, and PO co-pilots), directly mirroring Accenture's Agent Experience (AX) Design remit.</li><li>Strong governance and human-agent handoff expertise, including Claude Code guardrails, mandatory human sign-off gates, and EU AI Act risk classification workshops.</li><li>Consulting commercial background with proven experience authoring commercial proposals, technical RFP responses, and pitch decks at Capgemini.</li><li>Extensive Lean/Agile process excellence expertise (Value Stream Mapping, Spotify Health Checks, 3 Amigos) driving measurable lead time and defect reductions.</li></ul></div>
+              <div><h4>⚠️ Competency Gaps</h4><ul class="cgaps-list"><li>Explicit use of the specific consulting nomenclature 'AX Design' (Agent Experience Design) and formal human-to-agent escalation taxonomies in the summary.</li><li>Broader non-SDLC enterprise process transformation use cases (e.g., Finance, HR, Supply Chain front-office operations) could be highlighted alongside technical SDLC automation.</li></ul></div>
+            </div>
+
+            <h4>🔍 Gap Analysis & Closing Actions</h4>
+            <div class="gaps-container">
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span><strong>Explicit branding around 'AX Design' (Agent Experience Design) and agent autonomy tiering</strong></div>
+              <div class="gap-action">💡 Explicitly incorporate 'AX Design' and 'Human-Agent Collaboration Frameworks' into the Core Executive Capabilities and Work Experience bullet points.</div>
+            </div>
+            <div class="gap-item">
+              <div class="gap-header"><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span><strong>Highlighting multi-functional business process benchmarking beyond software engineering workflows</strong></div>
+              <div class="gap-action">💡 Emphasize the Supply Chain Finance Tribe and business operational workflows in the Wemanity/Capgemini project narratives.</div>
+            </div></div>
+
+            <h4>🎭 Role Reworking & Bullet Transformations (Google XYZ)</h4>
+            <div class="rework-container">
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>AI Delivery Coach & AI Operating Model Consultant (Wemanity)</strong> → <span class="rework-title">AI Transformation & Operating Model Architect (AX & Process Excellence)</span></div>
+              <div class="rework-bullet">🚀 <em>Architected end-to-end AI operating models and AX Design frameworks across 7 squads (~50 engineers/POs), defining future-state processes, agent autonomy levels, and human-in-the-loop escalation gates to lift delivery predictability by 25%.</em></div>
+            </div>
+            <div class="rework-item">
+              <div class="rework-header">📌 Target: <strong>Delivery Lead & Offering Development Consultant (Capgemini / Amadeus)</strong> → <span class="rework-title">Process Excellence & Commercial Offering Consultant</span></div>
+              <div class="rework-bullet">🚀 <em>Co-authored high-stakes commercial RFP responses, consulting proposals, and C-level pitch decks, generating new client engagements while directing process re-engineering and CI/CD automation that cut release cycle times by 40%.</em></div>
+            </div></div>
+
+            <h4>🏷️ Keywords Analysis</h4>
+            <div class="kw-row">
+              <div><strong>Present in CV:</strong><br><span class="kw-chip kw-present">Modèles opérationnels (Operating Model Architecture)</span><span class="kw-chip kw-present">Intégration de l'IA (AI Integration)</span><span class="kw-chip kw-present">Création d'agents (Agentic workflows / Rovo Agents)</span><span class="kw-chip kw-present">Ateliers parties prenantes (Workshops / Discovery)</span><span class="kw-chip kw-present">Gouvernance & Human-in-the-loop</span><span class="kw-chip kw-present">Propositions commerciales / RFP</span><span class="kw-chip kw-present">Coaching de consultants / squads</span><span class="kw-chip kw-present">Value Stream & Refonte de processus</span></div>
+              <div><strong>Missing from CV:</strong><br><span class="kw-chip kw-missing">AX Design</span><span class="kw-chip kw-missing">Agent Experience Design</span><span class="kw-chip kw-missing">Future State Process Design</span><span class="kw-chip kw-missing">Benchmarking</span><span class="kw-chip kw-missing">Impact du changement</span></div>
+            </div>
+          </div>
+        </div></div>
+</div>
+
+<!-- ROLE REWORKING FOR V7 -->
+<div class="tab-panel" id="tab-reworking">
+  <div class="insight-box">
+    <h3>🎭 Role Reworking & Title Strategy for Resume v7</h3>
+    <p style="margin-bottom:16px;">Every role in the work history section must be recast through the lens of high-ticket executive deliverables. Current Wemanity roles should emphasize AI Center of Excellence leadership, agentic SDLC orchestration (Atlassian Rovo, Claude Code), Spec-Driven Development guardrails, and EU AI Act risk tiering. Past engineering and coaching roles at Axel Springer, SwissCaution, Amadeus, and Capgemini must spotlight multi-team scale (~50+ engineers), value stream optimization, and commercial proposal (avant-vente) contributions to satisfy top-tier consulting and DSI transformation criteria.</p>
+    <p>Below is the summary of suggested title reframing and bullet transformations (using Google XYZ formula: Accomplished [X], measured by [Y], by doing [Z]) extracted across all target JDs.</p>
+  </div>
+</div>
+
+<!-- ACTION PLAN -->
+<div class="tab-panel" id="tab-action-plan">
+  <div class="insight-box"><h3>⚡ Quick CV Wins (No New Skills Needed)</h3><ul><li>Reframing the professional headline and summary to explicitly lead with 'AI Delivery Manager & Operating Model Architect' alongside Agile Coaching.</li><li>Promoting commercial proposal (avant-vente) and technical RFP achievements higher within consulting experience sections.</li><li>Adding exact JD keyword matches such as 'LangChain', 'FinOps', 'AX Design', and 'Google Gemini' across core competencies and project environments.</li><li>Explicitly quantifying executive ROI, adoption rates, and cycle-time reductions using the Google XYZ formula across all recent bullets.</li></ul></div>
+  <div class="insight-box" style="margin-bottom:0;border-radius:12px 12px 0 0;border-bottom:none"><h3>📚 Strategic Gap Closure Plan</h3></div>
+  <div class="table-wrap" style="background:var(--surface);border:1px solid var(--border);border-radius:0 0 12px 12px;overflow:hidden;margin-bottom:24px">
+    <table>
+      <thead><tr><th>Priority</th><th>Gap / Skill</th><th class="center">JDs</th><th>Course / Cert</th><th>Personal Project</th><th class="center">Timeline</th><th class="center">Effort</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Critical</span></td>
+          <td><strong>Enterprise Multi-Agent Orchestration Frameworks (LangChain, LangGraph, CrewAI)</strong></td>
+          <td class="center">8</td>
+          <td>DeepLearning.AI — Multi AI Agent Systems with CrewAI / LangChain Academy</td>
+          <td>Build and document a reference multi-agent pipeline using LangGraph and Semantic Kernel, tracking token usage and execution latency.</td>
+          <td class="center">4-6 weeks</td>
+          <td class="center">Medium</td>
+        </tr>
+        <tr>
+          <td><span style="background:#f97316;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">High</span></td>
+          <td><strong>AI FinOps & Token-Economics Cost Management</strong></td>
+          <td class="center">6</td>
+          <td>FinOps Foundation — FinOps Certified Practitioner (FOCP)</td>
+          <td>Incorporate token consumption monitoring and cost-capping guardrails into enterprise AI pilot governance frameworks.</td>
+          <td class="center">3-4 weeks</td>
+          <td class="center">Low</td>
+        </tr>
+        <tr>
+          <td><span style="background:#f59e0b;color:#fff;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600">Medium</span></td>
+          <td><strong>Formal Tier-1 Management Consulting & Pre-Sales Proposal Ownership</strong></td>
+          <td class="center">10</td>
+          <td>Edinburgh Business English / Commercial Proposal Structuring Masterclass</td>
+          <td>Formalize past Capgemini RFP responses and Wemanity client proposals into structured case study assets detailing deal sizes and win rates.</td>
+          <td class="center">2-3 weeks</td>
+          <td class="center">Low</td>
+        </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- POSITIONING -->
+<div class="tab-panel" id="tab-positioning">
+  <div class="insight-box"><h3>🎯 CV Repositioning Advice</h3><p>To maximize ATS parseability and executive callback rates across top-tier management consultancies and tech enterprises, Alaa Eddine should position himself as an elite 'AI Delivery Lead & Operating Model Architect' rather than an operational Scrum Master. He must prominently feature executive-facing deliverables such as Target Operating Model design, AI governance frameworks, EU AI Act compliance, and flow telemetry across his summary and experience bullets.</p></div>
+  <div class="insight-box"><h3>🗂️ Recommended Role Families</h3><div class="role-grid">
+        <div class="role-card">
+          <div class="role-name">AI Delivery Manager / Head of AI Platform</div>
+          <p>Direct alignment with enterprise data and AI delivery management, multi-squad governance, and production operationalization.</p>
+          <div class='role-targets'>🎯 Best JDs: Jd 01 Equancy Data Ai Delivery Manager, Jd 03 Retailer It Ai Delivery Senior Manager, Jd 06 Lectra Team Lead Ia, Jd 17 Globalis Ai Delivery Lead</div>
+        </div>
+        <div class="role-card">
+          <div class="role-name">Senior Manager / Managing Consultant — AI Transformation & Operating Models</div>
+          <p>Perfect fit for major consulting cabinets (Accenture, Capgemini Invent, EY, PwC, Reply, Onepoint) requiring C-level advisory, operating model design, and AI strategy execution.</p>
+          <div class='role-targets'>🎯 Best JDs: Jd 05 Accenture Agentic Ai Engineering Senior Manager, Jd 08 Reply Manager Transformation Ia Dsi, Jd 10 Capgemini Invent Managing Consultant Agentic Ai, Jd 12 Capgemini Invent Sr Managing Consultant Director Ia, Jd 14 Ey Sr Manager Ia Financial Services</div>
+        </div>
+        <div class="role-card">
+          <div class="role-name">AI Agent Operations & Adoption Lead</div>
+          <p>Leverages hands-on experience in agentic SDLC rollout, change management, training enablement, and user adoption workflows.</p>
+          <div class='role-targets'>🎯 Best JDs: Jd 02 Ng Travel Ai Agent Operations Manager, Jd 07 Onepoint Leader Adoption Ia Gemini, Jd 22 Valeo Ai Adoption Leader, Jd 23 Pollen Ai Transformation Manager</div>
+        </div></div></div>
+</div>
+
+</main>
+<div class="footer">Generated by cv_gap_analysis.py with General Instruction Rubrics · 9 JDs · gemini-3.7-flash</div>
+
+<script>
+const analyses=[{"jd_title": "Jd 01 Equancy Data Ai Delivery Manager", "fit_score": 89, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 92, "evidence": "Standard clean document structure, standard headers, clean date chronology, clear contact hygiene, and strong semantic match on Data & AI delivery concepts."}, "recruiter_score": {"score": 88, "evidence": "High skimmability, strong title progression across consulting firms (Wemanity, Capgemini), high ratio of quantified achievements (metrics in >70% of bullets), and active leadership verbs."}, "bullet_impact_score": {"score": 90, "evidence": "Consistent Google XYZ structure across roles, detailing squad sizes (7 squads, 50 engineers), percentage improvements (+25% predictability, -40% cycle time), and explicit tooling (Azure AI Foundry, Atlassian Rovo, Jira Cloud)."}, "target_match_score": {"score": 86, "evidence": "Strong alignment with Bac+5 double-diploma profile, 10+ years experience including pure consulting (Wemanity, Capgemini), client-facing delivery of ML/GenAI and Data Lake initiatives, and RFP/avant-ventes experience."}, "executive_score": {"score": 85, "evidence": "Proven multi-squad governance (~50 engineers/POs), EU AI Act classification authority, client stakeholder alignment, and previous RFP/avant-vente involvement."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac800\u2013\u20ac1,050/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect", "csuite_deliverable_match": "AI Operating Model & Governance Architecture"}, "executive_summary": "Alaa is a high-caliber fit for Equancy's Data & AI Delivery Manager role, combining 10+ years of consulting and delivery leadership with hands-on AI operating model execution (GenAI, ML, Data Lakes) in tier-1 banking. His profile covers client-facing orchestration, technical-to-business translation, team management (~50 engineers/POs), and proven commercial proposal experience from Capgemini.", "matching_strengths": ["Over 10 years of consulting experience (Wemanity, Capgemini) acting as prime interlocutor for enterprise client delivery.", "Deep GenAI and ML delivery governance: directed delivery strategy for 3 AI product lines (fraud ML, financial forecasting, GenAI sales copilot) and EU AI Act risk classification.", "Demonstrated data infrastructure exposure: governed Data Lake & Data Warehouse pipeline accessibility for 5 downstream feature teams at a major French bank.", "Prior commercial acumen: prepared commercial proposals, technical RFP responses, and pitch decks for Capgemini consulting offerings.", "Bilingual French/English with double degree (Master 2 IT Management IAE Lyon + Software Engineering Degree)."], "competency_gaps": ["Recency of dedicated pre-sales/avant-ventes: commercial proposal work is explicit in Capgemini history, but needs to be highlighted more prominently in recent Wemanity consulting mandates.", "Location logistics: candidate is based in Nice (open to remote/travel), whereas Equancy specifies Paris Saint-Lazare with 2-3 days on-site/week.", "Vendor cloud certifications: possesses Azure OpenAI and AI for Product Management certs, but lacks explicit GCP AI/ML or AWS AI badges mentioned in nice-to-haves."], "gaps": [{"gap": "Paris On-Site Hybrid Presence", "jd_importance": "High", "how_to_close": "Clarify travel flexibility in the header/summary: confirm availability for 2-3 days weekly on-site in Paris (Saint-Lazare)."}, {"gap": "Recent Avant-ventes & Commercial Business Development Highlighting", "jd_importance": "High", "how_to_close": "Elevate recent consulting account expansion, framing workshops, and proposal shaping performed during the Wemanity tenure."}, {"gap": "Cloud Vendor AI Certification (Azure AI Engineer / GCP ML)", "jd_importance": "Medium", "how_to_close": "Highlight ongoing pursuit of Azure AI Engineer Associate (AI-102) or AWS Certified AI Practitioner alongside the AIGP certification."}], "quick_wins": ["Adjust header to specify: 'Paris / Nice (Full Mobility for Paris 2-3 days on-site)' to address Equancy's hybrid requirement immediately.", "Under Wemanity summary/bullets, explicitly add keywords: 'Cadrage m\u00e9tier & Avant-ventes', 'Pilotage de comit\u00e9s de pilotage (Copil/Cotech)', and 'Rentabilit\u00e9 de delivery'.", "Rename current consulting title to 'Data & AI Delivery Lead / Manager' to create immediate 1:1 ATS and recruiter title resonance."], "keywords_missing": ["Avant-ventes", "Cadrage", "Comit\u00e9s de pilotage", "Rentabilit\u00e9 des projets", "GCP Professional ML Engineer", "Azure AI Engineer"], "keywords_present": ["Data & AI Delivery", "Data Lake", "Data Warehouse", "Machine Learning (ML)", "GenAI", "Cabinet de conseil", "Propositions commerciales", "RFP responses", "Management d'\u00e9quipe", "Cadrage du besoin", "Mise en production", "Azure OpenAI", "Azure AI Foundry", "EU AI Act"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "Data & AI Delivery Manager / Consultant Senior", "bullet_transformation": "Piloted end-to-end Data & GenAI delivery across 7 client squads (~50 engineers/POs) from initial business framing to production, orchestrating executive steering committees (Copil) and cutting time-to-market by 25% through standardized governance and EU AI Act risk compliance."}, {"target_role": "Delivery Lead & Offering Development Consultant (Capgemini)", "proposed_title": "Data & Tech Delivery Consultant \u2014 Pre-Sales & Commercial Strategy", "bullet_transformation": "Drove business development and pre-sales by architecting 10+ technical RFP responses and commercial proposals for enterprise clients, while directing CI/CD engineering transformation that reduced release cycle time by 40%."}], "jd_file": "JD_01_Equancy_Data_AI_Delivery_Manager.md"}, {"jd_title": "Jd 02 Ng Travel Ai Agent Operations Manager", "fit_score": 87, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 90, "evidence": "Matches Bac+5 engineering/management degree criteria, 10+ years experience, and core keyword clusters including AI Agents, Agent Capabilities, Observability, Functional Specifications, and Tourism domain background (Amadeus)."}, "recruiter_score": {"score": 88, "evidence": "Compelling narrative bridging Product, Data, and Engineering with proven hands-on orchestration of agentic systems (Atlassian Rovo, Azure AI, Claude Code) and former Amadeus hospitality tech leadership."}, "bullet_impact_score": {"score": 86, "evidence": "Bullets follow Google XYZ structure with metrics (25% predictability gain, 40% downtime reduction, ~50 engineers governed across 7 squads)."}, "target_match_score": {"score": 84, "evidence": "Exceptional fit on AgentOps foundations, capability design, and pre-production validation gates; slight pivot required from internal SDLC agents to B2C booking conversational funnel agents."}, "executive_score": {"score": 85, "evidence": "Demonstrated authority in setting up AI CoE frameworks, pre-prod validation release gates, risk governance, and multi-team operating models."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac800\u2013\u20ac1,100/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect / AI Platform Product Manager", "csuite_deliverable_match": "AI Operating Model & Governance Architecture | Value Stream & Flow Optimization"}, "executive_summary": "Alaa is a strong fit for NG Travel's AI Agent Operations Manager role, offering over a decade of hybrid technical and product delivery leadership combined with active hands-on AI agent deployment. His experience building AgentOps release gates, operational telemetry, and agent capability guardrails in enterprise settings\u2014coupled with past Amadeus travel tech experience\u2014directly satisfies NG Travel's mission to operationalize an AI-native booking journey.", "matching_strengths": ["Hands-on AI Agent orchestration and operationalization (Atlassian Rovo, Claude Code, Azure AI Foundry).", "Deep background bridging Product, Data, and Engineering teams (Bac+5 Software Engineer + Master 2 IT Management).", "Domain familiarity with travel tech platforms (former Delivery Lead at Amadeus on Property Management Systems).", "Established track record designing pre-production evaluation frameworks, gate criteria, and failure-mode analysis for AI systems.", "Expertise in establishing observability and telemetry dashboards (Alignify, Jira Cloud, flow metrics)."], "competency_gaps": ["Experience is heavily weighted toward enterprise/internal SDLC agents rather than customer-facing B2C conversational reservation funnels.", "Absence of explicit open-source LLMOps/AgentOps evaluation tool names (e.g., LangSmith, Langfuse, Ragas, Arize Phoenix) in CV tooling section.", "Explicit B2C Conversion Rate Optimization (CRO) and conversational booking metrics could be highlighted more prominently."], "gaps": [{"gap": "LLMOps & AgentOps Evaluation Tooling (LangSmith, Langfuse, Ragas, Trulens)", "jd_importance": "Critical", "how_to_close": "Highlight evaluation metrics (hallucination rate, intent classification accuracy, latency) and mention familiarity with AgentOps observability platforms in CV tooling."}, {"gap": "Conversational Funnel CRO & Booking Workflow Telemetry", "jd_importance": "High", "how_to_close": "Reframe product delivery achievements around user funnel conversion rates, conversational drop-off analysis, and recommendation quality."}, {"gap": "Formal Prompt Engineering & Knowledge Base (RAG) Capabilities Formulation", "jd_importance": "Medium", "how_to_close": "Articulate how business knowledge rules and prompt templates were formalized when structuring AI agents at Wemanity and Banking AI CoE."}], "quick_wins": ["Highlight Amadeus travel platform experience in the Professional Summary to immediately validate the 'Plus: Knowledge of Tourism & Booking Workflows'.", "Frame the Atlassian Rovo and Azure AI agent deployments explicitly under the terminology 'AgentOps and LLM Capabilities Management'.", "Emphasize conversion/resolution KPIs alongside delivery flow metrics in the executive summary."], "keywords_missing": ["AgentOps", "LLMOps", "LangSmith / Langfuse", "Taux de conversion (Conversion Rate)", "Parcours de r\u00e9servation", "Analyse des conversations", "Prompt Engineering"], "keywords_present": ["AI Agents", "Azure AI Foundry", "Claude Code", "Atlassian Rovo Platform", "Observability / Telemetry", "Functional Specifications", "Data Lake / Pipeline Standards", "Amadeus", "Definition of Ready / Done"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Agent Operations & Operating Model Lead", "bullet_transformation": "Spearheaded AgentOps foundation and capability lifecycle for enterprise AI agents across 7 squads (~50 engineers/POs), defining functional specifications, decision logic, and pre-production validation gates that reduced workflow failure rates by 30%."}, {"target_role": "Delivery Lead & Value Stream Consultant (Axel Springer)", "proposed_title": "Product Delivery Lead \u2014 Marketplace & Booking Platforms", "bullet_transformation": "Orchestrated end-to-end platform capability roadmap for high-traffic B2B marketplace serving 10,000+ users, aligning decision rules, data pipelines, and microservices on AWS to improve platform availability to 99.9%."}], "jd_file": "JD_02_NG_Travel_AI_Agent_Operations_Manager.md"}, {"jd_title": "Jd 06 Lectra Team Lead Ia", "fit_score": 91, "fit_label": "Excellent", "composite_breakdown": {"ats_score": {"score": 92, "evidence": "Clean single-column structure, standard section headers, clean date formatting, bilingual markers, and high keyword overlap for AI agents, Azure AI Foundry, Claude Code, and Agile operating models."}, "recruiter_score": {"score": 90, "evidence": "Rapid visual readability, clear leadership progression spanning multi-squad delivery, explicit metric density (>70% of bullets quantified), and strong executive positioning."}, "bullet_impact_score": {"score": 92, "evidence": "Bullets rigorously follow the Google XYZ formula (Accomplished [X], measured by [Y], by doing [Z]) with explicit toolchains (Rovo, Claude Code, Azure AI Foundry, Jira Cloud)."}, "target_match_score": {"score": 88, "evidence": "Direct match on AI agent deployment, Claude Code guardrails, agile team management, Azure AI Foundry, and governance; slight keyword gap on Microsoft Copilot Studio and GitHub Copilot naming."}, "executive_score": {"score": 88, "evidence": "Demonstrated governance oversight across 7 squads (~50 engineers/POs), EU AI Act classification experience, and strategic portfolio telemetry design."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,150/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect / Directeur de Projet IA & Governance", "csuite_deliverable_match": "AI Operating Model & Governance Architecture"}, "executive_summary": "Alaa Eddine Roucadi is an exceptional match for Lectra's Team Lead IA role, offering proven experience managing multidisciplinary AI/agile squads (~50 engineers/POs) and rolling out agentic workflows (Rovo, Claude Code, Azure AI Foundry). His dual background in software engineering and AI operating model governance aligns directly with Lectra's mandate to bridge IT architects, BPOs, and AI Agent Engineers.", "matching_strengths": ["Extensive experience architecting and governing AI agent workflows and developer assistants (Claude Code, Azure AI Foundry, Rovo).", "Proven multi-team delivery management (7 squads, 50 engineers/POs) covering capacity planning, release gates, and agile scaling.", "Strong governance and industrialization background, including EU AI Act classification, data privacy, and human-in-the-loop controls.", "Engineering foundation (Master 2 IT Management & Software Engineering Degree) ensuring credibility with AI Agent Engineers and IT Architects.", "Bilingual French/English fluency matching Lectra's international industrial context."], "competency_gaps": ["Specific hands-on mention of Microsoft Copilot Studio is absent from the CV despite Azure OpenAI/Foundry coverage.", "GitHub Copilot is not explicitly listed alongside Claude Code in developer tooling guardrails.", "Location alignment: Candidate is based in Nice / Open to Remote, whereas Lectra IT is headquartered in Cestas/Bordeaux (hybrid feasibility needs framing)."], "gaps": [{"gap": "Explicit mention of Copilot Studio alongside Azure AI Foundry", "jd_importance": "High", "how_to_close": "Highlight experience configuring or evaluating Microsoft Copilot Studio in enterprise agentic orchestrations within the Technical Skills section."}, {"gap": "GitHub Copilot explicit adoption alongside Claude Code", "jd_importance": "Medium", "how_to_close": "Add GitHub Copilot to developer assistant governance bullets alongside Claude Code."}, {"gap": "On-site / Hybrid presence in Cestas / Bordeaux", "jd_importance": "Medium", "how_to_close": "Clarify mobility and availability for regular on-site presence in Cestas/Bordeaux in the profile header/cover note."}], "quick_wins": ["Explicitly pair 'GitHub Copilot' and 'Copilot Studio' next to 'Claude Code' and 'Azure AI Foundry' in the summary and skills list.", "Emphasize collaboration with Business Process Owners (BPO) and Enterprise IT Architects in past banking/enterprise mandates.", "Frame current leadership as a direct parallel to Lectra's target squad structure (AI Agent Engineers, AI Devs, Delivery Coordinators)."], "keywords_missing": ["Copilot Studio", "GitHub Copilot", "Business Process Owners (BPO)", "Culture AI-first", "Plan de charge"], "keywords_present": ["Azure AI Foundry", "Claude Code", "AI Agent", "GenAI", "Operating Model", "Gouvernance", "Delivery", "Agile", "TDD / CI/CD", "Data Lake / Data Warehouse"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Delivery Lead & AI Agent Team Lead", "bullet_transformation": "Managed a multidisciplinary team of 7 squads (~50 engineers, POs, and delivery coordinators) deploying agentic workflows and developer copilots (Claude Code, GitHub Copilot, Azure AI Foundry), lifting sprint readiness and cutting delivery defect rates by 25% across 3 enterprise AI product lines."}, {"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Delivery Lead & AI Operating Model Architect", "bullet_transformation": "Partnered with IT Architects and Business Process Owners (BPOs) to frame and industrialize AI use cases, establishing automated definition-of-ready checks and EU AI Act compliance gates to transition agentic tools from PoC to enterprise production."}], "jd_file": "JD_06_Lectra_Team_Lead_IA.md"}, {"jd_title": "Jd 13 Wenvision Consulting Manager Genai Agents", "fit_score": 81, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 80, "evidence": "Clean single-column structure and standard headers. Strong semantic match for GenAI, Agentic AI, LLM governance, Claude, and Azure OpenAI, with minor gaps on specific orchestration frameworks (LangChain, CrewAI, AutoGen, Vector Stores)."}, "recruiter_score": {"score": 82, "evidence": "Clear executive trajectory bridging consulting, delivery leadership, and AI operating models. Over 65% of bullet points contain hard metrics ($/%, squad size, velocity)."}, "bullet_impact_score": {"score": 85, "evidence": "Accomplishment-focused bullets applying Google XYZ style across AI agent deployments, SDLC automation, EU AI Act risk workshops, and scaled delivery."}, "target_match_score": {"score": 75, "evidence": "Strong alignment on C-Level advisory, PoC-to-industrialization, and multi-squad governance. Technical agent orchestration (LangChain/CrewAI/AutoGen/RAG) is addressed at the operating model and tooling level (Rovo, Claude, Azure AI Foundry) rather than direct code-level multi-agent pipeline building."}, "executive_score": {"score": 85, "evidence": "Proven C-Level advisory, consulting sales/RFP experience (Capgemini/Wemanity), enterprise governance under EU AI Act, and multi-tribe leadership across 50+ engineers."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,150/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect / Consulting Manager IA Gen", "csuite_deliverable_match": "AI Operating Model & Governance Architecture"}, "executive_summary": "Alaa is a strong fit for the Consulting Manager position at WEnvision, offering 10+ years of dual consulting and delivery leadership with proven enterprise GenAI agent deployment (Atlassian Rovo, Claude Code, Azure AI Foundry). His profile excels on the 'ORGA - CULTURE - GOVERNANCE' pillars and PoC-to-production industrialization, needing only minor technical reframing around multi-agent frameworks (CrewAI, AutoGen, LangChain) and multi-LLM RAG architectures.", "matching_strengths": ["Proven track record scaling GenAI use cases from PoC to enterprise production across 7 squads (~50 engineers/POs) in regulated banking.", "Deep expertise in Agentic AI SDLC workflows (Atlassian Rovo, Claude Code guardrails, automated workflow gates).", "Established C-Level advisory posture on AI strategy, portfolio governance, and EU AI Act risk classification.", "Prior Tier-1 consulting background (Capgemini) preparing technical RFP responses and commercial service offerings.", "Holistic approach across Tech, Organization, and Culture (Agile@Scale, Spotify Health Checks, Communities of Practice)."], "competency_gaps": ["Explicit hands-on exposure with open-source multi-agent frameworks (CrewAI, AutoGen, LangGraph/LangChain).", "Specific technical mentions of RAG pipelines, Vector Stores (Chroma, Pinecone, Qdrant), and Embeddings architecture.", "Explicit coverage of Mistral and Gemini APIs alongside Claude and OpenAI/Azure.", "Geographic hybrid constraint (JD specifies Neuilly/Paris 3 days on-site; candidate is Nice-based / Full Remote)."], "gaps": [{"gap": "Multi-Agent Orchestration Frameworks (LangChain, CrewAI, AutoGen)", "jd_importance": "Critical", "how_to_close": "Highlight architectural patterns for autonomous agents, memory management, and multi-agent coordination evaluated in Azure AI Foundry or client PoCs."}, {"gap": "RAG & Vector Architecture Details (Embeddings, Vector Databases, Chunking)", "jd_importance": "High", "how_to_close": "Add architectural bullets describing knowledge grounding and RAG pipelines implemented for internal copilots and knowledge bases."}, {"gap": "Multi-LLM Benchmarking & Evaluation (Mistral, Gemini, LLMOps)", "jd_importance": "High", "how_to_close": "Detail prompt evaluation metrics, hallucination auditing, and prompt versioning frameworks deployed during AI CoE engagements."}, {"gap": "On-site Availability in Paris/Neuilly-sur-Seine", "jd_importance": "Medium", "how_to_close": "Clarify flexible travel availability for client workshops and executive steering committees in Paris."}], "quick_wins": ["Infuse keywords like 'RAG architectures', 'Multi-Agent Workflows (CrewAI/AutoGen paradigms)', and 'LLMOps Governance' into the Professional Summary and Core Capabilities.", "Highlight commercial pre-sales and C-Level scoping in the Wemanity and Capgemini sections to match the Consulting Manager profile.", "Specify multi-LLM coverage by explicitly listing Mistral, Gemini, OpenAI, and Anthropic Claude in the Technical Stack section."], "keywords_missing": ["LangChain", "CrewAI", "AutoGen", "RAG", "Embeddings", "Vector Stores", "LLMOps", "Mistral", "Gemini", "Chain-of-thought", "Memory Management"], "keywords_present": ["GenAI", "Agents AI", "Copilot", "Claude", "Azure OpenAI", "Azure AI Foundry", "Gouvernance", "EU AI Act", "PoC to production", "C-Level", "Prompting", "SDLC Automation"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "Engagement Lead \u2014 AI Agent Strategy & Operating Model Architecture", "bullet_transformation": "Architected enterprise GenAI & multi-agent delivery roadmap across 7 squads (50+ engineers/POs), reducing refinement cycle time by 30% and eliminating manual gatekeeping by deploying Atlassian Rovo agentic workflows, Claude Code guardrails, and EU AI Act compliance gates."}, {"target_role": "Delivery Lead & Offering Development Consultant (Capgemini)", "proposed_title": "Consulting Consultant \u2014 Strategy & Offering Development", "bullet_transformation": "Structured and pitched digital consulting proposals and RFP responses generating multi-team client engagements, while directing software delivery transformations cutting release lead time by 40%."}], "jd_file": "JD_13_WEnvision_Consulting_Manager_GenAI_Agents.md"}, {"jd_title": "Jd 17 Globalis Ai Delivery Lead", "fit_score": 93, "fit_label": "Excellent", "composite_breakdown": {"ats_score": {"score": 95, "evidence": "Standard markdown parseability, strong keyword alignment with Claude Code, AI agents, SDLC augmentation, Agile frameworks, and software engineering background."}, "recruiter_score": {"score": 92, "evidence": "Compelling career arc moving from software engineer to Agile Delivery Lead to AI Delivery Lead; quantifies productivity gains, cycle-time reductions, and agentic workflows."}, "bullet_impact_score": {"score": 90, "evidence": "Consistently applies Google XYZ formula (Accomplished [X], measured by [Y], by doing [Z]) with explicit metrics and specific tooling (Rovo, Claude Code, Jira, Azure AI)."}, "target_match_score": {"score": 94, "evidence": "Direct alignment with Globalis's AI-First vision: developer background, daily hands-on implementation of Claude Code/Rovo for developer augmentation, SDLC optimization, and prior pre-sales (avant-vente) consulting experience."}, "executive_score": {"score": 88, "evidence": "Strong cross-tribe governance, proven delivery across ~50 engineers, portfolio telemetry design (Alignify), and commercial RFP proposal history at Capgemini."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac800\u2013\u20ac1,100/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect", "csuite_deliverable_match": "AI Operating Model Architecture | Value Stream & Flow Optimization"}, "executive_summary": "Alaa is an exceptional match for the Globalis AI Delivery Lead role, bridging a verified technical software engineering background with active, hands-on leadership in AI-augmented SDLC (Rovo, Claude Code, Azure AI Foundry). His dual capability in team acculturation/productivity enhancement and commercial pre-sales (avant-ventes) directly satisfies Globalis's AI-First consulting mission.", "matching_strengths": ["Proven track record governing and scaling AI-assisted development tools (Claude Code guardrails, Atlassian Rovo agentic workflows) across engineering squads.", "Solid software engineering foundation (Engineering degree, prior hands-on full-stack/.NET/Vue.js/Web API experience) facilitating credible developer acculturation.", "Direct experience in consulting pre-sales, technical RFP responses, and commercial pitch deck creation (Capgemini).", "Deep expertise in Agile delivery, Value Stream Mapping, and eliminating non-value-added SDLC friction.", "Full-remote readiness with established cross-functional delivery cadence."], "competency_gaps": ["Light on specific modern mobile engineering ecosystems (React Native, Flutter, iOS/Android native pipelines).", "Could make web/mobile prompt engineering examples more explicit in relation to client-facing web app builds."], "gaps": [{"gap": "Mobile-specific AI tooling and SDLC workflows (React Native / Flutter / iOS / Android)", "jd_importance": "Medium", "how_to_close": "Highlight experience coaching web/mobile teams and integrate agentic workflows specific to front-end/mobile UI code generation."}, {"gap": "Explicit emphasis on bespoke Prompt Engineering libraries for client delivery", "jd_importance": "Low", "how_to_close": "Detail system prompt architectures and custom prompt libraries built for POs/Devs during refinement and test generation."}], "quick_wins": ["Front-load the Capgemini avant-vente / commercial proposal experience higher up in the summary or executive capabilities to directly target Globalis's consulting needs.", "Emphasize developer productivity metrics (e.g., % reduction in PR review turnaround, lead time to deploy) driven by Claude Code and Rovo in the current role."], "keywords_missing": ["Mobile (iOS/Android/Flutter)", "Copilot Studio", "Prompt Engineering Library"], "keywords_present": ["AI Delivery Lead", "Claude Code", "SDLC", "Avant-Vente", "Atlassian Rovo", "LLMs", "Agile", "Value Stream", "Full Remote", "Vue.js", "Web API"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Delivery Lead & AI-Augmented SDLC Architect", "bullet_transformation": "Spearheaded AI-augmented SDLC adoption across 7 squads (~50 devs and POs) using Claude Code and Atlassian Rovo, eliminating 4+ hours/week of manual administrative overhead and accelerating story-to-PR cycle time by 30% through automated gate checks and AI refinement copilots."}, {"target_role": "Delivery Lead & Offering Development Consultant (Capgemini)", "proposed_title": "Delivery Lead & Pre-Sales / Avant-Ventes Consultant", "bullet_transformation": "Co-authored 10+ technical RFP responses and commercial avant-vente pitch decks for enterprise digital offerings, while driving CI/CD automation across engineering teams to reduce release turnaround by 40%."}], "jd_file": "JD_17_Globalis_AI_Delivery_Lead.md"}, {"jd_title": "Jd 18 Zenika Lead Ia", "fit_score": 84, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 82, "evidence": "Standard markdown hierarchy, clean contact info, and clear chronological formatting. Matches key terms like Claude Code, Azure AI Foundry, and Guardrails, but misses specific frameworks like LangChain, LangGraph, Mistral Devstral, and AI Gateway."}, "recruiter_score": {"score": 88, "evidence": "Strong career progression from software engineering and delivery lead to AI Operating Model Lead. High density of active verbs (Architected, Deployed, Governed) and strong quantified business metrics (>60% of bullets)."}, "bullet_impact_score": {"score": 90, "evidence": "High adherence to Google XYZ formula with concrete metrics (25% predictability lift, 50 engineers across 7 squads, 4h/week saved) and modern tooling integration (Rovo, Claude Code, Azure AI Foundry)."}, "target_match_score": {"score": 75, "evidence": "Excellent match on strategic AI consulting, Claude Code governance, avant-vente/RFP leadership, and community facilitation (Coding Dojo, meetups). Slight gap in pure hands-on Python agentic orchestration (LangChain, LangGraph, Mistral Devstral) and AI FinOps/token management."}, "executive_score": {"score": 85, "evidence": "Demonstrated experience leading multi-squad transformations (~50 engineers), structuring Capgemini RFP responses and commercial proposals, and establishing EU AI Act compliance gates for banking leadership."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,150/day", "umbrella_title_alignment": "Lead IA & AI Operating Model Architect / Directeur de Projet IA & Governance", "csuite_deliverable_match": "AI Operating Model & Governance Architecture"}, "executive_summary": "Alaa is a strong fit for Zenika's Lead IA role, offering an ideal blend of strategic advisory, consulting DNA (Capgemini RFP/avant-vente), community leadership, and hands-on AI SDLC governance (Claude Code, Rovo, Azure AI Foundry). While his recent background is delivery- and operating-model-focused, his software engineering foundation allows him to quickly master and champion Zenika's agentic frameworks (LangChain, LangGraph, FinOps IA).", "matching_strengths": ["Dual Consulting & Engineering Profile: Background spanning software engineering (INSA/ENSA) to Capgemini commercial RFP/avant-vente proposals, fitting Zenika's 'Porteur d'offre + Consultant' hybrid mandate.", "Agentic SDLC & Guardrails: Proven track record deploying Atlassian Rovo and governing Claude Code usage with strict human-in-the-loop, review gates, and risk classifications.", "Knowledge Sharing & Community Culture: Proven organizer of Coding Dojos (2014\u20132019) and Agile Playground meetups, directly matching Zenika's core transmission/talks/blog pillar.", "Cloud & Technical Base: Solid technical awareness across Azure AI Foundry, AWS, Docker, CI/CD pipelines, and microservices architectures."], "competency_gaps": ["Orchestration Frameworks: Lack of explicit production experience with LangChain, LangGraph, and specialized coding models like Mistral Devstral or GitHub Copilot.", "AI FinOps & Gateway Architecture: Limited explicit framing around LLM token management, AI Gateway routing, Agent Registry patterns, and TCO optimization."], "gaps": [{"gap": "LangChain & LangGraph Orchestration", "jd_importance": "High", "how_to_close": "Highlight or build an open-source prototype implementing multi-agent state machines using LangGraph alongside existing Claude Code/Rovo experience."}, {"gap": "AI FinOps, AI Gateway & Token Management", "jd_importance": "High", "how_to_close": "Add explicit metrics and architecture descriptions detailing cost-per-token governance, AI Gateway caching/routing, and FinOps ROI tracking in the Professional Summary or banking mandate."}, {"gap": "Mistral Devstral & GitHub Copilot Ecosystem", "jd_importance": "Medium", "how_to_close": "Expand the agentic tooling section to reference experience evaluating Mistral models and integrating GitHub Copilot in developer workflows."}], "quick_wins": ["Frame the Capgemini and banking mandate bullet points to explicitly emphasize 'avant-vente', 'cadrage d'offres IA', and 'soutenances C-Level'.", "Integrate 'FinOps IA' and 'Token Optimization' terminology into the AI Operating Model and Azure AI Foundry bullet points.", "Mention LangGraph, AI Gateway, and Agent Registry in the Technical Stack / Skills section."], "keywords_missing": ["LangChain", "LangGraph", "Mistral Devstral", "GitHub Copilot", "FinOps IA", "AI Gateway", "Agent Registry", "TCO"], "keywords_present": ["Claude Code", "Azure AI Foundry", "Guardrails", "GenAI", "Architecture Cloud", "Microservices", "AWS", "Docker", "CI/CD", "Communities of Practice", "Avant-ventes / Commercial Proposals"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "Lead IA & AI Operating Model Architect", "bullet_transformation": "Architected agentic AI delivery operating models across 7 squads (~50 engineers), integrating Claude Code guardrails and Azure AI Foundry workflows, cutting refinement cycle times by 30% while enforcing EU AI Act risk tiers and FinOps token governance."}, {"target_role": "Delivery Lead & Offering Development Consultant (Amadeus & Capgemini)", "proposed_title": "Lead Consultant & Offering Development Lead", "bullet_transformation": "Spearheaded technical avant-vente pitches, client RFPs, and strategic offering development for digital and software engineering consulting, converting 5+ enterprise proposals into multi-year delivery engagements."}], "jd_file": "JD_18_Zenika_Lead_IA.md"}, {"jd_title": "Jd 20 Dataworks Ai Transformation Lead", "fit_score": 81, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 78, "evidence": "Clean document architecture and standard headings. Solid match on software engineering background, Python, AWS, APIs, and AI agent concepts, but misses specific keyword triggers like n8n, Dify, Snowflake, and Vertex AI."}, "recruiter_score": {"score": 82, "evidence": "Immediate visibility of dual technical engineering and change management background. Upward trajectory, strong active verbs, and clear executive stakeholder exposure across banking and consumer platforms."}, "bullet_impact_score": {"score": 88, "evidence": "High concentration of metrics (50 engineers, 7 squads, 25% predictability gain, 40% downtime reduction) and explicit Google XYZ framing across agent deployment and workflow optimization."}, "target_match_score": {"score": 75, "evidence": "Matches the core requirement of an engineer with change management and agentic workflow execution. Slight mismatch in tooling ecosystem (Azure AI/Rovo vs. Vertex AI/n8n/Dify) and domain focus (SDLC/engineering ops vs. broader business ops like HR/Marketing)."}, "executive_score": {"score": 85, "evidence": "Proven ability to present flow telemetry and value realization to executive leaders, govern multi-squad divisions, and structure operating model change across complex cross-functional teams."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,150/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect", "csuite_deliverable_match": "AI Operating Model & Governance Architecture"}, "executive_summary": "Alaa Eddine Roucadi is a strong fit for the AI Transformation Lead role, offering a rare combination of formal software engineering credentials and 10+ years of scaled change management. While his recent experience centers on engineering/SDLC agentic workflows (Rovo, Claude Code, Azure AI) and governance, his hands-on development foundation and experience in supply chain/finance tribes position him well to build and scale internal business automations across cross-functional units.", "matching_strengths": ["Dual Technical & Change Management Profile: Holds a formal Software Engineering degree (INSA/ENSA) combined with 10+ years driving organizational transformation.", "Hands-on AI Agent Workflow Deployment: Proven track record deploying automated AI agents (Atlassian Rovo, Claude Code guardrails) to streamline operational bottlenecks.", "Executive Reporting & Flow Telemetry: Built custom internal tooling (Alignify) to provide C-level and product leadership real-time visibility into throughput, ROI, and delivery bottlenecks.", "Cross-Functional Domain Exposure: Led agile transformations across Supply Chain Finance, Data Lake/Warehouse, and B2B/B2C digital platforms.", "Cloud & Technical Foundation: Hands-on experience with AWS, Python, REST APIs, Microservices, and relational/non-relational architectures."], "competency_gaps": ["Specific Low-Code Agent Orchestration Tooling: No explicit mention of n8n or Dify on the CV (currently focused on Azure AI Foundry and Rovo).", "Data Platform Keywords: Lacks direct citation of Snowflake and SQL querying experience, despite extensive Data Lake/Data Warehouse governance.", "Multi-Department Business Ops: Current CV heavily emphasizes software engineering and SDLC automation over non-technical business units (HR, Marketing, Customer Operations)."], "gaps": [{"gap": "Hands-on workflow automation with n8n and Dify", "jd_importance": "Critical", "how_to_close": "Highlight rapid prototyping projects or POCs built with n8n/Dify connecting REST APIs to LLMs, showcasing execution speed."}, {"gap": "Vertex AI & Snowflake exposure", "jd_importance": "High", "how_to_close": "Explicitly mention SQL and data integration with Snowflake/Vertex AI alongside existing Azure AI Foundry and AWS experience."}, {"gap": "Broad Business Ops AI Use Cases (Marketing, HR, Finance Ops)", "jd_importance": "Medium", "how_to_close": "Frame past workflow automation and value stream mapping around cross-departmental operations beyond pure engineering backlogs."}], "quick_wins": ["Add 'n8n', 'Dify', 'Snowflake', and 'SQL' into the Skills > Technical Awareness & Stack section.", "Reframe the Professional Summary to emphasize 'Internal Business Operations & Workflow Automation' alongside 'AI-native SDLC transformation'.", "Under Wemanity or Axel Springer experience, highlight cross-departmental automation examples spanning Finance, Supply Chain, and Operations."], "keywords_missing": ["n8n", "Dify", "Vertex AI", "Snowflake", "SQL", "Mini-apps", "HR", "Marketing"], "keywords_present": ["Python", "AWS", "APIs", "AI agents", "Automations", "Workflows", "Change Management", "Supply Chain", "Finance", "LLM tooling", "ROI", "Stakeholder Management"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Transformation Lead & Operating Model Architect", "bullet_transformation": "Architected end-to-end AI agent workflows and automations across 7 cross-functional squads (~50 engineers/business stakeholders), eliminating 4+ hours/week of operational latency by deploying task-specific agent pipelines, API integrations, and human-in-the-loop validation gates."}, {"target_role": "Agile Delivery Lead & Portfolio Telemetry Architect (Wemanity)", "proposed_title": "AI Operations & Data Transformation Lead", "bullet_transformation": "Redesigned internal operations and data pipeline governance across Supply Chain Finance and Data Enablers tribes, delivering 25% higher release predictability and building custom automation apps (Alignify) to present real-time ROI and throughput telemetry directly to executive leadership."}], "jd_file": "JD_20_Dataworks_AI_Transformation_Lead.md"}, {"jd_title": "Jd 21 Ceva Logistics Global Data Ai Innovation Expert", "fit_score": 83, "fit_label": "Strong", "composite_breakdown": {"ats_score": {"score": 84, "evidence": "Clean single-column structure, standard section headers, and solid keyword alignment across AI governance, cross-functional delivery, and data lake/warehouse ecosystems. Minor terminology gap in explicit hands-on SQL/analytics phrases and direct logistics domain deep-dives."}, "recruiter_score": {"score": 86, "evidence": "Clear career progression from Software Engineering to Agile Delivery Lead to AI Operating Model Lead. High density of active verbs (Architected, Governed, Spearheaded) and quantified achievements (>60% of bullets contain %, headcount, or cycle time metrics)."}, "bullet_impact_score": {"score": 82, "evidence": "Bullets adhere closely to Google XYZ formula, demonstrating business outcomes (25% defect reduction, 25% predictability improvement, 40% downtime cut) by leveraging technical frameworks and governance models."}, "target_match_score": {"score": 79, "evidence": "Matches core requirements for AI use case prioritization, stakeholder alignment, data governance, and international delivery. Slight mismatch on deep hands-on data analytics/SQL execution vs. strategic delivery orchestration."}, "executive_score": {"score": 85, "evidence": "Demonstrated authority in multi-tribe operating models (7 squads, 50 engineers), EU AI Act risk classification, cross-functional change management, and commercial proposal creation."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,100/day", "umbrella_title_alignment": "AI Delivery Lead & AI Innovation Consultant", "csuite_deliverable_match": "AI Operating Model & Governance Architecture | Value Stream & Flow Optimization"}, "executive_summary": "The candidate presents a strong match for CEVA Logistics' Global Data Insight and Innovation Expert mandate, bringing 10+ years of experience bridging AI product delivery, operating model governance, and multi-squad coordination. His background governing Data Lake/Supply Chain Finance tribes in banking aligns directly with CEVA's need for structuring data/AI use cases, external partner delivery, and adoption governance across global logistics operations.", "matching_strengths": ["Extensive experience structuring, prioritizing, and governing AI and analytics use cases across multi-squad divisions.", "Demonstrated domain experience leading Agile operating model transformation for Data Lake, Data Warehouse, and Supply Chain Finance tribes.", "Strong track record in AI governance, EU AI Act compliance, and responsible AI guardrails.", "Proven cross-functional leadership bridging business stakeholders, Product Owners, and technical engineering squads in international environments.", "Master's degrees in Engineering and IT Management (INSA Toulouse / IAE Lyon) matching educational criteria."], "competency_gaps": ["Explicit evidence of hands-on data analysis scripting (e.g., querying operational logistics datasets via SQL/Pandas directly).", "Deep end-to-end Contract Logistics / Freight Forwarding domain vernacular (e.g., warehousing, TMS, WMS workflows) outside of banking supply chain finance."], "gaps": [{"gap": "Contract Logistics / Freight Operations Domain Depth", "jd_importance": "High", "how_to_close": "Highlight existing Supply Chain Finance (Confirming & Factoring) tribe achievements and map them to physical supply chain, contract logistics, and inventory analytics."}, {"gap": "Hands-on Data Analytics & Dashboarding Tools (SQL, PowerBI/Tableau)", "jd_importance": "Medium", "how_to_close": "Add explicit references to data exploration and telemetry dashboards created during data lake governance and Alignify metric tracking."}], "quick_wins": ["Elevate 'Supply Chain Finance Tribe' in the Wemanity experience to emphasize end-to-end supply chain operational exposure.", "Explicitly frame Alignify and Jira Cloud telemetry work as 'executive dashboards & data-driven insights' to match the JD's reporting focus.", "Add 'SQL' and 'Contract Logistics & Supply Chain Analytics' into the Technical Awareness / Skills section."], "keywords_missing": ["Contract Logistics", "SQL", "Operations Research", "Data Insight", "Logistics Innovation"], "keywords_present": ["AI Transformation", "Supply Chain", "Data Lake", "Data Warehouse", "Data Governance", "Use Cases", "Stakeholder Management", "Change Management", "Python", "Product Ownership", "Business Cases"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "Global AI Innovation & Operating Model Lead", "bullet_transformation": "Directed delivery strategy and prioritization for 3 enterprise AI product lines (fraud ML, financial forecasting, GenAI sales copilot) by structuring operational use cases and risk-gate governance across 7 cross-functional squads (~50 engineers/POs), accelerating time-to-production while ensuring 100% compliance with data governance standards."}, {"target_role": "Agile Delivery Lead & Portfolio Telemetry Architect (Wemanity)", "proposed_title": "Data & Supply Chain Innovation Delivery Lead", "bullet_transformation": "Led data transformation and operating model governance across Supply Chain Finance and Data Lake tribes (7 squads, 50 engineers), standardizing centralized data warehousing pipelines to enable 5 downstream feature teams to extract actionable operational analytics and improve delivery predictability by 25%."}], "jd_file": "JD_21_CEVA_Logistics_Global_Data_AI_Innovation_Expert.md"}, {"jd_title": "Jd 24 Accenture Ai Transformation Process Excellence Manager", "fit_score": 95, "fit_label": "Excellent", "composite_breakdown": {"ats_score": {"score": 96, "evidence": "Standard markdown architecture, impeccable header hygiene, clear chronological progression, and deep semantic matching across target operating models, agentic workflows, and process optimization."}, "recruiter_score": {"score": 95, "evidence": "Compelling 10+ YOE trajectory across top-tier consultancies (Wemanity, Capgemini) and regulated enterprises. High-impact action verbs and strong quantification across multi-tribe delivery scopes (~50 engineers/POs)."}, "bullet_impact_score": {"score": 94, "evidence": "Bullets rigorously follow the Google XYZ formula (Accomplished [X], measured by [Y], by doing [Z]), detailing Atlassian Rovo agentic deployments, gate automation, and cycle time reductions."}, "target_match_score": {"score": 95, "evidence": "Direct alignment with process redesign, target operating models (TOM), agentic autonomy vs. human oversight, C-level advisory, and commercial proposal/RFP contributions (Capgemini)."}, "executive_score": {"score": 94, "evidence": "Strong demonstration of EU AI Act risk tier governance, human-in-the-loop guardrails, organizational scale (7 squads, 2 banking tribes), and commercial enablement."}}, "freelance_contract_fit": {"estimated_daily_rate_eur": "\u20ac850\u2013\u20ac1,200/day", "umbrella_title_alignment": "AI Delivery Lead & Operating Model Architect / Directeur de Projet IA & Governance", "csuite_deliverable_match": "AI Operating Model & Governance Architecture | Value Stream & Flow Optimization"}, "executive_summary": "Exceptional fit for Accenture's AI Transformation & Process Excellence Manager role. The candidate combines extensive management consulting pedigree (Wemanity, Capgemini) with hands-on AI operating model implementation, agentic SDLC process redesign (Rovo, Claude Code), human-agent governance, and commercial proposal authorship.", "matching_strengths": ["Proven track record designing AI Target Operating Models (TOM) and process governance across 7 squads (~50 engineers and POs) in a tier-1 banking environment.", "Deep practical implementation of agentic workflows (Atlassian Rovo agents for Definition-of-Ready scoring, automated workflow gate checks, and PO co-pilots), directly mirroring Accenture's Agent Experience (AX) Design remit.", "Strong governance and human-agent handoff expertise, including Claude Code guardrails, mandatory human sign-off gates, and EU AI Act risk classification workshops.", "Consulting commercial background with proven experience authoring commercial proposals, technical RFP responses, and pitch decks at Capgemini.", "Extensive Lean/Agile process excellence expertise (Value Stream Mapping, Spotify Health Checks, 3 Amigos) driving measurable lead time and defect reductions."], "competency_gaps": ["Explicit use of the specific consulting nomenclature 'AX Design' (Agent Experience Design) and formal human-to-agent escalation taxonomies in the summary.", "Broader non-SDLC enterprise process transformation use cases (e.g., Finance, HR, Supply Chain front-office operations) could be highlighted alongside technical SDLC automation."], "gaps": [{"gap": "Explicit branding around 'AX Design' (Agent Experience Design) and agent autonomy tiering", "jd_importance": "High", "how_to_close": "Explicitly incorporate 'AX Design' and 'Human-Agent Collaboration Frameworks' into the Core Executive Capabilities and Work Experience bullet points."}, {"gap": "Highlighting multi-functional business process benchmarking beyond software engineering workflows", "jd_importance": "Medium", "how_to_close": "Emphasize the Supply Chain Finance Tribe and business operational workflows in the Wemanity/Capgemini project narratives."}], "quick_wins": ["Incorporate the term 'AX Design (Agent Experience Design)' into the Professional Summary and Core Capabilities sections.", "Explicitly frame Rovo and Claude Code deployments as 'Agent-to-Human Hand-off and Escalation Design'.", "Surface Capgemini commercial RFP/proposal wins closer to the top of executive capabilities to reinforce management consulting alignment."], "keywords_missing": ["AX Design", "Agent Experience Design", "Future State Process Design", "Benchmarking", "Impact du changement"], "keywords_present": ["Mod\u00e8les op\u00e9rationnels (Operating Model Architecture)", "Int\u00e9gration de l'IA (AI Integration)", "Cr\u00e9ation d'agents (Agentic workflows / Rovo Agents)", "Ateliers parties prenantes (Workshops / Discovery)", "Gouvernance & Human-in-the-loop", "Propositions commerciales / RFP", "Coaching de consultants / squads", "Value Stream & Refonte de processus"], "role_reworking_suggestions": [{"target_role": "AI Delivery Coach & AI Operating Model Consultant (Wemanity)", "proposed_title": "AI Transformation & Operating Model Architect (AX & Process Excellence)", "bullet_transformation": "Architected end-to-end AI operating models and AX Design frameworks across 7 squads (~50 engineers/POs), defining future-state processes, agent autonomy levels, and human-in-the-loop escalation gates to lift delivery predictability by 25%."}, {"target_role": "Delivery Lead & Offering Development Consultant (Capgemini / Amadeus)", "proposed_title": "Process Excellence & Commercial Offering Consultant", "bullet_transformation": "Co-authored high-stakes commercial RFP responses, consulting proposals, and C-level pitch decks, generating new client engagements while directing process re-engineering and CI/CD automation that cut release cycle times by 40%."}], "jd_file": "JD_24_Accenture_AI_Transformation_Process_Excellence_Manager.md"}];
+function switchTab(id,el){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  el.classList.add('active');
+}
+function toggleCard(bodyId,header){
+  const body=document.getElementById(bodyId);
+  const ch=header.querySelector('.chevron');
+  const open=body.style.display==='block';
+  body.style.display=open?'none':'block';
+  ch.classList.toggle('open',!open);
+}
+function filterJDs(){
+  const q=document.getElementById('jd-search').value.toLowerCase();
+  const f=document.getElementById('jd-filter').value;
+  document.querySelectorAll('.jd-card').forEach(card=>{
+    const t=card.dataset.title||'';
+    const s=parseInt(card.dataset.score||0);
+    const ms=t.includes(q);
+    const mf=f==='all'||(f==='strong'&&s>=70)||(f==='moderate'&&s>=50&&s<70)||(f==='low'&&s<50);
+    card.style.display=ms&&mf?'':'none';
+  });
+}
+new Chart(document.getElementById('scoreChart'),{
+  type:'bar',
+  data:{labels:["Jd 01 Equancy Data Ai Delivery Manager", "Jd 02 Ng Travel Ai Agent Operations Manager", "Jd 06 Lectra Team Lead Ia", "Jd 13 Wenvision Consulting Manager Genai Agents", "Jd 17 Globalis Ai Delivery Lead", "Jd 18 Zenika Lead Ia", "Jd 20 Dataworks Ai Transformation Lead", "Jd 21 Ceva Logistics Global Data Ai Innovation Expert", "Jd 24 Accenture Ai Transformation Process Excellence Manager"],datasets:[{label:'Composite Fit Score',data:[89, 87, 91, 81, 93, 84, 81, 83, 95],backgroundColor:["#10b981", "#10b981", "#10b981", "#10b981", "#10b981", "#10b981", "#10b981", "#10b981", "#10b981"],borderRadius:6}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#94a3b8'}},y:{ticks:{color:'#94a3b8',font:{size:11}},grid:{display:false}}}}
+});
+new Chart(document.getElementById('skillChart'),{
+  type:'bar',
+  data:{labels:["Agentic SDLC", "Scaled Agile (SAFe/LeSS)", "Delivery & Flow Telemetry", "AI Governance & EU AI Act", "Atlassian Rovo & Claude Code", "Client Advisory & Avant-vente", "LangChain / LangGraph", "FinOps & Token Economics"],datasets:[{label:'Target JDs Requiring',data:[25, 25, 24, 22, 20, 18, 8, 6],backgroundColor:'rgba(99,102,241,.7)',borderColor:'rgba(129,140,248,1)',borderWidth:1,borderRadius:4}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#94a3b8',stepSize:1}},y:{ticks:{color:'#94a3b8',font:{size:11}},grid:{display:false}}}}
+});
+</script>
+</body>
+</html>

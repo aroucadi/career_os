@@ -1,0 +1,66 @@
+{
+  "id": "jeanluc_picard",
+  "full_name": "JeanLuc Picard",
+  "headline": "Senior AI Transformation Director & Enterprise Delivery Lead",
+  "resume_file": "resumes/jeanluc_picard_cv.txt",
+  "contact_email": "jean-luc.picard@starfleet.org",
+  "linkedin_url": "https://linkedin.com/in/jeanluc-picard",
+  "mobility": {
+    "base_location": "Paris, Hybrid / Remote",
+    "remote_preference": "100% Remote or Flexible Hybrid",
+    "travel_tolerance": "Executive milestones, quarterly kickoffs",
+    "unacceptable_commutes": []
+  },
+  "languages": {
+    "fluent_languages": [
+      "English Professional",
+      "French Native / Bilingual"
+    ],
+    "blocker_languages": []
+  },
+  "commercials": {
+    "freelance_tjm_eur": "1100 EUR / day",
+    "permanent_salary_eur": "140k - 160k EUR",
+    "currency": "EUR"
+  },
+  "scope": {
+    "primary_titles": [
+      "Senior AI Transformation Director & Enterprise Delivery Lead",
+      "AI Program Director & Operating Model Architect"
+    ],
+    "seniority": "Senior / Executive / Lead",
+    "anti_roles": [
+      "Junior IC",
+      "Unsupervised Maintenance"
+    ],
+    "core_domains": [
+      "Enterprise Technology",
+      "Banking & Finance",
+      "AI Systems"
+    ]
+  },
+  "proof_metrics": [
+    {
+      "category": "Scale",
+      "label": "Scale Metric",
+      "evidence": "Executive leader with 15+ years delivering mission-critical AI operating models, multi-squad agile transformations,",
+      "keywords": [
+        "Executive",
+        "leader",
+        "years",
+        "delivering"
+      ]
+    },
+    {
+      "category": "Scale",
+      "label": "Scale Metric",
+      "evidence": "- Led 8 engineering squads and 60+ engineers delivering generative AI copilot systems.",
+      "keywords": [
+        "engineering",
+        "squads",
+        "engineers",
+        "delivering"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "sophie_cloud_architect",
+  "full_name": "Sophie Laurent",
+  "headline": "Staff Cloud & DevOps Platform Architect (AWS / Kubernetes)",
+  "resume_file": "resumes/Sophie_DevOps_Resume.md",
+  "contact_email": "sophie.laurent.cloud@gmail.com",
+  "linkedin_url": "https://www.linkedin.com/in/sophielaurent-cloud/",
+  "mobility": {
+    "base_location": "Lyon, France",
+    "remote_preference": "Full Remote or Hybrid Lyon/Paris",
+    "travel_tolerance": "Occasional travel to Paris or Western Europe",
+    "unacceptable_commutes": [
+      "London on-site",
+      "Berlin on-site",
+      "non-Schengen on-site"
+    ]
+  },
+  "languages": {
+    "fluent_languages": [
+      "French (Native)",
+      "English (Full Professional B2/C1)"
+    ],
+    "blocker_languages": [
+      "German",
+      "Spanish",
+      "Japanese"
+    ]
+  },
+  "commercials": {
+    "freelance_tjm_eur": "650 - 800 EUR / day",
+    "permanent_salary_eur": "85k - 100k EUR",
+    "currency": "EUR"
+  },
+  "scope": {
+    "primary_titles": [
+      "Staff Cloud Architect",
+      "Lead DevOps Engineer",
+      "Platform Engineering Lead",
+      "SRE Director"
+    ],
+    "seniority": "Lead / Staff Engineer tier (8+ YOE)",
+    "anti_roles": [
+      "Agile Coach / Scrum Master",
+      "Frontend Developer",
+      "Manual QA"
+    ],
+    "core_domains": [
+      "Cloud Infrastructure",
+      "E-Commerce",
+      "SaaS Scaleups",
+      "Fintech"
+    ]
+  },
+  "proof_metrics": [
+    {
+      "category": "Scale",
+      "label": "Kubernetes Scale",
+      "evidence": "Managed 12 multi-region EKS clusters serving 20M daily requests with 99.99% uptime.",
+      "keywords": [
+        "eks",
+        "kubernetes",
+        "12 cluster",
+        "99.99%"
+      ]
+    },
+    {
+      "category": "Cost & FinOps",
+      "label": "AWS Cloud Cost Optimization",
+      "evidence": "Reduced annualized AWS cloud expenditure by 38% ($450k/year) via Graviton and Karpenter autoscaling.",
+      "keywords": [
+        "38%",
+        "450k",
+        "karpenter",
+        "graviton",
+        "finops"
+      ]
+    },
+    {
+      "category": "CI/CD Velocity",
+      "label": "Deployment Flow Velocity",
+      "evidence": "Engineered GitOps ArgoCD pipeline decreasing mean time to release from 4 days to 25 minutes.",
+      "keywords": [
+        "argocd",
+        "gitops",
+        "25 minute",
+        "pipeline"
+      ]
+    }
+  ]
+}

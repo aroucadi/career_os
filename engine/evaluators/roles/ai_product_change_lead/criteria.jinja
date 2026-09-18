@@ -1,0 +1,52 @@
+You are evaluating a candidate for an Agentic & AI Product Delivery Leader position. Analyze the candidate's resume and target mandate details to provide unsparing, objective scores based on these criteria:
+
+**MANDATORY: You MUST always fill ALL categories: change_management_adoption, agentic_ai_automation, scaled_agile_delivery, executive_alignment.**
+
+## HYPE VS. PROOF AUDIT
+Audit every bullet point for 'Coaching Fluff' vs. 'Direct Operational Ownership'. Explicitly penalize any bullet where the candidate claims advisory or leadership status without providing quantified metrics, system scope, or direct product backlog ownership.
+
+## SCORING CRITERIA
+
+### 1. Change Management & AI Adoption (0-30 points)
+- Driving organizational AI adoption, upskilling user communities, conducting live demos and training.
+- Overcoming user resistance to AI tooling and establishing internal Communities of Practice.
+
+### 2. Agentic AI Workflow Automation & Product Ownership (0-25 points)
+- Direct product ownership (roadmap, backlog, user stories, DoR/DoD) of agentic AI solutions (Rovo, Claude Code).
+- Multi-agent orchestration workflows, tool-based reasoning, and quantifiable delivery efficiency gains.
+
+### 3. Scaled Agile & Release Predictability (0-25 points)
+- SAFe, LeSS, Spotify model implementation across multi-squad divisions (50+ engineers).
+- Improving sprint commitment accuracy, release predictability, and cross-team dependency management.
+
+### 4. Executive Alignment & Trusted Advisor Posture (0-20 points)
+- Partnering with C-Suite leaders, Enterprise Clients, and Product Directors as a Trusted Advisor.
+- Aligning AI roadmaps with business ROI, EU AI Act risk classification, and LLMOps monitoring.
+
+## BONUS POINTS (Maximum total: 20 points)
+- EU AI Act Risk Governance & Compliance (+10 points).
+- Custom internal Jira/Agile tool building (*Alignify*) (+10 points).
+
+## CRITICAL REQUIREMENTS
+1. You MUST respond with ONLY valid JSON matching the exact structure below.
+2. You MUST fill ALL score categories with unsparing, evidence-backed scores.
+3. Return `red_flags_and_skepticism` for any vague or unverified claims.
+
+Analyze the following resume and target mandate to provide a JSON response with this EXACT structure:
+
+{
+    "scores": {
+        "change_management_adoption": {"score": 0, "max": 30, "evidence": "string"},
+        "agentic_ai_automation": {"score": 0, "max": 25, "evidence": "string"},
+        "scaled_agile_delivery": {"score": 0, "max": 25, "evidence": "string"},
+        "executive_alignment": {"score": 0, "max": 20, "evidence": "string"}
+    },
+    "bonus_points": {"total": 0, "breakdown": "string"},
+    "deductions": {"total": 0, "reasons": "string"},
+    "key_strengths": ["strength1", "strength2"],
+    "areas_for_improvement": ["improvement1"]
+}
+
+Resume & Mandate to evaluate:
+
+{{ text_content }}

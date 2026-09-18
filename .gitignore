@@ -1,1 +1,43 @@
+# Environment & Secrets
+.env
+.env.*
+gcp_credentials.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs & Temporary
+logs/
+*.log
 full_prompt.md
+.cache/
+cache/
+*.tmp
+
+# SQLite WAL temporary files
+*.db-wal
+*.db-shm
+storage/backups/
+
+# Node & Next.js
+node_modules/
+.next/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Resumes / Uploads temporary files
+resumes/uploads/
+resumes/tailored/*.tmp

@@ -1,0 +1,2551 @@
+{
+  "version": "2.0",
+  "last_synced_at": "2026-09-17T19:01:57.636126",
+  "total_count": 41,
+  "opportunities": {
+    "JD_01": {
+      "id": "JD_01",
+      "jd_filename": "JD_01_Equancy_Data_AI_Delivery_Manager.md",
+      "job_title": "Data & AI Delivery Manager (H/F)",
+      "company": "Equancy (Groupe EDG)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.092880",
+      "last_updated_at": "2026-09-17T19:01:57.635990",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 92.0,
+        "scores": {
+          "change_management_adoption": 14.0,
+          "agentic_ai_automation": 16.0,
+          "scaled_agile_delivery": 12.0,
+          "executive_alignment": 6.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "avant-ventes",
+          "propositions commerciales",
+          "développement commercial",
+          "P&L",
+          "cadrage budgétaire",
+          "pilotage financier",
+          "relation client"
+        ],
+        "competency_gaps": [
+          "Commercial pre-sales and proposal writing ('avant-ventes')",
+          "Direct P&L and financial oversight of client deliveries",
+          "Transitioning from a facilitator ('Scrum Master') to an authoritative consultant ('Posture Conseil')",
+          "Experience managing external client accounts over internal developer teams"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.092961"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.092934",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        },
+        {
+          "timestamp": "2026-09-08T16:53:35.025084",
+          "from_stage": "QUALIFIED",
+          "to_stage": "REJECTED",
+          "actor": "user",
+          "notes": "Episodic memory logged: Client maximum budget is capped at 650 EUR/day; P&L pre-sales ownership strictly required",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_02": {
+      "id": "JD_02",
+      "jd_filename": "JD_02_NG_Travel_AI_Agent_Operations_Manager.md",
+      "job_title": "AI Agent Operations Manager",
+      "company": "NG Travel",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.093347",
+      "last_updated_at": "2026-09-08T11:00:32.093351",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 58.0,
+        "scores": {
+          "change_management_adoption": 18.0,
+          "agentic_ai_automation": 11.0,
+          "scaled_agile_delivery": 22.0,
+          "executive_alignment": 12.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "AgentOps",
+          "LLMOps",
+          "Booking Workflows",
+          "Tourism",
+          "E-Commerce",
+          "Conversion Metrics",
+          "Custom LLM Evaluation",
+          "EVALs"
+        ],
+        "competency_gaps": [
+          "Transitioning Agile Scrum Master attempting to rebrand as an AI Operations Leader with less than a year of superficial AI experience.",
+          "Lacks hands-on engineering or development depth; reliance on packaged enterprise vendor tools (Atlassian) rather than designing proprietary AI pipeline architectures.",
+          "No experience in consumer transaction optimization, e-commerce purchase funnels, or booking workflow performance.",
+          "Corporate governance mindset (EU AI Act, banking regulations) which does not fit the lean, agile, startup-like culture of the target AI-native travel project."
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.093389"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.093375",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_03": {
+      "id": "JD_03",
+      "jd_filename": "JD_03_Retailer_IT_AI_Delivery_Senior_Manager.md",
+      "job_title": "IT AI Delivery Senior Manager (m/f)",
+      "company": "International Retailer (Annecy) / The Recruiter",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.093699",
+      "last_updated_at": "2026-09-17T19:01:57.348612",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 92.0,
+        "scores": {
+          "change_management_adoption": 14.0,
+          "agentic_ai_automation": 10.0,
+          "scaled_agile_delivery": 13.0,
+          "executive_alignment": 8.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "FinOps",
+          "Token economics",
+          "budget management",
+          "vendor contract negotiation",
+          "platform reliability",
+          "ML infrastructure",
+          "production LLMOps",
+          "line management"
+        ],
+        "competency_gaps": [
+          "Direct line management of permanent FTEs (only coached/advised external or pre-existing teams)",
+          "Ownership of multi-million euro technology budgets and commercial vendor agreements",
+          "Hard engineering accountability for platform uptime, hosting costs, and production service level agreements (SLAs)",
+          "Deep architecture/engineering delivery of core ML/DL systems beyond off-the-shelf software development plugins"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.093736"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.093724",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_04": {
+      "id": "JD_04",
+      "jd_filename": "JD_04_TaelentR_Leader_Transformation_GenAI_Gemini.md",
+      "job_title": "Leader - Transformation & Adoption GenAI (Gemini / Google AI)",
+      "company": "Taelent-R / Top Consulting Firm",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.094024",
+      "last_updated_at": "2026-09-08T11:00:32.094028",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 42.0,
+        "scores": {
+          "change_management_adoption": 14.0,
+          "agentic_ai_automation": 8.0,
+          "scaled_agile_delivery": 15.0,
+          "executive_alignment": 5.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "Google Gemini",
+          "Vertex AI",
+          "Google Cloud Platform (GCP)",
+          "Avant-vente",
+          "Propositions commerciales",
+          "Grands comptes",
+          "Gemini Adoption"
+        ],
+        "competency_gaps": [
+          "Direct experience pitching, designing, and delivering Google-specific Generative AI solutions.",
+          "Commercial pre-sales ownership (scoping client needs, drafting proposals, leading bid defenses).",
+          "Adoption strategies targeted at business-unit end users rather than purely technical/SDLC software engineering teams."
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.094056"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.094045",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_05": {
+      "id": "JD_05",
+      "jd_filename": "JD_05_Accenture_Agentic_AI_Engineering_Senior_Manager.md",
+      "job_title": "AI Engineering / Agentic AI Engineering Senior Manager",
+      "company": "Accenture (AI & Data Practice)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.094342",
+      "last_updated_at": "2026-09-08T11:00:32.094346",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 45.0,
+        "scores": {
+          "change_management_adoption": 18.0,
+          "agentic_ai_automation": 8.0,
+          "scaled_agile_delivery": 14.0,
+          "executive_alignment": 5.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "LangGraph",
+          "AutoGen",
+          "LlamaIndex",
+          "Semantic Kernel",
+          "Neo4j",
+          "Graph RAG",
+          "LangSmith",
+          "MLflow",
+          "Azure OpenAI",
+          "Avant-Vente",
+          "Propositions Commerciales"
+        ],
+        "competency_gaps": [
+          "Deep technical execution of Agentic AI / LLM Orchestration",
+          "Proven commercial/pre-sales business development for multi-million euro consulting engagements",
+          "Architectural knowledge of enterprise RAG and data platforms (Databricks, Snowflake)",
+          "Direct hands-on engineering ownership versus process management"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.094373"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.094363",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_06": {
+      "id": "JD_06",
+      "jd_filename": "JD_06_Lectra_Team_Lead_IA.md",
+      "job_title": "Team Lead IA H/F",
+      "company": "Lectra (Cestas / Bordeaux)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.094632",
+      "last_updated_at": "2026-09-08T11:00:32.094635",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.094650",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_07": {
+      "id": "JD_07",
+      "jd_filename": "JD_07_OnePoint_Leader_Adoption_IA_Gemini.md",
+      "job_title": "Leader Adoption IA Générative",
+      "company": "Gemini & Google AI Studio H/F — OnePoint",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.094895",
+      "last_updated_at": "2026-09-08T11:00:32.094898",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 44.0,
+        "scores": {
+          "change_management_adoption": 12.0,
+          "agentic_ai_automation": 8.0,
+          "scaled_agile_delivery": 20.0,
+          "executive_alignment": 10.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "Google Gemini",
+          "Google AI Studio",
+          "Workspace AI",
+          "Gemini at Work",
+          "Google Cloud",
+          "Avant-vente",
+          "C-Level pre-sales",
+          "Conduite du changement"
+        ],
+        "competency_gaps": [
+          "Mastery of Google-specific GenAI tools and enterprise integration strategies",
+          "Scale change management experience targeting thousands of business users rather than tech squads",
+          "Strategic pre-sales and consulting posture suitable for corporate C-suite (DSI, DRH, business sponsors)"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.094922"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.094913",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_08": {
+      "id": "JD_08",
+      "jd_filename": "JD_08_Reply_Manager_Transformation_IA_DSI.md",
+      "job_title": "Manager Transformation IA de la DSI H/F",
+      "company": "Reply France",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.095183",
+      "last_updated_at": "2026-09-08T11:00:32.095186",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 70.0,
+        "scores": {
+          "change_management_adoption": 20.0,
+          "agentic_ai_automation": 21.0,
+          "scaled_agile_delivery": 19.0,
+          "executive_alignment": 10.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "RFP",
+          "Avant-vente",
+          "Offre de conseil",
+          "ITIL",
+          "Lean",
+          "P&L",
+          "Pilotage économique"
+        ],
+        "competency_gaps": [
+          "Commercial pre-sales and response to client RFPs",
+          "Direct-line management and recruitment of consulting cohorts",
+          "Structuring of scalable consulting offerings and methodology frameworks",
+          "DSI-level financial and economic steering"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.095508"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.095495",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_09": {
+      "id": "JD_09",
+      "jd_filename": "JD_09_PwC_Manager_IA.md",
+      "job_title": "Manager IA F/H",
+      "company": "PwC France (IA & Data Practice)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.095824",
+      "last_updated_at": "2026-09-08T11:00:32.095827",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 52.0,
+        "scores": {
+          "change_management_adoption": 16.0,
+          "agentic_ai_automation": 10.0,
+          "scaled_agile_delivery": 18.0,
+          "executive_alignment": 8.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "LangChain",
+          "LangFuse",
+          "Vector Databases",
+          "OpenTelemetry",
+          "MLOps",
+          "LLMOps",
+          "Avant-vente",
+          "Propositions commerciales",
+          "Chiffrage"
+        ],
+        "competency_gaps": [
+          "Direct hands-on engineering/architecture of GenAI and RAG frameworks.",
+          "Commercial and pre-sales expertise (responding to RFPs, defense/soutenances, and pricing).",
+          "Direct line management of AI Engineers and Consultants (not just Agile facilitation).",
+          "Industrial LLMOps infrastructure implementation (Azure, AWS, GCP, CI/CD for AI)."
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.095856"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.095845",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_10": {
+      "id": "JD_10",
+      "jd_filename": "JD_10_Capgemini_Invent_Managing_Consultant_Agentic_AI.md",
+      "job_title": "Managing Consultant - Transformation IA & Agentic AI",
+      "company": "Capgemini Invent",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.096125",
+      "last_updated_at": "2026-09-08T11:00:32.096128",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.096145",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_11": {
+      "id": "JD_11",
+      "jd_filename": "JD_11_Reply_Consultant_Transformation_IA_Organisations.md",
+      "job_title": "Consultant Transformation IA & Organisations (H/F)",
+      "company": "Reply France",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.096398",
+      "last_updated_at": "2026-09-08T11:00:32.096401",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 76.0,
+        "scores": {
+          "change_management_adoption": 22.0,
+          "agentic_ai_automation": 23.0,
+          "scaled_agile_delivery": 20.0,
+          "executive_alignment": 11.0
+        },
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [
+          "Avant-Vente",
+          "RFP",
+          "Propositions commerciales",
+          "Appels d'offres",
+          "Microsoft Copilot"
+        ],
+        "competency_gaps": [
+          "Commercial pre-sales and RFP proposal creation",
+          "Non-IT/Business-side organizational change management",
+          "Management consulting business development"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.096427"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.096417",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_12": {
+      "id": "JD_12",
+      "jd_filename": "JD_12_Capgemini_Invent_Sr_Managing_Consultant_Director_IA.md",
+      "job_title": "Senior / Managing Consultant / Directeur en Transformation Digitale, Produit et IA",
+      "company": "Capgemini Invent (Paris)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.096691",
+      "last_updated_at": "2026-09-08T11:00:32.096694",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.096711",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_13": {
+      "id": "JD_13",
+      "jd_filename": "JD_13_WEnvision_Consulting_Manager_GenAI_Agents.md",
+      "job_title": "Consulting Manager - Stratégie IA Gen & Agents AI",
+      "company": "WEnvision (Groupe SFEIR)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.096954",
+      "last_updated_at": "2026-09-08T11:00:32.096957",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.096971",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_14": {
+      "id": "JD_14",
+      "jd_filename": "JD_14_EY_Sr_Manager_IA_Financial_Services.md",
+      "job_title": "Consultant Senior et Manager Intelligence Artificielle (IA & IA générative) - Secteur Financier F/H",
+      "company": "EY (Financial Services Office - FSO)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.097217",
+      "last_updated_at": "2026-09-08T11:00:32.097220",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.097237",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_15": {
+      "id": "JD_15",
+      "jd_filename": "JD_15_Converteo_Sr_Consultant_Transformation_IA.md",
+      "job_title": "Consultant Senior en Transformation IA H/F",
+      "company": "Converteo (Practice Transformation IA)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.097494",
+      "last_updated_at": "2026-09-08T11:00:32.097497",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.097512",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_16": {
+      "id": "JD_16",
+      "jd_filename": "JD_16_Externatic_Manager_Transformation_IA.md",
+      "job_title": "Manager Transformation & IA - H/F",
+      "company": "International Marketing & Tech Consulting Agency / Externatic",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.097743",
+      "last_updated_at": "2026-09-08T11:00:32.097745",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.097762",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_17": {
+      "id": "JD_17",
+      "jd_filename": "JD_17_Globalis_AI_Delivery_Lead.md",
+      "job_title": "AI Delivery Lead",
+      "company": "Globalis (ESN AI-First)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.097988",
+      "last_updated_at": "2026-09-08T11:00:32.097991",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.098004",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_18": {
+      "id": "JD_18",
+      "jd_filename": "JD_18_Zenika_Lead_IA.md",
+      "job_title": "Lead IA - Paris F/H",
+      "company": "Zenika (ESN Tech/Excellence)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.098226",
+      "last_updated_at": "2026-09-08T11:00:32.098229",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.098244",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_19": {
+      "id": "JD_19",
+      "jd_filename": "JD_19_Econocom_Consultant_Strategique_IA.md",
+      "job_title": "Consultant Stratégique IA (H/F)",
+      "company": "Econocom (Apps, Cloud & Data)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.098475",
+      "last_updated_at": "2026-09-08T11:00:32.098478",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.098491",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_20": {
+      "id": "JD_20",
+      "jd_filename": "JD_20_Dataworks_AI_Transformation_Lead.md",
+      "job_title": "AI Transformation Lead",
+      "company": "Dataworks / International Consumer Platform (Paris)",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.098712",
+      "last_updated_at": "2026-09-08T11:00:32.098715",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.098730",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_21": {
+      "id": "JD_21",
+      "jd_filename": "JD_21_K2_Partnering_Senior_AI_Product_Delivery_Manager.md",
+      "job_title": "Senior AI Product & Delivery Manager",
+      "company": "K2 Partnering (Full Remote - Europe)",
+      "location": "100% Remote – EUROPE BASED ONLY (Occasional travel)",
+      "employment_type": "Freelance / Contract (Initial 3 months + potential extension)",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.098971",
+      "last_updated_at": "2026-09-08T11:00:32.098974",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 82.0,
+        "scores": {
+          "change_management_adoption": 26.0,
+          "agentic_ai_automation": 20.0,
+          "scaled_agile_delivery": 23.0,
+          "executive_alignment": 15.0
+        },
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [
+          "Procurement AI",
+          "Spend Review Platform",
+          "Source-to-Pay (S2P)",
+          "Build vs Buy vs Partner",
+          "Vendor Management",
+          "Solution Selection"
+        ],
+        "competency_gaps": [
+          "Explicit Procurement / Spend Taxonomy familiarity (needs bridging from Supply Chain Finance)",
+          "Formal RFP / Vendor Contract negotiations (needs highlighting from past tool selections)",
+          "Title alignment: framing Delivery Lead & PO Co-pilot experience as dual Product & Delivery Ownership"
+        ],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.099001"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.098990",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_22": {
+      "id": "JD_22",
+      "jd_filename": "JD_22_Third_Bridge_Group_AI_Automation_Lead.md",
+      "job_title": "AI Automation Lead",
+      "company": "Third Bridge Group",
+      "location": "London, England, United Kingdom",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4452995977",
+      "discovered_at": "2026-09-08T11:00:32.099978",
+      "last_updated_at": "2026-09-08T11:00:32.099982",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 79.0,
+        "scores": {
+          "change_management_adoption": 18.0,
+          "agentic_ai_automation": 23.0,
+          "scaled_agile_delivery": 19.0,
+          "executive_alignment": 16.0
+        },
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [
+          "prompt engineering"
+        ],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.100009"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.099998",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_23": {
+      "id": "JD_23",
+      "jd_filename": "JD_23_Arch_Insurance__UK_AVP__Automation___AI_Delivery.md",
+      "job_title": "AVP, Automation & AI Delivery",
+      "company": "Arch Insurance (UK) Limited",
+      "location": "London, England, United Kingdom",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4441505823",
+      "discovered_at": "2026-09-08T11:00:32.100546",
+      "last_updated_at": "2026-09-08T11:00:32.100550",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 76.0,
+        "scores": {
+          "change_management_adoption": 20.0,
+          "agentic_ai_automation": 24.0,
+          "scaled_agile_delivery": 19.0,
+          "executive_alignment": 10.0
+        },
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.100575"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.100565",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_24": {
+      "id": "JD_24",
+      "jd_filename": "JD_24_Sapiens_AI_Lead.md",
+      "job_title": "AI Lead",
+      "company": "Sapiens",
+      "location": "Bengaluru, Karnataka, India",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4435664184",
+      "discovered_at": "2026-09-08T11:00:32.101278",
+      "last_updated_at": "2026-09-08T11:00:32.101283",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 72.0,
+        "scores": {
+          "change_management_adoption": 16.0,
+          "agentic_ai_automation": 21.0,
+          "scaled_agile_delivery": 22.0,
+          "executive_alignment": 10.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.101323"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.101308",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_25": {
+      "id": "JD_25",
+      "jd_filename": "JD_25_EPAM_Systems_Delivery_Manager.md",
+      "job_title": "Delivery Manager",
+      "company": "EPAM Systems",
+      "location": "Singapore, Singapore",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4460222239",
+      "discovered_at": "2026-09-08T11:00:32.102151",
+      "last_updated_at": "2026-09-08T11:00:32.102157",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 71.0,
+        "scores": {
+          "change_management_adoption": 22.0,
+          "agentic_ai_automation": 14.0,
+          "scaled_agile_delivery": 20.5,
+          "executive_alignment": 12.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.102197"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.102182",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_26": {
+      "id": "JD_26",
+      "jd_filename": "JD_26_Third_Bridge_Group_AI_Automation_Lead.md",
+      "job_title": "AI Automation Lead",
+      "company": "Third Bridge Group",
+      "location": "London, England, United Kingdom",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4452995977",
+      "discovered_at": "2026-09-08T11:00:32.103301",
+      "last_updated_at": "2026-09-08T11:00:32.103306",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 79.0,
+        "scores": {
+          "change_management_adoption": 18.0,
+          "agentic_ai_automation": 23.0,
+          "scaled_agile_delivery": 19.0,
+          "executive_alignment": 16.0
+        },
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [
+          "prompt engineering"
+        ],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.103367"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.103344",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_27": {
+      "id": "JD_27",
+      "jd_filename": "JD_27_Paires_Founding_AI_Engineer.md",
+      "job_title": "Founding AI Engineer",
+      "company": "Paires",
+      "location": "United Arab Emirates",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4454585425",
+      "discovered_at": "2026-09-08T11:00:32.104124",
+      "last_updated_at": "2026-09-08T11:00:32.104128",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 61.0,
+        "scores": {
+          "change_management_adoption": 16.0,
+          "agentic_ai_automation": 19.0,
+          "scaled_agile_delivery": 16.0,
+          "executive_alignment": 10.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.104165"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.104153",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_28": {
+      "id": "JD_28",
+      "jd_filename": "JD_28_Tata_Consultancy_Ser_Gen_AI_Developer.md",
+      "job_title": "Gen AI Developer",
+      "company": "Tata Consultancy Services",
+      "location": "Mississauga, Ontario, Canada",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4460608042",
+      "discovered_at": "2026-09-08T11:00:32.104698",
+      "last_updated_at": "2026-09-08T11:00:32.104702",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 65.0,
+        "scores": {
+          "change_management_adoption": 10.0,
+          "agentic_ai_automation": 24.0,
+          "scaled_agile_delivery": 16.0,
+          "executive_alignment": 12.0
+        },
+        "strategic_verdict": "CONDITIONAL GO",
+        "ats_keyword_gaps": [
+          "rag",
+          "prompt engineering"
+        ],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T11:00:32.104729"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.104718",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_29": {
+      "id": "JD_29",
+      "jd_filename": "JD_29_Computer_Futures_Generative_AI_Engineer_Vienna.md",
+      "job_title": "Generative AI Engineer / AI Consultant (AI CoE",
+      "company": "RAISE Project) — Computer Futures / Client Vienna",
+      "location": "Hybrid working — on-site 3 days/week in Vienna, Austria",
+      "employment_type": "Freelance (Contract)",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.105271",
+      "last_updated_at": "2026-09-08T11:00:32.105275",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.105294",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_30": {
+      "id": "JD_30",
+      "jd_filename": "JD_30_Transformation_Coach_AI_Agile.md",
+      "job_title": "Transformation Coach (AI & Agile)",
+      "company": "Enterprise Client",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "REJECTED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-08T11:00:32.105657",
+      "last_updated_at": "2026-09-17T19:01:51.863119",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 88.0,
+        "scores": {
+          "change_management_adoption": 25.0,
+          "agentic_ai_automation": 25.0,
+          "scaled_agile_delivery": 25.0,
+          "executive_alignment": 20.0
+        },
+        "strategic_verdict": "NO-GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-08T14:46:02.554085"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-08T11:00:32.105676",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        },
+        {
+          "timestamp": "2026-09-08T11:01:24.131612",
+          "from_stage": "DISCOVERED",
+          "to_stage": "QUALIFIED",
+          "actor": "user",
+          "notes": "Evaluated with score 88/100 and 100/100 quality gates",
+          "follow_up_date": null
+        },
+        {
+          "timestamp": "2026-09-08T11:01:24.131675",
+          "from_stage": "QUALIFIED",
+          "to_stage": "PITCH_READY",
+          "actor": "user",
+          "notes": "Direct hiring manager pitch compiled",
+          "follow_up_date": null
+        },
+        {
+          "timestamp": "2026-09-08T11:10:34.917759",
+          "from_stage": "PITCH_READY",
+          "to_stage": "PITCH_READY",
+          "actor": "user",
+          "notes": "Canonical prompt evaluation achieved 100/100 score on first pass",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_31": {
+      "id": "JD_31",
+      "jd_filename": "JD_31_Zenith_Rh_Consultant_Expert_IA_Accompagnement_Impl.md",
+      "job_title": "JD_31",
+      "company": "Enterprise Client",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.free-work.com/fr/tech-it/job-mission/assistant-chef-de-projet/copy-of-pmo-transverse-chef-de-projet-senior-pilotage-si",
+      "discovered_at": "2026-09-10T11:24:04.093883",
+      "last_updated_at": "2026-09-10T11:24:04.097927",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "JD_32": {
+      "id": "JD_32",
+      "jd_filename": "JD_32_Zenith_Rh_Consultant_Expert_IA_Accompagnement_Impl.md",
+      "job_title": "JD_32",
+      "company": "Enterprise Client",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.free-work.com/fr/tech-it/job-mission/assistant-chef-de-projet/copy-of-pmo-transverse-chef-de-projet-senior-pilotage-si",
+      "discovered_at": "2026-09-10T11:29:26.555415",
+      "last_updated_at": "2026-09-10T11:29:26.560653",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "JD_33": {
+      "id": "JD_33",
+      "jd_filename": "JD_33_Zenith_Rh_pour_client_final_Consultant_Expert_IA_Accompagnement_Impl.md",
+      "job_title": "JD_33",
+      "company": "Enterprise Client",
+      "location": "EMEA / Remote",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.free-work.com/fr/tech-it/job-mission/assistant-chef-de-projet/copy-of-pmo-transverse-chef-de-projet-senior-pilotage-si",
+      "discovered_at": "2026-09-10T15:27:26.284866",
+      "last_updated_at": "2026-09-10T15:27:26.288994",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "JD_34": {
+      "id": "JD_34",
+      "jd_filename": "JD_34_SCC_Responsable_Programme_Strategique_IA.md",
+      "job_title": "Responsable de Programme Stratégique IA (H/F)",
+      "company": "Freelance",
+      "location": "Marseille (100% On-site)",
+      "employment_type": "Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-15T10:56:32.632975",
+      "last_updated_at": "2026-09-17T18:28:12.732891",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-15T10:56:32.633041",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
+      "tags": []
+    },
+    "JD_35": {
+      "id": "JD_35",
+      "jd_filename": "JD_35_Salt_Head_of_AI_Adoption_Abu_Dhabi.md",
+      "job_title": "Head of AI Adoption",
+      "company": "Salt Middle East (Client: Abu Dhabi Govt / Leading Org)",
+      "location": "Abu Dhabi, UAE (Expat / Relocation / Hub)",
+      "employment_type": "12-Month Extendable Contract",
+      "stage": "QUALIFIED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4461889604/",
+      "discovered_at": "2026-09-17T15:56:36.342827",
+      "last_updated_at": "2026-09-17T16:02:52.291571",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 92.0,
+        "scores": {},
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T15:56:36.342755"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4452995977": {
+      "id": "radar_4452995977",
+      "jd_filename": "JD_26_Third_Bridge_Group_AI_Automation_Lead.md",
+      "job_title": "AI Automation Lead",
+      "company": "Third Bridge Group",
+      "location": "London, England, United Kingdom",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4452995977",
+      "discovered_at": "2026-09-17T16:02:42.621778",
+      "last_updated_at": "2026-09-17T16:02:42.622786",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 79.0,
+        "scores": {},
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.621749"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4441505823": {
+      "id": "radar_4441505823",
+      "jd_filename": "JD_23_Arch_Insurance__UK_AVP__Automation___AI_Delivery.md",
+      "job_title": "AVP, Automation & AI Delivery",
+      "company": "Arch Insurance (UK) Limited",
+      "location": "London, England, United Kingdom",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4441505823",
+      "discovered_at": "2026-09-17T16:02:42.655226",
+      "last_updated_at": "2026-09-17T16:02:42.656571",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 76.0,
+        "scores": {},
+        "strategic_verdict": "GO",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.655191"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4435664184": {
+      "id": "radar_4435664184",
+      "jd_filename": "JD_24_Sapiens_AI_Lead.md",
+      "job_title": "AI Lead",
+      "company": "Sapiens",
+      "location": "Bengaluru, Karnataka, India",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4435664184",
+      "discovered_at": "2026-09-17T16:02:42.689133",
+      "last_updated_at": "2026-09-17T16:02:42.690210",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 72.0,
+        "scores": {},
+        "strategic_verdict": "DISCOVERED",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.689112"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4460222239": {
+      "id": "radar_4460222239",
+      "jd_filename": "JD_25_EPAM_Systems_Delivery_Manager.md",
+      "job_title": "Delivery Manager",
+      "company": "EPAM Systems",
+      "location": "Singapore, Singapore",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4460222239",
+      "discovered_at": "2026-09-17T16:02:42.722542",
+      "last_updated_at": "2026-09-17T16:02:42.723618",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 71.0,
+        "scores": {},
+        "strategic_verdict": "DISCOVERED",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.722512"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4454585425": {
+      "id": "radar_4454585425",
+      "jd_filename": "JD_27_Paires_Founding_AI_Engineer.md",
+      "job_title": "Founding AI Engineer",
+      "company": "Paires",
+      "location": "United Arab Emirates",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4454585425",
+      "discovered_at": "2026-09-17T16:02:42.755667",
+      "last_updated_at": "2026-09-17T16:02:42.756701",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 61.0,
+        "scores": {},
+        "strategic_verdict": "DISCOVERED",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.755646"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    },
+    "radar_4460608042": {
+      "id": "radar_4460608042",
+      "jd_filename": "JD_28_Tata_Consultancy_Ser_Gen_AI_Developer.md",
+      "job_title": "Gen AI Developer",
+      "company": "Tata Consultancy Services",
+      "location": "Mississauga, Ontario, Canada",
+      "employment_type": "Contract",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "https://www.linkedin.com/jobs/view/4460608042",
+      "discovered_at": "2026-09-17T16:02:42.790351",
+      "last_updated_at": "2026-09-17T16:02:42.791338",
+      "next_follow_up": null,
+      "evaluation": {
+        "overall_score": 65.0,
+        "scores": {},
+        "strategic_verdict": "DISCOVERED",
+        "ats_keyword_gaps": [],
+        "competency_gaps": [],
+        "dealbreaker_flags": [],
+        "evaluated_at": "2026-09-17T16:02:42.790331"
+      },
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [],
+      "tags": []
+    }
+  }
+}

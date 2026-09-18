@@ -1,0 +1,912 @@
+[
+  {
+    "jd_file": "JD_01_Equancy_Data_AI_Delivery_Manager.md",
+    "job_title": "Data & AI Delivery Manager (H/F)",
+    "employer": "Equancy (Groupe EDG)",
+    "overall_match_score": 48,
+    "scores": {
+      "change_management_adoption": {
+        "score": 14,
+        "max": 30,
+        "evidence": "Conflates Scrum/Agile coaching with strategic client-side change management. Facilitating prompt engineering workshops for internal squads is a far cry from guiding LVMH or Renault executives through business-wide AI adoption."
+      },
+      "agentic_ai_automation": {
+        "score": 16,
+        "max": 25,
+        "evidence": "Shows interesting familiarity with Atlassian Rovo and Claude Code workflows, but this experience is hyper-indexed on internal developer SDLC automation rather than delivering external client-facing enterprise ML/AI business applications."
+      },
+      "scaled_agile_delivery": {
+        "score": 12,
+        "max": 25,
+        "evidence": "The candidate has spent years acting as a Scrum Master and Agile Coach. While technical delivery is mentioned, their posture is heavily execution-oriented and support-focused ('servant leader') rather than demonstrating hard, end-to-end commercial project ownership, budget responsibility, or risk management."
+      },
+      "executive_alignment": {
+        "score": 6,
+        "max": 20,
+        "evidence": "Complete void regarding pre-sales ('avant-ventes') and writing commercial proposals. In a senior ESN role at Equancy, this missing skill is an immediate dealbreaker. A consultant who cannot sell or draft winning bids is a cost center, not a partner."
+      }
+    },
+    "bonus_points": {
+      "total": 2,
+      "breakdown": "Possesses a solid academic background (INSA Toulouse engineering + IAE Lyon M2) and understands regulatory boundaries like the EU AI Act."
+    },
+    "deductions": {
+      "total": 15,
+      "reasons": "Major penalty applied for a complete lack of pre-sales / commercial proposal experience, combined with an overly administrative 'Agile Facilitator' posture that directly clashes with the authoritative, high-impact consulting posture Equancy demands."
+    },
+    "ats_keyword_gaps": [
+      "avant-ventes",
+      "propositions commerciales",
+      "développement commercial",
+      "P&L",
+      "cadrage budgétaire",
+      "pilotage financier",
+      "relation client"
+    ],
+    "competency_gaps": [
+      "Commercial pre-sales and proposal writing ('avant-ventes')",
+      "Direct P&L and financial oversight of client deliveries",
+      "Transitioning from a facilitator ('Scrum Master') to an authoritative consultant ('Posture Conseil')",
+      "Experience managing external client accounts over internal developer teams"
+    ],
+    "recommended_actions": [
+      "Aggressively strip out 'Scrum Master' and 'Agile Coach' framing; replace with 'Delivery Manager' and 'Engagement Lead' to fit ESN vocabulary.",
+      "Add explicit examples of pre-sales contributions, detailing the size of proposals written, win-rates, and commercial business value generated.",
+      "Reframe internal SDLC AI agent work into broader strategic narratives about building and launching enterprise AI products.",
+      "Highlight direct management of project margins, budgets, resource allocation, and external client-facing negotiation."
+    ]
+  },
+  {
+    "jd_file": "JD_02_NG_Travel_AI_Agent_Operations_Manager.md",
+    "job_title": "AI Agent Operations Manager",
+    "employer": "NG Travel",
+    "overall_match_score": 58,
+    "scores": {
+      "change_management_adoption": {
+        "score": 18,
+        "max": 30,
+        "evidence": "Led AI adoption and workshops for 7 internal engineer/PO squads (~50 people). However, this represents internal IT process change management rather than the required customer-facing product adoption and user conversion optimization."
+      },
+      "agentic_ai_automation": {
+        "score": 11,
+        "max": 25,
+        "evidence": "Uses third-party, out-of-the-box SaaS tools (Atlassian Rovo, Claude Code) for internal SDLC tasks. Lacks experience in engineering custom proprietary AI agents, designing AgentOps architectures, or defining evaluation datasets for productized LLMs."
+      },
+      "scaled_agile_delivery": {
+        "score": 22,
+        "max": 25,
+        "evidence": "Strong legacy background as an Agile Coach and Scrum Master (SAFe, LeSS, Spotify Model). While functionally strong, this level of corporate process-heavy oversight clashes with the fast-paced, lean startup-like expectations of NG Travel."
+      },
+      "executive_alignment": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Reports on LLMOps and risk frameworks in a highly-regulated banking CoE context. Lacks exposure to consumer-oriented business metrics like booking conversion rates and commercial product performance."
+      }
+    },
+    "bonus_points": {
+      "total": 2,
+      "breakdown": "Granted +2 points for experience with basic multi-agent workflows and human-in-the-loop validation patterns in an SDLC context."
+    },
+    "deductions": {
+      "total": 25,
+      "reasons": "Deducted 15 points for severe experience inflation: the candidate's actual AI focus is only 6 months long, preceded by a decade of generic Scrum Master/Agile coaching. Deducted 10 points for a complete lack of travel, e-commerce, or consumer transaction domain experience."
+    },
+    "ats_keyword_gaps": [
+      "AgentOps",
+      "LLMOps",
+      "Booking Workflows",
+      "Tourism",
+      "E-Commerce",
+      "Conversion Metrics",
+      "Custom LLM Evaluation",
+      "EVALs"
+    ],
+    "competency_gaps": [
+      "Transitioning Agile Scrum Master attempting to rebrand as an AI Operations Leader with less than a year of superficial AI experience.",
+      "Lacks hands-on engineering or development depth; reliance on packaged enterprise vendor tools (Atlassian) rather than designing proprietary AI pipeline architectures.",
+      "No experience in consumer transaction optimization, e-commerce purchase funnels, or booking workflow performance.",
+      "Corporate governance mindset (EU AI Act, banking regulations) which does not fit the lean, agile, startup-like culture of the target AI-native travel project."
+    ],
+    "recommended_actions": [
+      "Strip out the excessive Agile, SAFe, and Scrum Master jargon which positions you as a corporate project administrator rather than a lean AI product operator.",
+      "Detail the exact technical evaluation methods and LLMOps frameworks used to measure agent performance, shifting focus away from third-party tool administration.",
+      "Provide evidence of managing consumer-facing product KPIs, conversion rates, or customer-facing metrics instead of internal IT velocity and deployment cycle-time."
+    ]
+  },
+  {
+    "jd_file": "JD_03_Retailer_IT_AI_Delivery_Senior_Manager.md",
+    "job_title": "IT AI Delivery Senior Manager",
+    "employer": "International Retailer",
+    "overall_match_score": 45,
+    "scores": {
+      "change_management_adoption": {
+        "score": 14,
+        "max": 30,
+        "evidence": "Extensive history of agile coaching and workshop facilitation. However, these are passive advisory activities (coaching 50 engineers) rather than direct operational accountability for enterprise-wide change management and structural IT reorganization."
+      },
+      "agentic_ai_automation": {
+        "score": 10,
+        "max": 25,
+        "evidence": "Recent (since late 2024) experience with SDLC-specific tools like Atlassian Rovo and Claude Code. This is tool configuration for software productivity, completely lacking the robust production-grade ML infrastructure, LLMOps, model training, and FinOps/Token economic controls required to run a retail AI platform."
+      },
+      "scaled_agile_delivery": {
+        "score": 13,
+        "max": 25,
+        "evidence": "Strong background as a Scrum Master and Agile Coach (SAFe, LeSS, Spotify model). While useful for pipeline coordination, the target role demands an engineering/platform delivery leader who owns platform availability and SLAs, not an Agile process orchestrator."
+      },
+      "executive_alignment": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Claimed 'trusted advisor' status to directors. No evidence of direct P&L management, vendor negotiation authority, or strategic ownership of technology assets."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "+3 points for being located in France (Nice/Annecy alignment) and holding French master-level credentials, fulfilling local operational logistics."
+    },
+    "deductions": {
+      "total": 25,
+      "reasons": "-15 points for severe positioning inflation: attempting to rebrand a career of Scrum Master and Agile Coaching roles into an executive AI engineering leader based on 6 months of using development-assisting AI plugins. -10 points for zero evidence of budget ownership, vendor management, or production platform operational SLA accountability."
+    },
+    "ats_keyword_gaps": [
+      "FinOps",
+      "Token economics",
+      "budget management",
+      "vendor contract negotiation",
+      "platform reliability",
+      "ML infrastructure",
+      "production LLMOps",
+      "line management"
+    ],
+    "competency_gaps": [
+      "Direct line management of permanent FTEs (only coached/advised external or pre-existing teams)",
+      "Ownership of multi-million euro technology budgets and commercial vendor agreements",
+      "Hard engineering accountability for platform uptime, hosting costs, and production service level agreements (SLAs)",
+      "Deep architecture/engineering delivery of core ML/DL systems beyond off-the-shelf software development plugins"
+    ],
+    "recommended_actions": [
+      "Demote executive-level claims and position honestly as an Agile Delivery Lead with AI-enablement familiarity.",
+      "Quantify any direct technical ownership (e.g., AWS microservice migrations in past roles) with hard metrics on uptime, performance, and infrastructure cost reductions.",
+      "Detail any direct hands-on involvement with enterprise data platforms, ML flow pipelines, or model governance, separating actual execution from passive coaching or Scrum facilitation."
+    ]
+  },
+  {
+    "jd_file": "JD_04_TaelentR_Leader_Transformation_GenAI_Gemini.md",
+    "job_title": "Leader - Transformation & Adoption GenAI (Gemini / Google AI)",
+    "employer": "Taelent-R / Top Consulting Firm",
+    "overall_match_score": 42,
+    "scores": {
+      "change_management_adoption": {
+        "score": 14,
+        "max": 30,
+        "evidence": "Experienced in leading internal tool adoption (Atlassian Rovo, Claude Code) across 7 squads (~50 engineers) in a banking CoE. However, this is narrow IT-centric change management, not the broad enterprise-wide business user adoption of Gemini for 'grands comptes' required by the JD."
+      },
+      "agentic_ai_automation": {
+        "score": 8,
+        "max": 25,
+        "evidence": "Demonstrates solid engineering-level understanding of Claude Code, multi-agent workflows, and LLMOps. Regrettably, there is zero mention of Google Gemini, Vertex AI, or any tool within the Google AI ecosystem, which is the non-negotiable core of this mandate."
+      },
+      "scaled_agile_delivery": {
+        "score": 15,
+        "max": 25,
+        "evidence": "Deep consulting background at Wemanity and Capgemini with extensive Agile coaching/delivery experience. The major risk is that his profile reads heavily as a Scrum Master/Agile Coach trying to rebrand as an AI Leader, rather than a native AI Transformation Director."
+      },
+      "executive_alignment": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Reports operational LLM metrics to internal directors, but completely lacks evidence of client-facing commercial activities, 'avant-vente' (pre-sales), writing proposals, or running high-stakes client workshops for external corporate executives."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "+3 for structured EU AI Act compliance governance experience, which is highly appealing to risk-averse Tier-1 banking clients."
+    },
+    "deductions": {
+      "total": -25,
+      "reasons": "-15 for total absence of Google Gemini / Google Cloud AI technology stack alignment. -5 for missing pre-sales/commercial contribution ('avant-vente'). -5 for geographic misalignment (based in Nice, France, while the target role is Paris-based Hybride)."
+    },
+    "ats_keyword_gaps": [
+      "Google Gemini",
+      "Vertex AI",
+      "Google Cloud Platform (GCP)",
+      "Avant-vente",
+      "Propositions commerciales",
+      "Grands comptes",
+      "Gemini Adoption"
+    ],
+    "competency_gaps": [
+      "Direct experience pitching, designing, and delivering Google-specific Generative AI solutions.",
+      "Commercial pre-sales ownership (scoping client needs, drafting proposals, leading bid defenses).",
+      "Adoption strategies targeted at business-unit end users rather than purely technical/SDLC software engineering teams."
+    ],
+    "recommended_actions": [
+      "De-emphasize the standard Agile Coach/Scrum Master history to prevent being pigeonholed into a delivery-only role.",
+      "Immediately acquire Google Cloud Digital Leader or specialized Google Gemini certifications to establish technical credibility for this specific mandate.",
+      "Rework the work history to explicitly showcase pre-sales activities, commercial proposals, and business-focused client-facing workshops."
+    ]
+  },
+  {
+    "jd_file": "JD_05_Accenture_Agentic_AI_Engineering_Senior_Manager.md",
+    "job_title": "AI Engineering / Agentic AI Engineering Senior Manager",
+    "employer": "Accenture",
+    "overall_match_score": 45,
+    "scores": {
+      "change_management_adoption": {
+        "score": 18,
+        "max": 30,
+        "evidence": "Successfully drove prompt engineering workshops and workflow integration for 50 engineers across 7 squads. However, this is localized process coaching rather than the large-scale enterprise operating model transformation required by Accenture."
+      },
+      "agentic_ai_automation": {
+        "score": 8,
+        "max": 25,
+        "evidence": "Claims ownership of 'Enterprise Agentic Capabilities' but the technical reality is shallow: he configured off-the-shelf Atlassian Rovo agents and Claude Code. There is zero evidence of custom development using LangGraph, AutoGen, LlamaIndex, or building GraphRAG architectures with Neo4j."
+      },
+      "scaled_agile_delivery": {
+        "score": 14,
+        "max": 25,
+        "evidence": "Extensive history in Scaled Agile (SAFe, Spotify model, LeSS) coaching. However, Accenture is hiring an AI Engineering Senior Manager to architect solutions, not a Scrum Master to coordinate meetings."
+      },
+      "executive_alignment": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Reports operational metrics to Product Directors, but completely lacks the high-caliber commercial avant-vente (pre-sales), proposal writing, and C-suite strategic advisory required of a Senior Manager in a major ESN."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "+3 points for aligning AI governance against EU AI Act risk tiers in a regulated banking environment."
+    },
+    "deductions": {
+      "total": 25,
+      "reasons": "-15 points for 'Agile Coach Rebranding': 5 months of superficial AI delivery experience cannot mask 8 years of pure Scrum Master/Coaching roles. -10 points for the total absence of hands-on ML/LLMOps tools (LangSmith, MLflow, Azure OpenAI, Databricks) required by the target profile."
+    },
+    "ats_keyword_gaps": [
+      "LangGraph",
+      "AutoGen",
+      "LlamaIndex",
+      "Semantic Kernel",
+      "Neo4j",
+      "Graph RAG",
+      "LangSmith",
+      "MLflow",
+      "Azure OpenAI",
+      "Avant-Vente",
+      "Propositions Commerciales"
+    ],
+    "competency_gaps": [
+      "Deep technical execution of Agentic AI / LLM Orchestration",
+      "Proven commercial/pre-sales business development for multi-million euro consulting engagements",
+      "Architectural knowledge of enterprise RAG and data platforms (Databricks, Snowflake)",
+      "Direct hands-on engineering ownership versus process management"
+    ],
+    "recommended_actions": [
+      "Pivot target application away from pure AI Engineering to AI Project/Delivery Management where his Agile coaching background is actually an asset.",
+      "Strip away the inflated 'architected multi-agent verification' claims if they boil down to configuring Atlassian Rovo out-of-the-box templates.",
+      "Acquire and showcase hands-on certifications or tangible proof of building with LangChain, LangGraph, or AWS Bedrock/Azure OpenAI."
+    ]
+  },
+  {
+    "jd_file": "JD_07_OnePoint_Leader_Adoption_IA_Gemini.md",
+    "job_title": "Leader Adoption IA Générative — Gemini & Google AI Studio H/F",
+    "employer": "OnePoint",
+    "overall_match_score": 44,
+    "scores": {
+      "change_management_adoption": {
+        "score": 12,
+        "max": 30,
+        "evidence": "Conducted prompt engineering workshops and tool adoption for 50 engineers/POs across 7 squads. However, this is localized technical training, lacking the scale of enterprise-wide adoption, ambassador communities, and non-technical business user acculturation (hundreds/thousands of users) requested by the JD."
+      },
+      "agentic_ai_automation": {
+        "score": 8,
+        "max": 25,
+        "evidence": "Demonstrates experience with Atlassian Rovo and Claude Code in an engineering setup. However, there is absolutely zero evidence or mention of Google Gemini, Google AI Studio, or Google Workspace AI, which represents a massive and near-fatal ecosystem gap."
+      },
+      "scaled_agile_delivery": {
+        "score": 20,
+        "max": 25,
+        "evidence": "Extensive experience as an Agile Transformation Coach, Scrum Master, and Delivery Lead utilizing SAFe, LeSS, and Spotify models. Highly capable in structuring delivery and prioritizing product backlogs."
+      },
+      "executive_alignment": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Familiar with EU AI Act compliance and reported metrics to internal product directors. However, lacks the management consulting pedigree, pre-sales experience, and strategic C-level interface (DSI, DRH, CODIR) required for high-stakes external consulting mandates."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "+3 for proactive, hands-on operationalization of EU AI Act compliance and risk classification inside a highly regulated banking environment."
+    },
+    "deductions": {
+      "total": 25,
+      "reasons": "-15 for complete lack of Google Cloud, Gemini, and Google Workspace ecosystem experience; -10 for over-inflated positioning, presenting 10+ years of 'AI Transformation' leadership when AI-specific experience is limited to only 6 months, padded heavily with standard Agile coaching roles."
+    },
+    "ats_keyword_gaps": [
+      "Google Gemini",
+      "Google AI Studio",
+      "Workspace AI",
+      "Gemini at Work",
+      "Google Cloud",
+      "Avant-vente",
+      "C-Level pre-sales",
+      "Conduite du changement"
+    ],
+    "competency_gaps": [
+      "Mastery of Google-specific GenAI tools and enterprise integration strategies",
+      "Scale change management experience targeting thousands of business users rather than tech squads",
+      "Strategic pre-sales and consulting posture suitable for corporate C-suite (DSI, DRH, business sponsors)"
+    ],
+    "recommended_actions": [
+      "Pivot positioning away from an enterprise AI strategic leader to a hands-on AI Technical Delivery Lead.",
+      "Obtain immediate Google Cloud Digital Leader or Google Professional Cloud Architect/AI certifications to mitigate the tech stack gap.",
+      "Refructure the resume summary to transparently separate long-term Agile Coaching from recent 6-month AI delivery initiatives."
+    ]
+  },
+  {
+    "jd_file": "JD_08_Reply_Manager_Transformation_IA_DSI.md",
+    "job_title": "Manager Transformation IA de la DSI H/F",
+    "employer": "Reply France",
+    "overall_match_score": 70,
+    "scores": {
+      "change_management_adoption": {
+        "score": 20,
+        "max": 30,
+        "evidence": "Conducted workshops and prompt engineering sessions for ~50 engineers. However, this is squad-level facilitation, not the macro-level organizational restructuring of a DSI operating model requested by Reply."
+      },
+      "agentic_ai_automation": {
+        "score": 21,
+        "max": 25,
+        "evidence": "Strong relevant experience with Atlassian Rovo and Claude Code in a Banking CoE, linking GenAI to SDLC automation. Very high technical relevance, but limited by a short tenure (since Sept 2024)."
+      },
+      "scaled_agile_delivery": {
+        "score": 19,
+        "max": 25,
+        "evidence": "Extensive Agile background (SAFe, LeSS, Scrum of Scrums) supporting large teams. Heavy on coaching/scrum mastering, but lacks clear ITIL/Lean governance application."
+      },
+      "executive_alignment": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Claims to be a 'Trusted Advisor' to executive leadership on metrics, but there is zero evidence of managing pre-sales, writing RFPs, pricing services, or driving P&L targets for an ESN."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "+3 points for proactive alignment with EU AI Act risk tiers and governance, showing real awareness of modern compliance guardrails."
+    },
+    "deductions": {
+      "total": 13,
+      "reasons": "-8 for complete absence of commercial business development, RFP management, or consulting offer structuring. -5 for short tenure (less than a year) in the actual AI role, raising concerns over sustained impact."
+    },
+    "ats_keyword_gaps": [
+      "RFP",
+      "Avant-vente",
+      "Offre de conseil",
+      "ITIL",
+      "Lean",
+      "P&L",
+      "Pilotage économique"
+    ],
+    "competency_gaps": [
+      "Commercial pre-sales and response to client RFPs",
+      "Direct-line management and recruitment of consulting cohorts",
+      "Structuring of scalable consulting offerings and methodology frameworks",
+      "DSI-level financial and economic steering"
+    ],
+    "recommended_actions": [
+      "Pivot the resume's positioning from a pure delivery/coaching focus to a business-driving consultant leader.",
+      "Explicitly add metrics showing your contribution to pre-sales, commercial proposals, or internal offer building at Wemanity.",
+      "Demonstrate how your Agile/Coaching frameworks translates directly into IT operating model redesign and cost-saving metrics for the CIO."
+    ]
+  },
+  {
+    "jd_file": "JD_09_PwC_Manager_IA.md",
+    "job_title": "Manager IA F/H",
+    "employer": "PwC France",
+    "overall_match_score": 52,
+    "scores": {
+      "change_management_adoption": {
+        "score": 16,
+        "max": 30,
+        "evidence": "Demonstrated experience directing AI adoption workshops across 7 squads for internal SDLC tooling. However, this is limited to developer-centric workflows (Atlassian Rovo) rather than driving high-stakes, client-facing enterprise business transformation."
+      },
+      "agentic_ai_automation": {
+        "score": 10,
+        "max": 25,
+        "evidence": "Claims multi-agent verification and Atlassian Rovo integration, but entirely lacks standard technical implementations (LangChain, LangFuse, Vector Databases) or production-level LLMOps pipeline engineering required by the mandate."
+      },
+      "scaled_agile_delivery": {
+        "score": 18,
+        "max": 25,
+        "evidence": "Strong foundations in SAFe, LeSS, and Agile frameworks. However, this experience is heavily rooted in passive Scrum Master and Agile Coach roles rather than hands-on technical delivery management of complex AI pipelines."
+      },
+      "executive_alignment": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Acts as an internal advisor on metrics, but shows zero commercial track record, pre-sales (avant-vente) capability, pricing (chiffrage), or direct client-facing business development necessary for a Manager role at PwC."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "Awarded 3 points for explicit references to the EU AI Act risk classification and governance."
+    },
+    "deductions": {
+      "total": 20,
+      "reasons": "Deducted 12 points for attempting to rebrand a career of Agile coaching and Scrum ceremonies as direct AI technical delivery ownership. Deducted 8 points for complete lack of agency/consulting business development experience."
+    },
+    "ats_keyword_gaps": [
+      "LangChain",
+      "LangFuse",
+      "Vector Databases",
+      "OpenTelemetry",
+      "MLOps",
+      "LLMOps",
+      "Avant-vente",
+      "Propositions commerciales",
+      "Chiffrage"
+    ],
+    "competency_gaps": [
+      "Direct hands-on engineering/architecture of GenAI and RAG frameworks.",
+      "Commercial and pre-sales expertise (responding to RFPs, defense/soutenances, and pricing).",
+      "Direct line management of AI Engineers and Consultants (not just Agile facilitation).",
+      "Industrial LLMOps infrastructure implementation (Azure, AWS, GCP, CI/CD for AI)."
+    ],
+    "recommended_actions": [
+      "De-emphasize the high-level 'Agile Coaching' jargon and replace it with concrete, technical AI delivery metrics and architecture ownership.",
+      "Obtain and showcase hands-on certifications or experience with standard enterprise LLM orchestration frameworks (e.g., LangChain, LlamaIndex) and LLMOps tools.",
+      "Explicitly detail any past experience in proposal writing, scoping, and business development within consulting contexts to satisfy the Manager-level commercial requirements."
+    ]
+  },
+  {
+    "jd_file": "JD_11_Reply_Consultant_Transformation_IA_Organisations.md",
+    "job_title": "Consultant Transformation IA & Organisations (H/F)",
+    "employer": "Reply France",
+    "overall_match_score": 76,
+    "scores": {
+      "change_management_adoption": {
+        "score": 22,
+        "max": 30,
+        "evidence": "Directed AI adoption workshops and prompt engineering sessions for 7 squads (~50 engineers/POs). However, this is heavily skewed towards internal IT/SDLC adoption rather than broad, business-side organizational change management."
+      },
+      "agentic_ai_automation": {
+        "score": 23,
+        "max": 25,
+        "evidence": "Excellent operational tracking of Atlassian Rovo, Claude Code, and multi-agent verification workflows within a regulated banking AI Center of Excellence."
+      },
+      "scaled_agile_delivery": {
+        "score": 20,
+        "max": 25,
+        "evidence": "Extensive Agile/SAFe coaching background with tribes. However, the sheer volume of Scrum Master and Agile Coach roles suggests an execution-level facilitator rather than a strategic management consultant."
+      },
+      "executive_alignment": {
+        "score": 11,
+        "max": 20,
+        "evidence": "Reports on LLMOps and metrics to product directors, but entirely lacks evidence of commercial pre-sales, RFP responses, or writing proposals to win client business, which is a major pillar of this Reply mandate."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "Evaluated and governed AI use cases against the EU AI Act risk tiers, providing strong compliance value for enterprise consulting."
+    },
+    "deductions": {
+      "total": 8,
+      "reasons": "Profile is overqualified in pure agile delivery (10+ years experience vs 3-5 years requested), which risks resistance to hands-on consulting grunt work, combined with a total lack of listed commercial/RFP writing experience."
+    },
+    "ats_keyword_gaps": [
+      "Avant-Vente",
+      "RFP",
+      "Propositions commerciales",
+      "Appels d'offres",
+      "Microsoft Copilot"
+    ],
+    "competency_gaps": [
+      "Commercial pre-sales and RFP proposal creation",
+      "Non-IT/Business-side organizational change management",
+      "Management consulting business development"
+    ],
+    "recommended_actions": [
+      "Explicitly add details of any past contribution to pre-sales, RFP responses, or commercial consulting proposals.",
+      "Reflect the transition from delivery/coaching roles into top-down organizational strategy and advisory.",
+      "Highlight experience driving AI adoption in non-technical business functions beyond developers and POs."
+    ]
+  },
+  {
+    "jd_file": "JD_21_K2_Partnering_Senior_AI_Product_Delivery_Manager.md",
+    "job_title": "Senior AI Product & Delivery Manager",
+    "employer": "K2 Partnering (Full Remote Europe)",
+    "overall_match_score": 82,
+    "decision": "FIT / DIRECT GO (High-Priority Staffing Placement)",
+    "scores": {
+      "change_management_adoption": {
+        "score": 26,
+        "max": 30,
+        "evidence": "Proven track record leading AI adoption, prompt engineering workshops, and delivery governance across 7 squads (~50 engineers/POs) in a Tier-1 banking AI CoE. Directly matches POC -> industrialization -> rollout -> adoption lifecycle."
+      },
+      "agentic_ai_automation": {
+        "score": 20,
+        "max": 25,
+        "evidence": "Hands-on orchestration with Azure AI Foundry (OpenAI/Anthropic), Atlassian Rovo agentic SDLC workflows, and Claude Code guardrails. Evaluated AI use cases against EU AI Act risk tiers."
+      },
+      "scaled_agile_delivery": {
+        "score": 23,
+        "max": 25,
+        "evidence": "10+ years agile product delivery leadership. Built and productized Alignify (internal Jira SaaS product); coached POs on backlogs, user stories, acceptance criteria, and PI planning."
+      },
+      "executive_alignment": {
+        "score": 15,
+        "max": 20,
+        "evidence": "Acts as trusted advisor to product leadership on AI viability. Assessed Build vs Buy for agentic tools and data platforms. Bridge between business, compliance, and engineering."
+      }
+    },
+    "bonus_points": {
+      "total": 9,
+      "breakdown": "+5 for European remote location (France) + bilingual English/French; +4 for rare direct Supply Chain Finance (Confirming & Factoring) domain overlap + EU AI Act governance."
+    },
+    "deductions": {
+      "total": 11,
+      "reasons": "-6 points for title friction (positioned as AI Delivery Lead / Coach rather than explicitly Senior AI Product & Delivery Manager); -5 points for lack of explicit Procurement Spend Analytics tool naming (Coupa/Ivalua/Sievo)."
+    },
+    "ats_keyword_gaps": [
+      "Procurement AI",
+      "Spend Review Platform",
+      "Source-to-Pay (S2P)",
+      "Build vs Buy vs Partner",
+      "Vendor Management",
+      "Solution Selection"
+    ],
+    "competency_gaps": [
+      "Explicit Procurement / Spend Taxonomy familiarity (needs bridging from Supply Chain Finance)",
+      "Formal RFP / Vendor Contract negotiations (needs highlighting from past tool selections)",
+      "Title alignment: framing Delivery Lead & PO Co-pilot experience as dual Product & Delivery Ownership"
+    ],
+    "recommended_actions": [
+      "Adjust header title to Senior AI Product & Delivery Manager.",
+      "Explicitly bridge Supply Chain Finance (Confirming & Factoring) with Source-to-Pay and Spend Governance.",
+      "Frame Atlassian Rovo, Claude Code, and Alignify initiatives as Build vs Buy vs Partner decision frameworks.",
+      "Submit immediately to Lorena Gomez (lgomez@k2partnering.com) emphasizing ASAP availability and French/English fluency."
+    ]
+  },
+  {
+    "jd_file": "JD_22_Third_Bridge_Group_AI_Automation_Lead.md",
+    "job_title": "AI Automation Lead",
+    "employer": "Third Bridge Group",
+    "overall_match_score": 79,
+    "scores": {
+      "change_management_adoption": {
+        "score": 18,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 23,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, prompt engineering, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 19.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: roadmap, dependency). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 16,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [
+      "prompt engineering"
+    ],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Third Bridge Group's opening for AI Automation Lead. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_23_Arch_Insurance__UK_AVP__Automation___AI_Delivery.md",
+    "job_title": "AVP, Automation & AI Delivery",
+    "employer": "Arch Insurance (UK) Limited",
+    "overall_match_score": 76,
+    "scores": {
+      "change_management_adoption": {
+        "score": 20,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation, training). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 24,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, agentic, multi-agent, genai). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 19.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: backlog, release). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Arch Insurance (UK) Limited's opening for AVP, Automation & AI Delivery. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_24_Sapiens_AI_Lead.md",
+    "job_title": "AI Lead",
+    "employer": "Sapiens",
+    "overall_match_score": 72,
+    "scores": {
+      "change_management_adoption": {
+        "score": 16,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: enablement). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 21,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, agentic, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 22.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: safe, backlog, roadmap, kpi). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Sapiens's opening for AI Lead. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_25_EPAM_Systems_Delivery_Manager.md",
+    "job_title": "Delivery Manager",
+    "employer": "EPAM Systems",
+    "overall_match_score": 71,
+    "scores": {
+      "change_management_adoption": {
+        "score": 22,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation, training, upskilling). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 14,
+        "max": 25,
+        "evidence": "General AI awareness required; candidate provides strong technical depth without overstatement."
+      },
+      "scaled_agile_delivery": {
+        "score": 20.5,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: delivery manager, roadmap, predictability). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed EPAM Systems's opening for Delivery Manager. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_26_Loading_Loading.md",
+    "job_title": "Loading...",
+    "employer": "Loading...",
+    "overall_match_score": 79,
+    "scores": {
+      "change_management_adoption": {
+        "score": 18,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 23,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, prompt engineering, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 19.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: roadmap, dependency). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 16,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [
+      "prompt engineering"
+    ],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Loading...'s opening for Loading.... As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_26_Third_Bridge_Group_AI_Automation_Lead.md",
+    "job_title": "AI Automation Lead",
+    "employer": "Third Bridge Group",
+    "overall_match_score": 79,
+    "scores": {
+      "change_management_adoption": {
+        "score": 18,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 23,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, prompt engineering, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 19.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: roadmap, dependency). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 16,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [
+      "prompt engineering"
+    ],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Third Bridge Group's opening for AI Automation Lead. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_27_Paires_Founding_AI_Engineer.md",
+    "job_title": "Founding AI Engineer",
+    "employer": "Paires",
+    "overall_match_score": 61,
+    "scores": {
+      "change_management_adoption": {
+        "score": 16,
+        "max": 30,
+        "evidence": "Role heavily emphasizes AI adoption & change management (matches: formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+      },
+      "agentic_ai_automation": {
+        "score": 19,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 16.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: ). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 0,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Paires's opening for Founding AI Engineer. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  },
+  {
+    "jd_file": "JD_28_Tata_Consultancy_Ser_Gen_AI_Developer.md",
+    "job_title": "Gen AI Developer",
+    "employer": "Tata Consultancy Services",
+    "overall_match_score": 65,
+    "scores": {
+      "change_management_adoption": {
+        "score": 10,
+        "max": 30,
+        "evidence": "Moderate change management requirements mentioned; candidate exceeds baseline operational requirements."
+      },
+      "agentic_ai_automation": {
+        "score": 24,
+        "max": 25,
+        "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, genai, generative ai). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+      },
+      "scaled_agile_delivery": {
+        "score": 16.0,
+        "max": 25,
+        "evidence": "Strong delivery leadership required (matches: ). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+      },
+      "executive_alignment": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+      }
+    },
+    "bonus_points": {
+      "total": 3,
+      "breakdown": "EU AI Act Governance, banking CoE validation."
+    },
+    "deductions": {
+      "total": 0,
+      "reasons": "Pre-sales / commercial bidding weighting penalty if applicable."
+    },
+    "ats_keyword_gaps": [
+      "rag",
+      "prompt engineering"
+    ],
+    "competency_gaps": [],
+    "recommended_actions": [
+      "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+    ],
+    "recruiter_pitch_hook": "Hello, I noticed Tata Consultancy Services's opening for Gen AI Developer. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap."
+  }
+]

@@ -1,0 +1,49 @@
+You are evaluating a candidate for an Executive AI Transformation Director position (C-Suite & Board Level). Analyze the resume data and executive signals to provide scores based on these criteria:
+
+**MANDATORY: You MUST always fill ALL categories: pnl_and_fiscal_ownership, organizational_scale, commercial_strategy, board_and_governance.**
+
+## SCORING CRITERIA
+
+### 1. P&L & Fiscal Ownership (0-30 points)
+- Clear articulation of budget scope, revenue ownership, or cost optimization scale ($M+ budgets, AI FinOps savings).
+- Cost vs ROI optimizations in enterprise AI & cloud transformations.
+
+### 2. Organizational Scale & Depth (0-25 points)
+- Reporting hierarchy depth, team headcounts, global hub leadership (e.g. 50+ engineers, multi-tribe management).
+- Scaling agile/engineering frameworks across business-critical divisions.
+
+### 3. Commercial Strategy & Vision (0-25 points)
+- Driving digital & AI transformation roadmap from strategy to operational deployment.
+- High-impact business automation (LLMs, GenAI, agentic workflows, microservices modernization).
+
+### 4. Board & Governance Authority (0-20 points)
+- Executive committee, steering committee, or board-level reporting.
+- Compliance & risk governance (EU AI Act risk classification, ISO standards, data lake/privacy governance).
+
+## BONUS POINTS (Maximum total: 20 points)
+- Direct C-Suite / Board interaction & strategic advisor status (+10 points).
+- In-house product/app innovation for enterprise portfolio visibility (+10 points).
+
+## CRITICAL REQUIREMENTS
+1. You MUST respond with ONLY valid JSON matching the exact structure below.
+2. You MUST fill ALL score categories.
+3. You MUST provide concise, factual evidence for each category.
+
+Analyze the following resume and executive signals to provide a JSON response with this EXACT structure:
+
+{
+    "scores": {
+        "pnl_and_fiscal_ownership": {"score": 0, "max": 30, "evidence": "string"},
+        "organizational_scale": {"score": 0, "max": 25, "evidence": "string"},
+        "commercial_strategy": {"score": 0, "max": 25, "evidence": "string"},
+        "board_and_governance": {"score": 0, "max": 20, "evidence": "string"}
+    },
+    "bonus_points": {"total": 0, "breakdown": "string"},
+    "deductions": {"total": 0, "reasons": "string"},
+    "key_strengths": ["strength1", "strength2"],
+    "areas_for_improvement": ["improvement1"]
+}
+
+Resume to evaluate:
+
+{{ text_content }}

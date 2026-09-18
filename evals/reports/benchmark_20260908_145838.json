@@ -1,0 +1,90 @@
+{
+  "total_cases": 3,
+  "passed_cases": 3,
+  "failed_cases": 0,
+  "accuracy": 1.0,
+  "false_go_count": 0,
+  "false_go_rate": 0.0,
+  "dealbreaker_recall": 1.0,
+  "average_fit_score": 79.66666666666667,
+  "average_critic_score": 90.0,
+  "suite_status": "PASS",
+  "execution_time_seconds": 0.01985335350036621,
+  "results": [
+    {
+      "case_id": "CASE_08_SOPHIE_PERFECT_DEVOPS_MATCH",
+      "description": "Staff Cloud Platform & DevOps Architect matching Sophie's exact skills and rate",
+      "profile_id": "sophie_cloud_architect",
+      "target_jd": "evals/test_jds/PERFECT_AWS_DEVOPS_LEAD.md",
+      "verdict": "CONDITIONAL GO",
+      "fit_score": 74.0,
+      "critic_score": 90.0,
+      "passed_gates": [
+        "Gate 1: All 4 pillars scored with numerical evidence",
+        "Gate 2: Clear separation of hard dealbreakers vs compensable gaps",
+        "Gate 3: Negative constraint respected",
+        "Gate 4: Explicit strategic verdict provided",
+        "Gate 5: Pitch present but weak on verified candidate metrics"
+      ],
+      "failed_gates": [],
+      "is_false_go": false,
+      "verdict_correct": true,
+      "dealbreaker_flagged": false,
+      "proof_tokens_found": [
+        "eks",
+        "kubernetes"
+      ],
+      "assertion_passed": true,
+      "latency_seconds": 0.004793643951416016,
+      "notes": "Clean alignment"
+    },
+    {
+      "case_id": "CASE_09_SOPHIE_AGILE_COACH_ANTI_ROLE",
+      "description": "Transformation Coach (AI & Agile) evaluated against Sophie (Agile Coach is an Anti-Role)",
+      "profile_id": "sophie_cloud_architect",
+      "target_jd": "07_TARGET_JDS/JD_30_Transformation_Coach_AI_Agile.md",
+      "verdict": "NO-GO / PIVOT",
+      "fit_score": 88.0,
+      "critic_score": 90.0,
+      "passed_gates": [
+        "Gate 1: All 4 pillars scored with numerical evidence",
+        "Gate 2: Clear separation of hard dealbreakers vs compensable gaps",
+        "Gate 3: Negative constraint respected",
+        "Gate 4: Explicit strategic verdict provided",
+        "Gate 5: Pitch present but weak on verified candidate metrics"
+      ],
+      "failed_gates": [],
+      "is_false_go": false,
+      "verdict_correct": true,
+      "dealbreaker_flagged": true,
+      "proof_tokens_found": [],
+      "assertion_passed": true,
+      "latency_seconds": 0.00397491455078125,
+      "notes": "Dealbreakers detected: Anti-role mismatch: Agile Coach / Scrum Master"
+    },
+    {
+      "case_id": "CASE_10_SOPHIE_GERMAN_LANGUAGE_TRAP",
+      "description": "German mandatory role evaluated against Sophie (German is a blocker language)",
+      "profile_id": "sophie_cloud_architect",
+      "target_jd": "evals/test_jds/TRAP_GERMAN_MANDATORY.md",
+      "verdict": "NO-GO",
+      "fit_score": 77.0,
+      "critic_score": 90.0,
+      "passed_gates": [
+        "Gate 1: All 4 pillars scored with numerical evidence",
+        "Gate 2: Clear separation of hard dealbreakers vs compensable gaps",
+        "Gate 3: Negative constraint respected",
+        "Gate 4: Explicit strategic verdict provided",
+        "Gate 5: Pitch present but weak on verified candidate metrics"
+      ],
+      "failed_gates": [],
+      "is_false_go": false,
+      "verdict_correct": true,
+      "dealbreaker_flagged": true,
+      "proof_tokens_found": [],
+      "assertion_passed": true,
+      "latency_seconds": 0.004658937454223633,
+      "notes": "Dealbreakers detected: Language blocker: German"
+    }
+  ]
+}

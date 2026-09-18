@@ -1,0 +1,197 @@
+[
+  {
+    "id": "CASE_01_PERFECT_FIT_AI_DELIVERY",
+    "description": "High-fit AI Product Delivery role with remote flexibility and high rate",
+    "jd_file": "07_TARGET_JDS/JD_21_K2_Partnering_Senior_AI_Product_Delivery_Manager.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "GO",
+      "CONDITIONAL GO"
+    ],
+    "disallowed_verdicts": [
+      "NO-GO"
+    ],
+    "min_fit_score": 80.0,
+    "dealbreaker_expected": false,
+    "required_proof_tokens": [
+      "7 squad",
+      "50 engineer",
+      "alignify",
+      "rovo",
+      "eu ai act"
+    ]
+  },
+  {
+    "id": "CASE_02_GERMAN_LANGUAGE_TRAP",
+    "description": "Enterprise AI Lead role with mandatory German C1 requirement (Blocker Language)",
+    "jd_file": "evals/test_jds/TRAP_GERMAN_MANDATORY.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "NO-GO",
+      "CONDITIONAL GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "language_blocker",
+    "expected_blocker_keywords": [
+      "german"
+    ]
+  },
+  {
+    "id": "CASE_03_MUNICH_HYBRID_3DAYS_TRAP",
+    "description": "Transformation Lead with non-negotiable 3 days/week on-site commute to Munich",
+    "jd_file": "evals/test_jds/TRAP_HYBRID_MUNICH_3DAYS.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "NO-GO",
+      "CONDITIONAL GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "commute_blocker",
+    "expected_blocker_keywords": [
+      "munich",
+      "on-site",
+      "hybrid"
+    ]
+  },
+  {
+    "id": "CASE_04_VIENNA_ONSITE_COMMUTE_TRAP",
+    "description": "Generative AI Engineer in Vienna requiring on-site presence",
+    "jd_file": "07_TARGET_JDS/JD_29_Computer_Futures_Generative_AI_Engineer_Vienna.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "NO-GO",
+      "CONDITIONAL GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "commute_blocker",
+    "expected_blocker_keywords": [
+      "vienna"
+    ]
+  },
+  {
+    "id": "CASE_05_JUNIOR_CODER_ANTI_ROLE",
+    "description": "Founding AI Engineer focused on raw Python/PyTorch coding (Candidate Anti-Role)",
+    "jd_file": "07_TARGET_JDS/JD_27_Paires_Founding_AI_Engineer.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "NO-GO",
+      "CONDITIONAL GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "anti_role",
+    "expected_blocker_keywords": [
+      "developer",
+      "coding",
+      "engineer"
+    ]
+  },
+  {
+    "id": "CASE_06_LOW_BUDGET_RATE_TRAP",
+    "description": "Attractive title but budget capped at 400-450 EUR/day (Commercial Mismatch)",
+    "jd_file": "evals/test_jds/TRAP_LOW_BUDGET_RFP.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "NO-GO",
+      "CONDITIONAL GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "rate_mismatch"
+  },
+  {
+    "id": "CASE_07_REMOTE_CLARIFICATION_CHECK",
+    "description": "Transformation Coach with flexible remote options requiring contractual confirmation",
+    "jd_file": "07_TARGET_JDS/JD_30_Transformation_Coach_AI_Agile.md",
+    "profile": "alaa_roucadi",
+    "expected_verdict": [
+      "CONDITIONAL GO",
+      "GO"
+    ],
+    "disallowed_verdicts": [],
+    "min_fit_score": 80.0,
+    "dealbreaker_expected": false,
+    "required_proof_tokens": [
+      "7 squad",
+      "50 engineer"
+    ]
+  },
+  {
+    "id": "CASE_08_SOPHIE_PERFECT_DEVOPS_MATCH",
+    "description": "Staff Cloud Platform & DevOps Architect matching Sophie's exact skills and rate",
+    "jd_file": "evals/test_jds/PERFECT_AWS_DEVOPS_LEAD.md",
+    "profile": "sophie_cloud_architect",
+    "expected_verdict": [
+      "GO",
+      "CONDITIONAL GO"
+    ],
+    "disallowed_verdicts": [
+      "NO-GO"
+    ],
+    "min_fit_score": 80.0,
+    "dealbreaker_expected": false,
+    "required_proof_tokens": [
+      "eks",
+      "kubernetes",
+      "argocd",
+      "graviton",
+      "karpenter"
+    ]
+  },
+  {
+    "id": "CASE_09_SOPHIE_AGILE_COACH_ANTI_ROLE",
+    "description": "Transformation Coach (AI & Agile) evaluated against Sophie (Agile Coach is an Anti-Role)",
+    "jd_file": "07_TARGET_JDS/JD_30_Transformation_Coach_AI_Agile.md",
+    "profile": "sophie_cloud_architect",
+    "expected_verdict": [
+      "NO-GO",
+      "NO-GO / PIVOT",
+      "PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "anti_role"
+  },
+  {
+    "id": "CASE_10_SOPHIE_GERMAN_LANGUAGE_TRAP",
+    "description": "German mandatory role evaluated against Sophie (German is a blocker language)",
+    "jd_file": "evals/test_jds/TRAP_GERMAN_MANDATORY.md",
+    "profile": "sophie_cloud_architect",
+    "expected_verdict": [
+      "NO-GO",
+      "NO-GO / PIVOT"
+    ],
+    "disallowed_verdicts": [
+      "GO",
+      "DIRECT GO"
+    ],
+    "dealbreaker_expected": true,
+    "expected_blocker_type": "language_blocker"
+  }
+]

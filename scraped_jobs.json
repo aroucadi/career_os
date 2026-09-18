@@ -1,0 +1,331 @@
+{
+  "4452995977": {
+    "job": {
+      "id": "4452995977",
+      "title": "AI Automation Lead",
+      "company": "Third Bridge Group",
+      "location": "London, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4452995977",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": null,
+      "description": "- **Seniority level**: Mid-Senior level\n- **Employment type**: Full-time\n- **Job function**: Engineering and Information Technology\n- **Industries**: Construction, Software Development, and IT Services and IT Consulting\n\n## Job Description\n\n- Map and own the opportunity landscape: You'll work directly with business leads to identify and prioritise AI automation opportunities — deciding what the central team owns versus what local teams run themselves, and building a 12–24 month roadmap that balances impact, feasibility, and risk.\n- Build the governance architecture: You'll design the systemic protocols, agent approval frameworks, and risk controls that allow Third Bridge to demonstrate positive control over AI technology as it scales — across hundreds of live agents, client-facing and internal.\n- Lead and develop your team: Your AI Solution Engineers will look to you for direction, unblocking, and credibility. You'll earn that last one through your own technical chops — this is a role where you need to be able to do, not just direct.\n- Drive adoption, not just delivery: Solutions that get built and thrown over the fence don't count. You'll sit with business stakeholders, ensure every deployment actually lands and gets used, and build the trust that makes future work possible.\n- Build capability that outlasts the central team: Working with L&D, you'll upskill business units so they can build and iterate within your framework — reducing dependency on the central AI team over the next 12–18 months.\n- Operational or consulting depth with real AI delivery: Your experience in business operations, transformation, or management consulting have allowed you to directly deliver AI or automation programmes — not advising on them from a distance.\n- Hands-on technical capability: You can build as well as strategise. Your experience with prompt engineering, AI agent design, and LLM capabilities means the engineers on your team will respect you — and our stakeholders will trust you.\n- Governance and risk fluency: You've designed AI governance frameworks in regulated environments before. You understand that moving fast and maintaining control aren't mutually exclusive — and you know how to make that case to a Compliance team.\n- Influence without authority: Your track record includes embedding technology solutions across organisations where you didn't have direct control. You get adoption through trust, not mandate.\n- Comfort with genuine ambiguity: You've built structure where little existed. If you need certainty before you can move, this isn't the right environment — but if a blank sheet of paper is where you do your best work, it is.\n- Vacation: 25 days (which increases to 28 days after 2 years of service) plus UK Bank Holidays\n- Learning: personal development allowance of £1000 per year\n- Health and wellbeing: private medical insurance and healthcare cash plan, a variety of health and wellbeing events to focus on mental health, Ride to Work scheme (savings on bikes and accessories)\n- Future and family: pension contributions of 4% (increases with tenure) and life insurance of 4x of your base salary\n- Flexibility: work from anywhere for one month per year, 2 annual volunteer days, 2 personal days when life throws you a curveball and 'Summer Fridays'\n- Rewards: get points through our colleague-to-colleague recognition programme to spend on hotels, gift cards, donations to charity and more\n- Social: optional social gatherings, daily breakfast and snacks, social events\n- ESG: CSR, Environment and Diversity & Inclusion (including Women at Third Bridge, Pride and Blkbridge)\n- Frontline Innovation: your chance to share your ideas for improvement through Hackathons and other events\n- A genuinely founding brief: You're not inheriting someone else's playbook. You'll write the one that everyone at Third Bridge follows for the next decade — defining what the AI function looks like, how it's structured, and what it stands for.\n- Direct line to the top: You report to the COO and will have executive visibility from day one. Your work will be front and centre!\n- Build your own team: You'll recruit and shape your AI Solution Engineers, set the standard for technical quality, and define the culture of the function.\n- A business that's already bought in: Third Bridge already has enthusiastic AI adopters across the organisation — you're not convincing sceptics. The foundation is there; you're the architect.\n- Scope that evolves with you: As capability embeds across business units, the role grows — the best outcome is a distributed model you designed, which opens the door to broader Group-level technology and transformation leadership.",
+      "discovered_at": "2026-09-07T12:05:50.741448"
+    },
+    "scored": {
+      "job_id": "4452995977",
+      "job_title": "AI Automation Lead",
+      "company": "Third Bridge Group",
+      "url": "https://www.linkedin.com/jobs/view/4452995977",
+      "overall_match_score": 79,
+      "scores": {
+        "change_management_adoption": {
+          "score": 18,
+          "max_score": 30.0,
+          "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+        },
+        "agentic_ai_automation": {
+          "score": 23,
+          "max_score": 25.0,
+          "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, prompt engineering, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+        },
+        "scaled_agile_delivery": {
+          "score": 19.0,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: roadmap, dependency). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 16,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 3,
+      "deductions": 0,
+      "ats_keyword_gaps": [
+        "prompt engineering"
+      ],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed Third Bridge Group's opening for AI Automation Lead. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_26_Third_Bridge_Group_AI_Automation_Lead.md",
+      "scored_at": "2026-09-07T12:05:51.492240"
+    }
+  },
+  "4441505823": {
+    "job": {
+      "id": "4441505823",
+      "title": "AVP, Automation & AI Delivery",
+      "company": "Arch Insurance (UK) Limited",
+      "location": "London, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4441505823",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": "2026-09-03",
+      "description": "- **Seniority level**: Not Applicable\n- **Employment type**: Full-time\n- **Job function**: Engineering and Information Technology\n- **Industries**: Insurance\n\n## Job Description\n\n- Oversee end-to-end delivery of human centric AI tools from design through build, test, deployment, supported by relevant technical delivery resources within the SA team, ensuring solutions are secure, scalable and supportable.\n- Establish and evangelize the use of automation and AI, including addressing potential challenges preventing adoption\n- Maintain and evolve a prioritised pipeline of automation and AI opportunities, identifying high‑impact use cases and overseeing a strong, value-based prioritisation\n- Oversee structured discovery with stakeholders to define problem statements, success metrics and determine feasibility\n- Own, Track and report on delivery scope, progress, risks and dependencies\n- Ensure delivery standards for requirements, documentation, testing, releases, monitoring and incident management are met\n- Implement feedback loops and metrics to track and report on adoption, trust, and impact to SA leadership and senior stakeholders\n- Collaborate with business stakeholders to scale high-impact AI tools developed by individuals into robust, secure and supported enterprise AI tools\n- Support training efforts and act as an AI SME supporting business stakeholders with personal automation and AI use cases\n- Ensure solutions comply with Arch policies, standards and approvals (permitted use, privacy, security, model governance and third-party risk).\n- Highly organised with strong programme/project management skills; able to manage multiple initiatives concurrently and deliver results.\n- Exceptional stakeholder management with the ability to build trusting relationships and drive consensus across functions and levels of seniority.\n- Strong written and verbal communication skills; comfortable presenting to senior leadership and translating between business and technical audiences.\n- Comfortable operating in ambiguity and breaking complex problems into actionable delivery plans.\n- Strong delivery mindset with a focus on measurable outcomes, adoption and continuous improvement.\n- Working knowledge of automation and AI technologies (e.g., individual and multi-agent AI solutions, GenAI, IDP RPA, workflow automation)\n- Sound understanding of risk and controls considerations for automation/AI in a regulated environment (data privacy, security, model governance, third-party risk).\n- Exceptional teamwork skills required to play a key role in cross-functional teams. Ability to collaborate and build trusting relationships with business partners\n- Natural curiosity to understand the world around you and question as needed\n- Comfortable handling ambiguous concepts and breaking down complex problems into manageable pieces\n- Ability to apply critical thinking and creative problem-solving skills\n- Degree in statistics, mathematics, computer science, engineering or similar quantitative ﬁelds; or signiﬁcant evidence of continuous professional development in automation or AI\n- Significant experience delivering business process improvement, automation and/or AI solutions—preferably within commercial insurance (specialty, London Market and/or general insurance) including agentic AI solutions.\n- Experience leading multidisciplinary teams to deliver technology solutions (in-house and/or vendor-led), including managing offshore resources.\n- Experience defining technology and data requirements to enhance business processes and optimise operational outcomes.\n- Track record of taking solutions into production with appropriate monitoring, support and business adoption.\n- Exposure to product operating models (backlog, discovery-to-delivery, value tracking) is beneficial.\n- Experience working closely with business stakeholders, such as underwriting",
+      "discovered_at": "2026-09-07T12:01:24.265059"
+    },
+    "scored": {
+      "job_id": "4441505823",
+      "job_title": "AVP, Automation & AI Delivery",
+      "company": "Arch Insurance (UK) Limited",
+      "url": "https://www.linkedin.com/jobs/view/4441505823",
+      "overall_match_score": 76,
+      "scores": {
+        "change_management_adoption": {
+          "score": 20,
+          "max_score": 30.0,
+          "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation, training). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+        },
+        "agentic_ai_automation": {
+          "score": 24,
+          "max_score": 25.0,
+          "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, agentic, multi-agent, genai). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+        },
+        "scaled_agile_delivery": {
+          "score": 19.0,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: backlog, release). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 10,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 3,
+      "deductions": 0,
+      "ats_keyword_gaps": [],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed Arch Insurance (UK) Limited's opening for AVP, Automation & AI Delivery. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_23_Arch_Insurance__UK_AVP__Automation___AI_Delivery.md",
+      "scored_at": "2026-09-07T12:01:26.154874"
+    }
+  },
+  "4435664184": {
+    "job": {
+      "id": "4435664184",
+      "title": "AI Lead",
+      "company": "Sapiens",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4435664184",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": "2026-09-01",
+      "description": "- **Seniority level**: Not Applicable\n- **Employment type**: Full-time\n- **Job function**: Other\n- **Industries**: Software Development\n\n## Job Description\n\n- Team Leadership & Development: Lead, coach, and grow a small team of agentic AI developers. Set goals and priorities, manage day-to-day delivery, run hiring as the team scales, and create a culture of high-quality, responsible AI engineering.\n- ServiceNow Native Enablement: Enable and configure ServiceNow’s out-of-the-box agentic capabilities—Now Assist, AI Agents, Virtual Agent, and generative-AI features—adopting platform functionality first to deliver value quickly and sustainably.\n- Custom Agent Development: Where native capability falls short, design, build, and tune custom agents—defining their tools, workflows, and integrations—to address use cases unique to our products, customers, and operations.\n- Agentic AI Delivery: Own delivery of the agentic-AI roadmap for service management across both tracks—shipping capabilities that deflect tier-1 work and resolve routine requests end to end, whether delivered through configuration or custom build.\n- Support & Cloud Operations Enablement: Partner directly with Global Support and Cloud Operations to identify high-value use cases, build agents tuned to their disciplines, and measure real reductions in manual effort, deflection rates, and Mean Time to Resolution.\n- Roadmap & Prioritization: Translate the COE strategy into a prioritized, achievable backlog. Balance quick wins against foundational work, and sequence use cases for proactive, signal-driven customer care and specialized agent workspaces.\n- Guardrails, Evaluation & Responsible AI: Define and enforce guardrails, evaluation criteria, and governance for AI in operations—ensuring agents are accurate, safe, monitored, and grounded in trusted knowledge and catalog content before they reach customers.\n- Metrics & Continuous Improvement: Define KPIs for AI performance—deflection, resolution acceleration, agent accuracy, and grounding quality—and feed AI-accelerated improvements back into the Process Review Board and continual-service-improvement cadence.\n- Experience: Proven experience delivering AI/ML, conversational-AI, or agentic-AI capabilities in production, plus experience leading or managing small technical delivery teams.\n- Agentic AI Competency: Hands-on understanding of how AI agents and virtual agents are designed, built, tuned, and evaluated—both by enabling platform-native capabilities and by developing custom agents, including grounding on enterprise content and data.\n- Delivery Leadership: Strong product sense and the ability to prioritize use cases, manage a backlog, and ship iteratively in a fast-moving environment.\n- Service Operations Awareness: Working knowledge of ITIL processes and service operations, and how AI can improve them across Support and Cloud Operations.\n- Responsible AI: Awareness of AI risk, evaluation, monitoring, and responsible-use practices in an enterprise setting.\n- Platform: Familiarity with ServiceNow Now Assist, Virtual Agent, and the CSM module strongly preferred.\n- Certifications: ITIL 4 Foundation and/or relevant AI, machine-learning, or ServiceNow certifications a plus.\n- Environment: Experience in multi-tenant SaaS or Cloud Operations, and exposure to integration, CMDB, or knowledge-management practices.\n- Methodologies: Agile delivery and continual-improvement experience preferred.",
+      "discovered_at": "2026-09-07T12:04:28.637229"
+    },
+    "scored": {
+      "job_id": "4435664184",
+      "job_title": "AI Lead",
+      "company": "Sapiens",
+      "url": "https://www.linkedin.com/jobs/view/4435664184",
+      "overall_match_score": 72,
+      "scores": {
+        "change_management_adoption": {
+          "score": 16,
+          "max_score": 30.0,
+          "evidence": "Role heavily emphasizes AI adoption & change management (matches: enablement). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+        },
+        "agentic_ai_automation": {
+          "score": 21,
+          "max_score": 25.0,
+          "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, agentic, governance). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+        },
+        "scaled_agile_delivery": {
+          "score": 22.0,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: safe, backlog, roadmap, kpi). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 10,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 3,
+      "deductions": 0,
+      "ats_keyword_gaps": [],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed Sapiens's opening for AI Lead. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_24_Sapiens_AI_Lead.md",
+      "scored_at": "2026-09-07T12:04:29.154617"
+    }
+  },
+  "4460222239": {
+    "job": {
+      "id": "4460222239",
+      "title": "Delivery Manager",
+      "company": "EPAM Systems",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4460222239",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": "2026-09-01",
+      "description": "- **Seniority level**: Mid-Senior level\n- **Employment type**: Full-time\n- **Job function**: Information Technology, Project Management, and Engineering\n- **Industries**: Software Development and IT Services and IT Consulting\n\n## Job Description\n\n- Own end-to-end delivery of AI and Generative AI initiatives from discovery through production rollout\n- Align stakeholders through clear governance, risk management and delivery updates\n- Coach delivery teams on integrating AI into the software delivery lifecycle\n- Apply Agile and Lean ways of working to build repeatable AI delivery frameworks\n- Embed responsible AI, data privacy and model risk practices across delivery\n- Track outcomes using delivery metrics, value realization and adoption measurement\n- Coordinate distributed, cross-functional teams to maintain delivery health and predictability\n- Delivery leadership across complex software delivery lifecycle programs with clear outcome ownership\n- Understanding of the AI lifecycle including experimentation, evaluation, deployment and monitoring\n- Familiarity with MLOps and continuous integration and continuous delivery (CI/CD) practices\n- Ability to turn ambiguity into actionable plans for technical and non-technical audiences\n- Hands-on experience delivering machine learning and Generative AI solutions into production\n- Confidence engaging executive stakeholders on delivery strategy, progress and trade-offs\n- Background leading distributed, multicultural teams across different functions\n- By choosing EPAM, you're getting a job at one of the most loved workplaces according to Newsweek 2021 & 2022&2023.\n- Employee ideas are the main driver of our business. We have a very supportive environment where your voice matters\n- You will be challenged while working side-by-side with the best talent globally. We work with top-notch technologies, constantly seeking new industry trends and best practices\n- We offer a transparent career path and an individual roadmap to engineer your future & accelerate your journey\n- At EPAM, you can find vast opportunities for self-development: online courses and libraries, mentoring programs, partial grants of certification, and experience exchange with colleagues around the world. You will learn, contribute, and grow with us\n- EPAM is a leading global provider of digital platform engineering and development services. EPAM has been expanding in Singapore since 2013 and delivering the best solutions to our customers. As a recognized leader, EPAM Singapore achieved Great Place to Work® Certification in 2023 and is committed to providing our team with inspiring careers.\n- You will have the opportunity to work with fellow talented technologists and accelerate your career by participating in our numerous upskilling, training, and certification programs. That is why EPAM Singapore was awarded Gold for Best In-House Certification Programmes in the Employee Experience Awards 2023 and Silver in the SkillsFuture Employers Awards 2022 for our efforts in championing employees' skills development and building a lifelong learning culture at the workplace. You can also look forward to developing holistically with the multiracial festivals and various wellness and cultural activities organized by our passionate colleagues here.",
+      "discovered_at": "2026-09-07T12:04:28.637847"
+    },
+    "scored": {
+      "job_id": "4460222239",
+      "job_title": "Delivery Manager",
+      "company": "EPAM Systems",
+      "url": "https://www.linkedin.com/jobs/view/4460222239",
+      "overall_match_score": 71,
+      "scores": {
+        "change_management_adoption": {
+          "score": 22,
+          "max_score": 30.0,
+          "evidence": "Role heavily emphasizes AI adoption & change management (matches: adoption, formation, training, upskilling). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+        },
+        "agentic_ai_automation": {
+          "score": 14,
+          "max_score": 25.0,
+          "evidence": "General AI awareness required; candidate provides strong technical depth without overstatement."
+        },
+        "scaled_agile_delivery": {
+          "score": 20.5,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: delivery manager, roadmap, predictability). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 12,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 3,
+      "deductions": 0,
+      "ats_keyword_gaps": [],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed EPAM Systems's opening for Delivery Manager. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_25_EPAM_Systems_Delivery_Manager.md",
+      "scored_at": "2026-09-07T12:04:30.682934"
+    }
+  },
+  "4454585425": {
+    "job": {
+      "id": "4454585425",
+      "title": "Founding AI Engineer",
+      "company": "Paires",
+      "location": "United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/view/4454585425",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": "2026-08-14",
+      "description": "- **Seniority level**: Not Applicable\n- **Employment type**: Full-time\n- **Job function**: Engineering and Information Technology\n- **Industries**: Venture Capital and Private Equity Principals\n\n## Job Description\n\n- The agent layer: one orchestrator routing work to specialist agents. Those agents research investors, draft outreach that reads human, and carry investor conversations end to end. Evals gate what they are allowed to do alone. This is where you start.\n- The matching engine behind it: embeddings, ranking, scoring, and the feedback loop that makes matches sharper over time.\n- The backend and data behind it all: Python, Postgres, Supabase, AWS, clean pipelines. The agent layer is built on the Claude Agent SDK and Pydantic AI.\n- Shipping to production end to end, and the judgment to know what to build next as we scale.\n- Have been one of the first engineers at a quick-growing company, running the show: you know what it takes to scale and deliver a product, not just manage it.\n- Have at least 3 years of shipping production software behind you, and have taken a full app from zero to production and kept it running, end to end. This seat needs a whole-product builder, not only a model specialist.\n- Have shipped LLM systems to production and have real examples you can walk us through, including an agent system that is more than a single prompt in a loop.\n- Have built retrieval, ranking, or matching with embeddings in production.\n- Write strong Python and reason clearly about data and systems.\n- Design evals, because you care whether the output is actually good.\n- Own outcomes end to end and move fast with AI tooling. You write the code yourself: this is a builder seat, not a management seat. There is no team to hand work to.\n- Bonus: TypeScript in production, FastAPI, vector databases, fintech or fundraising.",
+      "discovered_at": "2026-09-07T12:06:06.394398"
+    },
+    "scored": {
+      "job_id": "4454585425",
+      "job_title": "Founding AI Engineer",
+      "company": "Paires",
+      "url": "https://www.linkedin.com/jobs/view/4454585425",
+      "overall_match_score": 61,
+      "scores": {
+        "change_management_adoption": {
+          "score": 16,
+          "max_score": 30.0,
+          "evidence": "Role heavily emphasizes AI adoption & change management (matches: formation). Candidate has proven track record leading AI workshops and adoption for 7 squads (~50 engineers) at banking client."
+        },
+        "agentic_ai_automation": {
+          "score": 19,
+          "max_score": 25.0,
+          "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+        },
+        "scaled_agile_delivery": {
+          "score": 16.0,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: ). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 10,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 0,
+      "deductions": 0,
+      "ats_keyword_gaps": [],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed Paires's opening for Founding AI Engineer. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_27_Paires_Founding_AI_Engineer.md",
+      "scored_at": "2026-09-07T12:06:06.715071"
+    }
+  },
+  "4460608042": {
+    "job": {
+      "id": "4460608042",
+      "title": "Gen AI Developer",
+      "company": "Tata Consultancy Services",
+      "location": "Mississauga, Ontario, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4460608042",
+      "source": "linkedin",
+      "employment_type": "Contract",
+      "is_remote": true,
+      "posted_date": "2026-09-01",
+      "description": "- **Seniority level**: Mid-Senior level\n- **Employment type**: Full-time\n- **Industries**: IT Services and IT Consulting and Engineering Services\n\n## Job Description\n\nInclusion without Exception\n\n\n\nTata Consultancy Services (TCS) is an equal opportunity employer, and embraces diversity in race, nationality, ethnicity, gender, age, physical ability, neurodiversity, and sexual orientation, to create a workforce that reflects the societies we operate in. Our continued commitment to Culture and Diversity is reflected in our people stories across our workforce and implemented through equitable workplace policies and processes.\n\n\n\nTata Consultancy Services (BSE: 532540, NSE: TCS) is the technology partner of choice for industry-leading organizations worldwide. Since its inception in 1968, TCS has upheld the highest standards of innovation, engineering excellence and customer service.\n\nIt has set an aspiration to become the world's largest AI-led technology services company and is enabling its clients to transform themselves across the full AI stack, from infrastructure to intelligence.\n\n\n\nRooted in the heritage of the Tata Group, TCS is focused on creating long term value for its clients, its investors, its employees, and the community at large. With a highly skilled workforce spread across 56 countries and 194 service delivery centers across the world, the company has been recognized as a top employer in six continents. With the ability to rapidly apply and scale new technologies, the company has built long term partnerships with its clients. Many of these relationships have endured into decades and navigated every technology cycle, from mainframes in the 1970s to artificial intelligence today.\n\n\n\nRequired skill set\n\n\n\nSkills and Responsibilities:\n\n\n\n• Design, develop, and deploy Generative AI solutions using Large Language Models (LLMs), NLP, and machine learning techniques to solve business problems.\n\n• Build and optimize AI applications leveraging platforms such as OpenAI, Azure OpenAI, Lang Chain, Hugging Face, and vector databases.\n\n• Develop prompt engineering strategies, Retrieval-Augmented Generation (RAG) pipelines, and AI agents to improve model performance and user experience.\n\n• Collaborate with cross-functional teams to integrate GenAI solutions into enterprise applications while ensuring scalability, security, and compliance.\n\n• Monitor, evaluate, and continuously enhance AI models through testing, fine-tuning, performance optimization, and governance best practices.\"\n\n\n\nSalary Range - CA$ 90,000 - CA$ 120,000 Per Year\n\n\n\n\"Tata Consultancy Services Canada Inc. is committed to meeting the accessibility needs of all individuals in accordance with the Accessibility for Ontarians with Disabilities Act (AODA) and the Ontario Human Rights Code (OHRC). Should you require accommodation during the recruitment and selection process, please inform Human Resources.\n\n\n\nThank you for your interest in TCS. Candidates that meet the qualifications for this position will be contacted within a 2-week period. We invite you to continue to apply for other opportunities that match your profile.",
+      "discovered_at": "2026-09-07T12:06:06.394801"
+    },
+    "scored": {
+      "job_id": "4460608042",
+      "job_title": "Gen AI Developer",
+      "company": "Tata Consultancy Services",
+      "url": "https://www.linkedin.com/jobs/view/4460608042",
+      "overall_match_score": 65,
+      "scores": {
+        "change_management_adoption": {
+          "score": 10,
+          "max_score": 30.0,
+          "evidence": "Moderate change management requirements mentioned; candidate exceeds baseline operational requirements."
+        },
+        "agentic_ai_automation": {
+          "score": 24,
+          "max_score": 25.0,
+          "evidence": "Direct match with candidate's core expertise in agentic SDLC and LLM governance (matches: agent, llm, genai, generative ai). Candidate actively governs Atlassian Rovo and Claude Code rollouts."
+        },
+        "scaled_agile_delivery": {
+          "score": 16.0,
+          "max_score": 25.0,
+          "evidence": "Strong delivery leadership required (matches: ). Candidate possesses 10+ years scaled delivery experience (SAFe, LeSS, multi-squad governance)."
+        },
+        "executive_alignment": {
+          "score": 12,
+          "max_score": 20.0,
+          "evidence": "Standard stakeholder alignment and business value tracking; strong fit with candidate's advisory background."
+        }
+      },
+      "bonus_points": 3,
+      "deductions": 0,
+      "ats_keyword_gaps": [
+        "rag",
+        "prompt engineering"
+      ],
+      "competency_gaps": [],
+      "recommended_actions": [
+        "Emphasize the 30% sprint overhead reduction and EU AI Act risk tiering from your banking CoE experience."
+      ],
+      "recruiter_pitch_hook": "Hello, I noticed Tata Consultancy Services's opening for Gen AI Developer. As an AI Delivery Lead currently rolling out agentic SDLC tooling (Atlassian Rovo, Claude Code) and EU AI Act governance across 7 squads in an enterprise banking CoE, I specialize in turning autonomous agent pilots into governed, high-adoption production workflows. I'd love to connect to discuss how I can accelerate your AI delivery roadmap.",
+      "saved_jd_file": "JD_28_Tata_Consultancy_Ser_Gen_AI_Developer.md",
+      "scored_at": "2026-09-07T12:06:08.447973"
+    }
+  }
+}

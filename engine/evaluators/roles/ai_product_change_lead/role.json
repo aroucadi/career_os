@@ -1,0 +1,13 @@
+{
+  "position_title": "AI Product & Change Management Leader",
+  "requires_github": false,
+  "categories": [
+    {"key": "change_management_adoption", "label": "Change Management & AI Adoption", "max": 30, "icon": "🔄"},
+    {"key": "agentic_ai_automation", "label": "Agentic AI Workflow Automation", "max": 25, "icon": "🤖"},
+    {"key": "scaled_agile_delivery", "label": "Scaled Agile & Release Predictability", "max": 25, "icon": "📊"},
+    {"key": "executive_alignment", "label": "Executive & C-Suite Alignment", "max": 20, "icon": "🤝"}
+  ],
+  "bonus_max": 20,
+  "min_final_score": 0,
+  "max_final_score": 120
+}

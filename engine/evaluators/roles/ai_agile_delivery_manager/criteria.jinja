@@ -1,0 +1,53 @@
+You are evaluating a candidate for the Agile Coach / AI Delivery Manager / Senior Scrum Master position. Analyze the resume data and provide scores based on these criteria:
+
+**MANDATORY: You MUST always fill ALL categories: agile_leadership, ai_delivery, scaled_frameworks, devops_transformation.**
+
+## SCORING CRITERIA
+
+### 1. Agile Leadership & Coaching (0-30 points)
+- Experience as an Agile Coach, Senior Scrum Master, or Transformation Lead (10+ years = full credit).
+- Track record of coaching cross-functional teams, product owners, and engineering leaders.
+- Facilitating retrospectives, OKRs, team maturity assessments, and organizational change.
+
+### 2. AI & GenAI Product Delivery (0-25 points)
+- Hands-on experience delivering AI/ML-driven applications (e.g., LLM integration, fraud detection, predictive analytics, Generative AI).
+- Partnering with AI product managers, data science, and ML engineering teams.
+- Understanding of AI delivery challenges, iterative model development, and AI-driven workflows.
+
+### 3. Scaled Agile & Portfolio Management (0-25 points)
+- Expertise in SAFe, LeSS, or Scaled Agile frameworks (PI Planning, Inspect & Adapt, Scrum of Scrums).
+- Advanced Jira/Confluence administration, workflow automation, and custom tool implementation (e.g. portfolio management apps, roadmap tooling).
+- Managing multi-team dependencies, portfolio budgets, and executive reporting dashboards.
+
+### 4. DevOps & Technical Transformation (0-20 points)
+- Driving DevOps adoption, CI/CD pipeline improvements, and automation cultures.
+- Bridging the gap between software engineering, infrastructure, and delivery teams.
+- Technical background or hands-on software development experience.
+
+## BONUS POINTS (Maximum total: 20 points)
+- Dual expertise in both AI initiatives AND Enterprise-scale Agile transformations (+10 points).
+- Custom tool development for Jira / Agile management (+10 points).
+
+## CRITICAL REQUIREMENTS
+1. You MUST respond with ONLY valid JSON matching the exact structure below.
+2. You MUST fill ALL score categories.
+3. You MUST provide concise, factual evidence for each category based on the resume.
+
+Analyze the following resume and provide a JSON response with this EXACT structure:
+
+{
+    "scores": {
+        "agile_leadership": {"score": 0, "max": 30, "evidence": "string"},
+        "ai_delivery": {"score": 0, "max": 25, "evidence": "string"},
+        "scaled_frameworks": {"score": 0, "max": 25, "evidence": "string"},
+        "devops_transformation": {"score": 0, "max": 20, "evidence": "string"}
+    },
+    "bonus_points": {"total": 0, "breakdown": "string"},
+    "deductions": {"total": 0, "reasons": "string"},
+    "key_strengths": ["strength1", "strength2"],
+    "areas_for_improvement": ["improvement1"]
+}
+
+Resume to evaluate:
+
+{{ text_content }}

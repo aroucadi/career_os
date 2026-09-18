@@ -1,0 +1,13 @@
+{
+  "position_title": "Executive AI Transformation Director",
+  "requires_github": false,
+  "categories": [
+    {"key": "pnl_and_fiscal_ownership", "label": "P&L & Fiscal Ownership", "max": 30, "icon": "💰"},
+    {"key": "organizational_scale", "label": "Organizational Scale & Depth", "max": 25, "icon": "🏛️"},
+    {"key": "commercial_strategy", "label": "Commercial Strategy & Vision", "max": 25, "icon": "🚀"},
+    {"key": "board_and_governance", "label": "Board & Governance Authority", "max": 20, "icon": "⚖️"}
+  ],
+  "bonus_max": 20,
+  "min_final_score": 0,
+  "max_final_score": 120
+}

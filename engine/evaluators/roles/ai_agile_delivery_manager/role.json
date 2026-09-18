@@ -1,0 +1,13 @@
+{
+  "position_title": "Agile Coach / AI Delivery Manager / Senior Scrum Master",
+  "requires_github": false,
+  "categories": [
+    {"key": "agile_leadership", "label": "Agile Leadership & Coaching", "max": 30, "icon": "🎯"},
+    {"key": "ai_delivery", "label": "AI & GenAI Product Delivery", "max": 25, "icon": "🤖"},
+    {"key": "scaled_frameworks", "label": "Scaled Agile & Portfolio Management (SAFe, Jira, PI)", "max": 25, "icon": "📊"},
+    {"key": "devops_transformation", "label": "DevOps & Technical Transformation", "max": 20, "icon": "🔄"}
+  ],
+  "bonus_max": 20,
+  "min_final_score": -20,
+  "max_final_score": 120
+}

@@ -1,0 +1,39 @@
+{
+  "total_cases": 1,
+  "passed_cases": 1,
+  "failed_cases": 0,
+  "accuracy": 1.0,
+  "false_go_count": 0,
+  "false_go_rate": 0.0,
+  "dealbreaker_recall": 1.0,
+  "average_fit_score": 77.0,
+  "average_critic_score": 100.0,
+  "suite_status": "PASS",
+  "execution_time_seconds": 0.012061834335327148,
+  "results": [
+    {
+      "case_id": "CASE_02_GERMAN_LANGUAGE_TRAP",
+      "description": "Enterprise AI Lead role with mandatory German C1 requirement (Blocker Language)",
+      "profile_id": "alaa_roucadi",
+      "target_jd": "evals/test_jds/TRAP_GERMAN_MANDATORY.md",
+      "verdict": "NO-GO",
+      "fit_score": 77.0,
+      "critic_score": 100.0,
+      "passed_gates": [
+        "Gate 1: All 4 pillars scored with numerical evidence",
+        "Gate 2: Clear separation of hard dealbreakers vs compensable gaps",
+        "Gate 3: Negative constraint respected",
+        "Gate 4: Explicit strategic verdict provided",
+        "Gate 5: Grounded pitch citing verified metrics (Scale (Banking CoE Scale), Innovation (Agentic SDLC & Tooling), Governance (EU AI Act Risk Gates))"
+      ],
+      "failed_gates": [],
+      "is_false_go": false,
+      "verdict_correct": true,
+      "dealbreaker_flagged": true,
+      "proof_tokens_found": [],
+      "assertion_passed": true,
+      "latency_seconds": 0.00538182258605957,
+      "notes": "Dealbreakers detected: Language blocker: German, Commute blocker: Frankfurt"
+    }
+  ]
+}
