@@ -41,3 +41,5 @@ frontend/out/
 # Resumes / Uploads temporary files
 resumes/uploads/
 resumes/tailored/*.tmp
+brag-output/
+

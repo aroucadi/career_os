@@ -124,6 +124,28 @@ class DatabaseManager:
             );
             """)
 
+            # 7. Dense Vector Talent Embeddings (768-dim float32 packed BLOBs)
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS talent_embeddings (
+                profile_id TEXT PRIMARY KEY,
+                anonymized_alias TEXT NOT NULL,
+                embedding_blob BLOB NOT NULL,
+                raw_text_chunk TEXT NOT NULL,
+                updated_at TEXT NOT NULL
+            );
+            """)
+
+            # 8. Requisition Vector Embeddings
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS requisition_embeddings (
+                req_id TEXT PRIMARY KEY,
+                job_title TEXT NOT NULL,
+                embedding_blob BLOB NOT NULL,
+                raw_text_chunk TEXT NOT NULL,
+                created_at TEXT NOT NULL
+            );
+            """)
+
             # Create Indexes for fast querying
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_talent_status ON talent_profiles(readiness_status);")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_matches_cand ON recruiter_matches(candidate_id);")

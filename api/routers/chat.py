@@ -953,8 +953,17 @@ async def handle_chat_stream(payload: ChatPayload):
                     auth_score = ai_rep.get("authenticity_score", 95)
                     yield format_text_delta(f"\nTailored CV successfully compiled and calibrated: `{res['pdf_path'].name}`\n*🛡️ Human Tone Authenticity Score: **{auth_score}%** (AI Risk: {ai_rep.get('verdict', 'HUMAN_AUTHENTIC')})*")
 
+            elif cmd in ("/agent", "/autonomous", "/act"):
+                route_taken = "CANDIDATE_AUTONOMOUS_AGENT"
+                goal = cmd_arg.strip() or "Review current pipeline opportunities and evaluate best next steps"
+                from engine.agents.candidate_agent import CandidateAutonomousAgent
+                agent = CandidateAutonomousAgent(profile_id=cand.id)
+                async for chunk in agent.execute_goal_stream(goal=goal):
+                    yield chunk
+
             elif cmd in ("/help", "/commands"):
                 yield format_text_delta("🛠️ **Available CareerOS Slash Commands**:\n\n")
+                yield format_text_delta("- `/agent [goal]` — Launch Autonomous ReAct Agent with dynamic tool planning\n")
                 yield format_text_delta("- `/debate [JD or URL]` — Run Dual-Agent Dialectic Debate (Advocate vs Prosecutor)\n")
                 yield format_text_delta("- `/tailor [JD or URL]` — Synthesize tailored CV and compile pixel-perfect A4 PDF\n")
                 yield format_text_delta("- `/scan [query]` — Run Career Radar market scan on job boards\n")

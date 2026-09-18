@@ -7,6 +7,7 @@ double opt-in candidate consent, and executive dossier unlocking.
 
 from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, Body
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from engine.recruiter.models import (
@@ -17,9 +18,46 @@ from engine.recruiter.models import (
 )
 from engine.recruiter.matcher import RequisitionMatcher
 from engine.recruiter.dossier import ExecutiveDossierCompiler
+from engine.agents.recruiter_agent import RecruiterAutonomousAgent
 
 router = APIRouter(prefix="/api/recruiter", tags=["Recruiter Delegation"])
 candidate_router = APIRouter(prefix="/api/candidates", tags=["Candidate Portal"])
+
+class RecruiterAgentSourcingRequest(BaseModel):
+    brief: str = Field(description="Natural language hiring brief, requirements, or JD")
+    org_id: Optional[str] = Field(default="org_default_test")
+    api_key: Optional[str] = Field(default="cr_live_test123")
+    auto_dispatch_top: Optional[bool] = Field(default=False)
+
+@router.post("/agent/source")
+async def stream_recruiter_sourcing_agent(payload: RecruiterAgentSourcingRequest):
+    """
+    S-Tier Autonomous Recruiter Agent:
+    Decomposes natural language brief, searches talent lake via 768-dim embeddings,
+    generates candidate match slate, synthesizes tailored tactical interview cheatsheets,
+    and optionally initiates cryptographic double opt-in.
+    Streams Vercel AI SDK SSE protocol.
+    """
+    if not payload.brief or not payload.brief.strip():
+        raise HTTPException(status_code=400, detail="A non-empty hiring brief is required.")
+
+    agent = RecruiterAutonomousAgent(
+        org_id=payload.org_id or "org_default_test",
+        api_key=payload.api_key or "cr_live_test123"
+    )
+
+    return StreamingResponse(
+        agent.execute_sourcing_stream(
+            brief=payload.brief,
+            auto_dispatch_top=bool(payload.auto_dispatch_top)
+        ),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"
+        }
+    )
 
 class RequisitionMatchRequest(BaseModel):
     job_title: str = Field(description="Title of requisition, e.g. 'Head of AI Adoption'")
