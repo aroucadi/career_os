@@ -1,0 +1,35 @@
+﻿version: "3.8"
+
+services:
+  careeros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: careeros-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - NODE_ENV=production
+      - DEFAULT_MODEL=gemini-3.7-flash
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CAREEROS_SECRET_KEY=${CAREEROS_SECRET_KEY:-local-development-secret-key-32chars}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY:-}
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+    volumes:
+      # Persist SQLite WAL database, candidate profiles, and generated PDF resumes
+      - careeros_storage:/app/storage
+      - careeros_profiles:/app/profiles
+      - careeros_resumes:/app/resumes
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8080/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  careeros_storage:
+  careeros_profiles:
+  careeros_resumes:

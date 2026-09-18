@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_synced_at": "2026-09-17T19:01:57.636126",
+  "last_synced_at": "2026-09-18T17:20:55.113495",
   "total_count": 41,
   "opportunities": {
     "JD_01": {
@@ -14,7 +14,7 @@
       "source": "radar",
       "url": "",
       "discovered_at": "2026-09-08T11:00:32.092880",
-      "last_updated_at": "2026-09-17T19:01:57.635990",
+      "last_updated_at": "2026-09-18T17:20:55.113370",
       "next_follow_up": null,
       "evaluation": {
         "overall_score": 92.0,
@@ -181,7 +181,7 @@
       "source": "radar",
       "url": "",
       "discovered_at": "2026-09-08T11:00:32.093699",
-      "last_updated_at": "2026-09-17T19:01:57.348612",
+      "last_updated_at": "2026-09-18T17:20:54.796636",
       "next_follow_up": null,
       "evaluation": {
         "overall_score": 92.0,
@@ -1919,7 +1919,7 @@
       "source": "radar",
       "url": "",
       "discovered_at": "2026-09-08T11:00:32.105657",
-      "last_updated_at": "2026-09-17T19:01:51.863119",
+      "last_updated_at": "2026-09-18T17:20:43.726359",
       "next_follow_up": null,
       "evaluation": {
         "overall_score": 88.0,

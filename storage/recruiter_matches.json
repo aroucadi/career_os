@@ -6701,5 +6701,3930 @@
     "opt_in_status": "PENDING_CONSENT",
     "requested_at": null,
     "unlocked_at": null
+  },
+  "match_7ccab574": {
+    "match_id": "match_7ccab574",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_7a075510": {
+    "match_id": "match_7a075510",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_d34de662": {
+    "match_id": "match_d34de662",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_be5ddda6": {
+    "match_id": "match_be5ddda6",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_40488c01": {
+    "match_id": "match_40488c01",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_284379c9": {
+    "match_id": "match_284379c9",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_82e61e33": {
+    "match_id": "match_82e61e33",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5db541ba": {
+    "match_id": "match_5db541ba",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_b76dc12a": {
+    "match_id": "match_b76dc12a",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 77.0,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_6bcb81cc": {
+    "match_id": "match_6bcb81cc",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Chief Audit Executive",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_143f694a": {
+    "match_id": "match_143f694a",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_ff8a8289": {
+    "match_id": "match_ff8a8289",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_7f599c74": {
+    "match_id": "match_7f599c74",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_091d9965": {
+    "match_id": "match_091d9965",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_d19645f4": {
+    "match_id": "match_d19645f4",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_2fe8d734": {
+    "match_id": "match_2fe8d734",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_b0244eb5": {
+    "match_id": "match_b0244eb5",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f0b042ff": {
+    "match_id": "match_f0b042ff",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_d9c384e2": {
+    "match_id": "match_d9c384e2",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_04d782ee": {
+    "match_id": "match_04d782ee",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_b5f54c25": {
+    "match_id": "match_b5f54c25",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_bbe30424": {
+    "match_id": "match_bbe30424",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_643cc052": {
+    "match_id": "match_643cc052",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c0e31d57": {
+    "match_id": "match_c0e31d57",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_06d9ff27": {
+    "match_id": "match_06d9ff27",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 77.0,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_2e977d2a": {
+    "match_id": "match_2e977d2a",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Chief Audit Executive",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f683d9f8": {
+    "match_id": "match_f683d9f8",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_6fbd9020": {
+    "match_id": "match_6fbd9020",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_8fdb5a08": {
+    "match_id": "match_8fdb5a08",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_6d8e40b5": {
+    "match_id": "match_6d8e40b5",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c0fa073a": {
+    "match_id": "match_c0fa073a",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a0ab5525": {
+    "match_id": "match_a0ab5525",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f8c70f43": {
+    "match_id": "match_f8c70f43",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a43f68b7": {
+    "match_id": "match_a43f68b7",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_40260c44": {
+    "match_id": "match_40260c44",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_179b9422": {
+    "match_id": "match_179b9422",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_49788e1b": {
+    "match_id": "match_49788e1b",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_e6e44063": {
+    "match_id": "match_e6e44063",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_e84029ff": {
+    "match_id": "match_e84029ff",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_8ee72f4f": {
+    "match_id": "match_8ee72f4f",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_e5416ef6": {
+    "match_id": "match_e5416ef6",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 77.0,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_887076db": {
+    "match_id": "match_887076db",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Chief Audit Executive",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f7d96cbc": {
+    "match_id": "match_f7d96cbc",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_de77d074": {
+    "match_id": "match_de77d074",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_bdda9b24": {
+    "match_id": "match_bdda9b24",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_0bdb3720": {
+    "match_id": "match_0bdb3720",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_25aee342": {
+    "match_id": "match_25aee342",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_3d59c3f3": {
+    "match_id": "match_3d59c3f3",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_e3cc8ad2": {
+    "match_id": "match_e3cc8ad2",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect, Senior AI Product & Delivery Manager",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_53498ece": {
+    "match_id": "match_53498ece",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_d36978d2": {
+    "match_id": "match_d36978d2",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5f21e0fa": {
+    "match_id": "match_5f21e0fa",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_db49944e": {
+    "match_id": "match_db49944e",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_83fca9c9": {
+    "match_id": "match_83fca9c9",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 93.8,
+    "rubric_subscores": {
+      "domain": 98.0,
+      "governance": 95.0,
+      "scale": 95.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Director of Internal Audit, Head of Tech Compliance & Risk",
+      "Verified core stack match: SOX 404, ITGC Controls, Internal Audit",
+      "Grounded governance expertise: SOX 404 / Risk Automation, Audit Committee Reporting"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "APPROVED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_71165791": {
+    "match_id": "match_71165791",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Board Reporting"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f9508389": {
+    "match_id": "match_f9508389",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c08a805e": {
+    "match_id": "match_c08a805e",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_08887614": {
+    "match_id": "match_08887614",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5e8d3e1c": {
+    "match_id": "match_5e8d3e1c",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 87.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 93.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Fractional CTO",
+      "Verified Executive Advisory (Retainer Governance): Governs technical roadmaps across 3 concurrent high-growth clients under structured retainers."
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "DECLINED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c7616611": {
+    "match_id": "match_c7616611",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_eab05ba7": {
+    "match_id": "match_eab05ba7",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_312f7b04": {
+    "match_id": "match_312f7b04",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_fff4a21a": {
+    "match_id": "match_fff4a21a",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_4e71f96e": {
+    "match_id": "match_4e71f96e",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_fb1d094b": {
+    "match_id": "match_fb1d094b",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_98ee71e4": {
+    "match_id": "match_98ee71e4",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_32f1f9da": {
+    "match_id": "match_32f1f9da",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_57c3611c": {
+    "match_id": "match_57c3611c",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_bb5cb820": {
+    "match_id": "match_bb5cb820",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_0fc9b9cd": {
+    "match_id": "match_0fc9b9cd",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_ca886a2f": {
+    "match_id": "match_ca886a2f",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_ff37f2b4": {
+    "match_id": "match_ff37f2b4",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c6df0ec2": {
+    "match_id": "match_c6df0ec2",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 77.0,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a29f6d7d": {
+    "match_id": "match_a29f6d7d",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Chief Audit Executive",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_4e116c47": {
+    "match_id": "match_4e116c47",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c980f2c8": {
+    "match_id": "match_c980f2c8",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_e7011e7b": {
+    "match_id": "match_e7011e7b",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a0ffa02f": {
+    "match_id": "match_a0ffa02f",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_69853689": {
+    "match_id": "match_69853689",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_59152c5e": {
+    "match_id": "match_59152c5e",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_608e3a7d": {
+    "match_id": "match_608e3a7d",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect, Senior AI Product & Delivery Manager",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5e2b7bf0": {
+    "match_id": "match_5e2b7bf0",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_20000ed1": {
+    "match_id": "match_20000ed1",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_46ffec08": {
+    "match_id": "match_46ffec08",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_7ba841a0": {
+    "match_id": "match_7ba841a0",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_669074a4": {
+    "match_id": "match_669074a4",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 93.8,
+    "rubric_subscores": {
+      "domain": 98.0,
+      "governance": 95.0,
+      "scale": 95.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Director of Internal Audit, Head of Tech Compliance & Risk",
+      "Verified core stack match: SOX 404, ITGC Controls, Internal Audit",
+      "Grounded governance expertise: SOX 404 / Risk Automation, Audit Committee Reporting"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "APPROVED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_900a1e6d": {
+    "match_id": "match_900a1e6d",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Board Reporting"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_75968bec": {
+    "match_id": "match_75968bec",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_05d8bcaa": {
+    "match_id": "match_05d8bcaa",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_9ec31319": {
+    "match_id": "match_9ec31319",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_bbf21150": {
+    "match_id": "match_bbf21150",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 87.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 93.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Fractional CTO",
+      "Verified Executive Advisory (Retainer Governance): Governs technical roadmaps across 3 concurrent high-growth clients under structured retainers."
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "DECLINED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f7ec6615": {
+    "match_id": "match_f7ec6615",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_b8e6fc1d": {
+    "match_id": "match_b8e6fc1d",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_f3fe138a": {
+    "match_id": "match_f3fe138a",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5a8cdb51": {
+    "match_id": "match_5a8cdb51",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_12c34034": {
+    "match_id": "match_12c34034",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_2839b7b9": {
+    "match_id": "match_2839b7b9",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a8c753b9": {
+    "match_id": "match_a8c753b9",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 76.7,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_29fc2db6": {
+    "match_id": "match_29fc2db6",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_dd0acc53": {
+    "match_id": "match_dd0acc53",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_8a198aed": {
+    "match_id": "match_8a198aed",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c4e48b85": {
+    "match_id": "match_c4e48b85",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_14f90ac4": {
+    "match_id": "match_14f90ac4",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_903d9c49": {
+    "match_id": "match_903d9c49",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Solutions Architect', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_73c1f852": {
+    "match_id": "match_73c1f852",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 77.0,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a956c011": {
+    "match_id": "match_a956c011",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Chief Audit Executive",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_00fd2ed3": {
+    "match_id": "match_00fd2ed3",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_cc8d7f3a": {
+    "match_id": "match_cc8d7f3a",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Executive Technology Leader', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c136719d": {
+    "match_id": "match_c136719d",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_c3e56f5b": {
+    "match_id": "match_c3e56f5b",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 80.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_307d8768": {
+    "match_id": "match_307d8768",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_24b847e4": {
+    "match_id": "match_24b847e4",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption for enterprise bank', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_fd0c77fe": {
+    "match_id": "match_fd0c77fe",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include AI Delivery Lead & Operating Model Architect, Senior AI Product & Delivery Manager",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_a13460d6": {
+    "match_id": "match_a13460d6",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_97ba70ef": {
+    "match_id": "match_97ba70ef",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_cba28e90": {
+    "match_id": "match_cba28e90",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'AI Delivery Lead', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_6b744447": {
+    "match_id": "match_6b744447",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_fb3e08e6": {
+    "match_id": "match_fb3e08e6",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 93.8,
+    "rubric_subscores": {
+      "domain": 98.0,
+      "governance": 95.0,
+      "scale": 95.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Director of Internal Audit, Head of Tech Compliance & Risk",
+      "Verified core stack match: SOX 404, ITGC Controls, Internal Audit",
+      "Grounded governance expertise: SOX 404 / Risk Automation, Audit Committee Reporting"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "APPROVED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_7e02ab49": {
+    "match_id": "match_7e02ab49",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Board Reporting"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_96de185d": {
+    "match_id": "match_96de185d",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Director of Internal Audit & Risk', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_ffb52724": {
+    "match_id": "match_ffb52724",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_5f32c53f": {
+    "match_id": "match_5f32c53f",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_4dc23d17": {
+    "match_id": "match_4dc23d17",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 87.4,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 80.0,
+      "scale": 93.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Fractional CTO",
+      "Verified Executive Advisory (Retainer Governance): Governs technical roadmaps across 3 concurrent high-growth clients under structured retainers."
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "DECLINED",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_1933602a": {
+    "match_id": "match_1933602a",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 73.5,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 80.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Fractional CTO', but core competencies align."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_ed421bea": {
+    "match_id": "match_ed421bea",
+    "candidate_id": "cand_6f234c",
+    "anonymized_alias": "Candidate #6F23 \u2014 Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "headline": "Senior AI Product & Delivery Manager / AI Operating Model Architect",
+    "seniority": "Senior / Lead / Executive Director tier (10+ YOE)",
+    "overall_match_score": 83.9,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 65.0,
+      "scale": 94.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of AI Platform Delivery",
+      "Verified Scale (Banking CoE Scale): Governed 3 banking tribes and 7 squads (~50 engineers/POs) across 3 AI product streams.",
+      "Verified Scale (Alignify Custom Jira App): Created Alignify, a custom internal Jira portfolio dependency application for cross-tribe delivery."
+    ],
+    "pre_identified_gaps": [
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "target_compensation": {
+      "freelance_tjm": "800 - 1,000 EUR / day",
+      "permanent_salary": "110k - 130k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_b6b8380e": {
+    "match_id": "match_b6b8380e",
+    "candidate_id": "cand_sarah_audit",
+    "anonymized_alias": "Candidate #4129 \u2014 Senior Manager & Director of Financial Audit / Tech Risk",
+    "headline": "Senior Manager / Director of Internal Audit, Tech Risk & SOX Automation",
+    "seniority": "Director / Senior Manager (12+ YOE)",
+    "overall_match_score": 84.2,
+    "rubric_subscores": {
+      "domain": 92.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Direct role alignment: target titles include Head of Tech Compliance & Risk",
+      "Grounded governance expertise: Regulated Fintech & Banking"
+    ],
+    "pre_identified_gaps": [],
+    "governance_tags": [
+      "SOX 404 / Risk Automation",
+      "Regulated Fintech & Banking",
+      "Audit Committee Reporting"
+    ],
+    "target_compensation": {
+      "permanent_salary": "120k - 135k EUR base + bonus",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_524c1a6e": {
+    "match_id": "match_524c1a6e",
+    "candidate_id": "cand_julien_fractional",
+    "anonymized_alias": "Candidate #8904 \u2014 Fractional CTO & Tech Advisory Partner",
+    "headline": "Fractional CTO & Strategic Architecture Advisor for Series A-B Startups",
+    "seniority": "Executive VP / CTO Tier (15+ YOE)",
+    "overall_match_score": 77.2,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 95.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [
+      "Grounded governance expertise: Steerco Governance"
+    ],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align."
+    ],
+    "governance_tags": [
+      "Steerco Governance",
+      "Board Reporting",
+      "Due Diligence"
+    ],
+    "target_compensation": {
+      "monthly_retainer": "4,000 - 5,500 EUR / month (1-2 d/wk)",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
+  },
+  "match_10c20b22": {
+    "match_id": "match_10c20b22",
+    "candidate_id": "cand_lucas_ai",
+    "anonymized_alias": "Candidate #1023 \u2014 Junior AI & LLM Systems Engineer",
+    "headline": "Junior Applied AI Engineer | LLM Evaluations, FastAPI, LangChain & Agentic Workflows",
+    "seniority": "Junior / Associate (2 YOE)",
+    "overall_match_score": 69.7,
+    "rubric_subscores": {
+      "domain": 72.0,
+      "governance": 65.0,
+      "scale": 65.0,
+      "compensation": 80.0
+    },
+    "key_leverage_points": [],
+    "pre_identified_gaps": [
+      "Target titles differ slightly from 'Head of AI Adoption', but core competencies align.",
+      "Standard governance experience without explicit mandate-specific certifications."
+    ],
+    "governance_tags": [
+      "LLM Evaluation",
+      "Automated Testing"
+    ],
+    "target_compensation": {
+      "permanent_salary": "48k - 55k EUR base",
+      "currency": "EUR"
+    },
+    "opt_in_status": "PENDING_CONSENT",
+    "requested_at": null,
+    "unlocked_at": null
   }
 }

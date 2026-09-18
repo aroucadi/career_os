@@ -58,7 +58,7 @@
     "consent_broadcast_enabled": true,
     "verified_composite_score": 88.0,
     "last_evaluated_jd": null,
-    "indexed_at": "2026-09-17T18:01:59.597566+00:00"
+    "indexed_at": "2026-09-18T16:21:11.298188+00:00"
   },
   "cand_sarah_audit": {
     "profile_id": "cand_sarah_audit",
@@ -106,7 +106,7 @@
     "consent_broadcast_enabled": true,
     "verified_composite_score": 91.0,
     "last_evaluated_jd": null,
-    "indexed_at": "2026-09-17T18:01:59.108843+00:00"
+    "indexed_at": "2026-09-18T16:20:59.565313+00:00"
   },
   "cand_julien_fractional": {
     "profile_id": "cand_julien_fractional",
@@ -153,7 +153,7 @@
     "consent_broadcast_enabled": true,
     "verified_composite_score": 93.0,
     "last_evaluated_jd": null,
-    "indexed_at": "2026-09-17T18:01:59.108870+00:00"
+    "indexed_at": "2026-09-18T16:20:59.565356+00:00"
   },
   "cand_lucas_ai": {
     "profile_id": "cand_lucas_ai",
@@ -200,6 +200,6 @@
     "consent_broadcast_enabled": true,
     "verified_composite_score": 86.0,
     "last_evaluated_jd": null,
-    "indexed_at": "2026-09-17T18:01:59.108897+00:00"
+    "indexed_at": "2026-09-18T16:20:59.565386+00:00"
   }
 }
