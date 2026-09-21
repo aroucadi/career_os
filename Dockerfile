@@ -1,10 +1,10 @@
-﻿# ==========================================
+# ==========================================
 # Stage 1: Frontend Next.js Standalone Build
 # ==========================================
 FROM node:20-bookworm-slim AS frontend-builder
 WORKDIR /app/frontend
 
-COPY frontend/package.json frontend/package-lock.json ./
+COPY frontend/package*.json ./
 RUN npm ci
 
 COPY frontend/ ./
@@ -23,32 +23,17 @@ ENV PYTHONUNBUFFERED=1 \
     PORT=8080 \
     NEXT_TELEMETRY_DISABLED=1 \
     NODE_ENV=production \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
-# Install system dependencies (Node.js 20, Chromium, Fonts, CA certs)
+# Install system utilities, Node.js, and font libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     ca-certificates \
-    gnupg \
-    chromium \
+    nodejs \
+    npm \
     fonts-liberation \
-    fonts-noto-color-emoji \
     fontconfig \
-    libnss3 \
-    libatk-bridge2.0-0 \
-    libdrm2 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxrandr2 \
-    libgbm1 \
-    libasound2 \
-    libpango-1.0-0 \
-    libcairo2 \
-    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y --no-install-recommends nodejs \
     && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean \
     && fc-cache -fv
 
 WORKDIR /app
@@ -57,6 +42,9 @@ WORKDIR /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
+
+# Install Playwright browser and its required system libraries
+RUN python -m playwright install --with-deps chromium || true
 
 # Copy Backend Python codebase
 COPY 00_CORE/ 00_CORE/
@@ -68,7 +56,9 @@ COPY 05_TEMPLATES/ 05_TEMPLATES/
 COPY 06_PROMPT_COMPONENTS/ 06_PROMPT_COMPONENTS/
 COPY 07_TARGET_JDS/ 07_TARGET_JDS/
 COPY api/ api/
+COPY career_radar/ career_radar/
 COPY engine/ engine/
+COPY evals/ evals/
 COPY profiles/ profiles/
 COPY resumes/ resumes/
 COPY storage/ storage/
@@ -83,7 +73,6 @@ COPY --from=frontend-builder /app/frontend/public ./frontend-server/public
 COPY docker-entrypoint.sh ./
 RUN chmod +x docker-entrypoint.sh
 
-# Cloud Run defaults to PORT=8080
 EXPOSE 8080
 
 HEALTHCHECK --interval=15s --timeout=5s --start-period=10s --retries=3 \

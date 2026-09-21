@@ -1,4 +1,4 @@
-﻿# ==============================================================================
+# ==============================================================================
 # Google Cloud Build Pipeline: CareerOS 2.0
 # ==============================================================================
 # Triggers on git push to main -> Builds Container -> Pushes to Artifact Registry -> Deploys to Cloud Run
@@ -8,6 +8,7 @@ substitutions:
   _REGION: "europe-west1"
   _SERVICE_NAME: "careeros"
   _REPOSITORY: "careeros-repo"
+  _TAG: "v2.3.0"
 
 steps:
   # 1. Build Container Image using BuildKit caching
@@ -17,7 +18,7 @@ steps:
       - "-c"
       - |
         docker build \
-          --tag "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:$COMMIT_SHA" \
+          --tag "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:${_TAG}" \
           --tag "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:latest" \
           -f Dockerfile .
 
@@ -36,7 +37,7 @@ steps:
       - "deploy"
       - "${_SERVICE_NAME}"
       - "--image"
-      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:$COMMIT_SHA"
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:${_TAG}"
       - "--region"
       - "${_REGION}"
       - "--platform"
@@ -55,10 +56,10 @@ steps:
       - "--set-env-vars"
       - "DEFAULT_MODEL=gemini-3.7-flash,NODE_ENV=production"
       - "--set-secrets"
-      - "GEMINI_API_KEY=GEMINI_API_KEY:latest,CAREEROS_SECRET_KEY=CAREEROS_SECRET_KEY:latest,STRIPE_SECRET_KEY=STRIPE_SECRET_KEY:latest,RESEND_API_KEY=RESEND_API_KEY:latest"
+      - "GEMINI_API_KEY=GEMINI_API_KEY:latest,CAREEROS_SECRET_KEY=CAREEROS_SECRET_KEY:latest"
 
 images:
-  - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:$COMMIT_SHA"
+  - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:${_TAG}"
   - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:latest"
 
 options:

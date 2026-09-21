@@ -52,6 +52,7 @@ app.include_router(recruiter.candidate_router)
 app.include_router(candidates.router)
 
 @app.get("/health", tags=["System"])
+@app.get("/api/health", tags=["System"])
 def health_check():
     """Health check endpoint for container orchestrators and monitoring."""
     return {
