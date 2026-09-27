@@ -16,14 +16,18 @@ import {
   ChevronDown,
   Building2,
   GraduationCap,
-  Shuffle
+  Shuffle,
+  UploadCloud,
+  Mail
 } from "lucide-react";
 import MessageItem from "./MessageItem";
 import { CommandMenu, CANDIDATE_COMMANDS, SlashCommand } from "./CommandMenu";
-import { EnergyCreditBadge } from "./EnergyCreditBadge";
 import { InboundOffersDrawer } from "./InboundOffersDrawer";
 import { UploadCVModal } from "./UploadCVModal";
 import { RecruiterPortalModal } from "../recruiter/RecruiterPortalModal";
+import { AdminSecretDrawer } from "./AdminSecretDrawer";
+import { ClaimAccountModal } from "./ClaimAccountModal";
+import { useAnonymousSession } from "@/lib/session";
 
 export type CareerMode = "freelance" | "employee" | "fractional" | "student" | "pivot";
 
@@ -184,24 +188,22 @@ const CAREER_MODES: Record<CareerMode, ModeConfig> = {
 };
 
 export const ChatInterface: React.FC = () => {
+  const { sessionId, activeCV, saveCV, removeCV, isHydrated } = useAnonymousSession();
   const [showCommands, setShowCommands] = useState(false);
   const [showInbound, setShowInbound] = useState(false);
   const [showUploadCV, setShowUploadCV] = useState(false);
+  const [showClaimModal, setShowClaimModal] = useState(false);
   const [showRecruiterPortal, setShowRecruiterPortal] = useState(false);
+  const [showAdminDrawer, setShowAdminDrawer] = useState(false);
   const [activeModel, setActiveModel] = useState("gemini-2.5-flash");
   const [careerMode, setCareerMode] = useState<CareerMode>("freelance");
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // 5-Tap Gesture Detection State for Admin Controls (Phase 0 / Question 7)
+  const [tapCount, setTapCount] = useState(0);
+  const tapTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-detect magic-link Double Opt-In token on page load (SPEC-0045)
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("consent_token") || params.get("match_id")) {
-        setShowInbound(true);
-      }
-    }
-  }, []);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const mainScrollRef = useRef<HTMLElement>(null);
 
   const activeConfig = CAREER_MODES[careerMode];
 
@@ -216,7 +218,7 @@ export const ChatInterface: React.FC = () => {
   } = useChat({
     api: "/api/chat",
     body: {
-      profileId: "alaa_roucadi",
+      profileId: activeCV?.profileId || sessionId,
       persona: "candidate",
       model: activeModel,
       career_mode: careerMode
@@ -225,14 +227,106 @@ export const ChatInterface: React.FC = () => {
       {
         id: "intro-1",
         role: "assistant",
-        content: "👋 **Welcome back, Alaa.** I am your Universal CareerOS Strategic Agent.\n\nI am connected to your master profile telemetry, target market JDs, adversarial debates, and headless A4 PDF compiler.\n\nYou can paste any job URL or text, switch career modes above, or use commands like `/tailor JD_34`, `/evaluate JD_34`, or `/pipeline` to drive actions."
+        content: "👋 **Welcome to CareerOS.** I am your Universal Strategic Career Agent.\n\nDrop your CV (PDF or Markdown) and paste any target Job Description or desired role to instantly calculate your ATS match score, skill-up path, and tailored resume — completely anonymous, zero sign-up required.\n\nWhat role would you like to explore today?"
       }
     ]
   });
 
-  // Auto scroll to bottom smoothly
+  // Dynamic welcome message based on active anonymous session
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (isHydrated && activeCV) {
+      setMessages((prev) => {
+        if (prev.length === 1 && prev[0].id === "intro-1") {
+          return [
+            {
+              id: "intro-1",
+              role: "assistant",
+              content: `👋 **Welcome back.** Your active CV (**${activeCV.filename}**) is loaded in your private local session.\n\nI am connected to your profile telemetry, target market JDs, gap remediation, and adversarial debates.\n\nWhat role or job description are we targeting today?`
+            }
+          ];
+        }
+        return prev;
+      });
+    }
+  }, [isHydrated, activeCV, setMessages]);
+
+  // Auto-detect magic-link Double Opt-In token or test demo fixture on page load (SPEC-0045)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("consent_token") || params.get("match_id")) {
+        setShowInbound(true);
+      }
+      if (params.get("demo") === "generative") {
+        setMessages([
+          {
+            id: "intro-1",
+            role: "assistant",
+            content: "👋 **Welcome back, Alaa.** Here is your latest strategic mandate evaluation:"
+          },
+          {
+            id: "demo-eval-1",
+            role: "assistant",
+            content: "I have completed the dialectic arbitration for **Mandate #JD_34: Lead AI Delivery Architect (SCC)**:",
+            toolInvocations: [
+              {
+                state: "result",
+                toolCallId: "call_eval_34",
+                toolName: "DebateVerdictCard",
+                args: {
+                  verdict: "ENGAGE & EXPLOIT FIT",
+                  quality_score: 92,
+                  trap_score: 12,
+                  target_role: "Lead AI Delivery Architect (SCC)",
+                  jd_id: "JD_34",
+                  decision_rationale: "Strong alignment with candidate multi-agent AI CoE leadership. Rate floor exceeded (€950/d vs budget €1,050/d). Remote leverage confirmed.",
+                  advocate_points: [
+                    "Candidate architected production multi-agent system matching 100% of tech stack.",
+                    "Target TJM €950/d is well within the hiring manager budget cap (€1,100/d).",
+                    "100% asynchronous delivery model matches candidate operating preferences."
+                  ],
+                  dealbreakers: [
+                    "Commute clause requires 1 quarterly onsite executive meeting in Paris (acceptable)."
+                  ]
+                },
+                result: { success: true }
+              },
+              {
+                state: "result",
+                toolCallId: "call_tailor_34",
+                toolName: "TailoredCVCard",
+                args: {
+                  candidate_name: "Alaa Eddine Roucadi",
+                  target_role: "Lead AI Delivery Architect (SCC)",
+                  tailored_summary: "Principal AI Delivery Manager & Solutions Architect with 10+ years driving enterprise AI operating models, LLM orchestration, and multi-agent platforms.",
+                  bullets_synthesized: 14,
+                  pdf_path: "Alaa_Eddine_Roucadi_Resume_v12.pdf",
+                  ai_report: {
+                    authenticity_score: 98,
+                    verdict: "HUMAN_AUTHENTIC",
+                    burstiness_index: 0.52,
+                    token_diversity_ttr: 0.68
+                  }
+                },
+                result: { success: true }
+              }
+            ]
+          }
+        ]);
+      }
+    }
+  }, [setMessages]);
+
+  // Auto scroll main container smoothly (only when user interacts or multiple messages exist, never on initial glance)
+  useEffect(() => {
+    if (messages.length > 2 || isLoading) {
+      if (mainScrollRef.current) {
+        mainScrollRef.current.scrollTo({
+          top: mainScrollRef.current.scrollHeight,
+          behavior: "smooth"
+        });
+      }
+    }
   }, [messages, isLoading]);
 
   // Adjust textarea height automatically
@@ -276,35 +370,75 @@ export const ChatInterface: React.FC = () => {
     append({ role: "user", content: actionText });
   };
 
+  // 5-Tap Gesture Handler on Version Label
+  const handleVersionTap = () => {
+    const newCount = tapCount + 1;
+    setTapCount(newCount);
+
+    if (tapTimerRef.current) {
+      clearTimeout(tapTimerRef.current);
+    }
+
+    if (newCount >= 5) {
+      setTapCount(0);
+      setShowAdminDrawer(true);
+      if (typeof window !== "undefined" && "vibrate" in navigator) {
+        try { navigator.vibrate([15, 30, 15]); } catch (e) {}
+      }
+    } else {
+      tapTimerRef.current = setTimeout(() => {
+        setTapCount(0);
+      }, 2500);
+    }
+  };
+
   return (
-    <div className="flex flex-col h-screen bg-slate-50/70 text-slate-900 font-sans">
-      {/* Top Executive Header (Stitch MCP Executive Pure Light) */}
-      <header className="h-14 shrink-0 border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between z-20 shadow-xs">
+    <div className="flex flex-col h-screen bg-canvas text-content-primary font-sans">
+      {/* Top Executive Header (Clean, 60-30-10 Balanced, Zero Clutter) */}
+      <header className="h-14 shrink-0 border-b border-border-subtle bg-surface/90 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between z-20 shadow-career-card">
         {/* Left Brand Cluster */}
         <div className="flex items-center space-x-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold text-xs shadow-sm">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-white font-bold text-xs shadow-xs">
             OS
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <h1 className="text-sm font-bold text-slate-900 leading-tight tracking-tight">CareerOS 2.0</h1>
-              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200/80">
-                UNIVERSAL
+              <h1 className="text-sm font-bold text-content-primary leading-tight tracking-tight">CareerOS</h1>
+              <span className="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-accent-subtle text-accent border border-indigo-200/60">
+                v2.0
               </span>
             </div>
-            <p className="text-[11px] text-slate-500 font-medium">Strategic Career Agent</p>
+            <p className="text-[11px] text-content-muted font-medium">Strategic Career Agent</p>
           </div>
         </div>
 
-        {/* Center/Right Career Track & Telemetry Cluster */}
-        <div className="flex items-center space-x-2.5">
+        {/* Center / Right Functional Actions */}
+        <div className="flex items-center space-x-2">
+          {/* Anonymous Session Pill & Claim Account Trigger */}
+          <button
+            type="button"
+            onClick={() => setShowClaimModal(true)}
+            className="min-touch-target hidden sm:flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200/80 text-emerald-800 text-xs font-mono transition-colors cursor-pointer shadow-xs"
+            title="Anonymous local session. Click to save across devices."
+          >
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="font-semibold">{activeCV ? "Session Active" : "Guest Mode"}</span>
+            {activeCV ? (
+              <span className="text-[11px] text-emerald-700 max-w-[100px] truncate hidden lg:inline">
+                ({activeCV.filename})
+              </span>
+            ) : null}
+            <span className="text-[10px] text-emerald-600 bg-emerald-100/60 px-1 py-0.5 rounded font-sans font-medium">Save →</span>
+          </button>
+
           {/* Universal Career Track Switcher */}
-          <div className="flex items-center space-x-1.5 bg-slate-100/90 p-1 rounded-lg border border-slate-200 text-xs font-mono">
-            <span className="text-[10px] uppercase text-slate-400 font-bold px-1.5 hidden md:inline">Track:</span>
+          <div className="flex items-center space-x-1.5 bg-surface-subtle p-1 rounded-lg border border-border-subtle text-xs font-mono">
+            <span className="text-[10px] uppercase text-content-muted font-bold px-1 hidden md:inline">Track:</span>
             <select
               value={careerMode}
               onChange={(e) => setCareerMode(e.target.value as CareerMode)}
-              className="bg-white border border-slate-200 rounded-md px-2 py-1 text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer text-xs"
+              className="bg-surface border border-border-subtle rounded-md px-2 py-1 text-content-primary font-semibold focus:outline-none focus:ring-2 focus:ring-accent/20 cursor-pointer text-xs"
+              aria-label="Select Career Track"
             >
               <option value="freelance">💼 Freelance / Contractor</option>
               <option value="employee">🏢 Full-Time (CDI / Perm)</option>
@@ -314,82 +448,45 @@ export const ChatInterface: React.FC = () => {
             </select>
           </div>
 
-          {/* Energy Credit Compute Guard (SPEC-0042) */}
-          <EnergyCreditBadge userId="alaa_roucadi" />
-
-          {/* Inbound Direct Recruiter Offers Drawer Trigger (SPEC-0042 / SPEC-0043) */}
+          {/* Inbound Direct Offers Trigger */}
           <button
+            type="button"
             onClick={() => setShowInbound(true)}
-            className="flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-amber-50 hover:bg-amber-100/80 text-amber-800 border border-amber-200/80 text-xs font-mono font-semibold transition-colors cursor-pointer shadow-xs"
+            className="min-touch-target flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100/80 text-amber-800 border border-amber-200/80 text-xs font-mono font-semibold transition-colors cursor-pointer shadow-xs"
             title="Review Inbound Recruiter Introductions (Double Opt-In Gate)"
           >
-            <span className="text-sm">📬</span>
+            <Mail className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Inbound</span>
           </button>
 
-          {/* Self-Serve Candidate CV Ingestion (SPEC-0045) */}
+          {/* Self-Serve Candidate CV Import */}
           <button
+            type="button"
             onClick={() => setShowUploadCV(true)}
-            className="flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-indigo-50 hover:bg-indigo-100/80 text-indigo-700 border border-indigo-200/80 text-xs font-mono font-semibold transition-colors cursor-pointer shadow-xs"
+            className="min-touch-target flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-accent text-white hover:bg-accent-hover text-xs font-semibold transition-colors cursor-pointer shadow-xs"
             title="Import Your Candidate CV (.pdf, .docx, text)"
           >
-            <span className="text-sm">📄</span>
+            <UploadCloud className="h-3.5 w-3.5" />
             <span className="hidden md:inline">Import CV</span>
           </button>
-
-          {/* Dedicated B2B Recruiter Portal (SPEC-0045) */}
-          <button
-            onClick={() => setShowRecruiterPortal(true)}
-            className="flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200/80 text-slate-800 border border-slate-300 text-xs font-mono font-semibold transition-colors cursor-pointer shadow-xs"
-            title="Open B2B Recruiter Requisition Matching Workspace"
-          >
-            <span className="text-sm">🏢</span>
-            <span className="hidden lg:inline">Recruiter Portal</span>
-          </button>
-
-          {/* Dynamic Telemetry Pill */}
-          <div className="hidden xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100/80 border border-slate-200 text-xs font-mono">
-            <div className="h-5 w-5 rounded-full bg-indigo-600 text-white text-[10px] font-bold flex items-center justify-center">
-              AR
-            </div>
-            <span className="font-semibold text-slate-800">Alaa</span>
-            <span className="text-slate-400">•</span>
-            <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold border border-emerald-200 text-[11px]">
-              {activeConfig.badge1}
-            </span>
-            <span className="text-slate-400">•</span>
-            <span className="text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded font-semibold border border-indigo-200 text-[11px]">
-              {activeConfig.badge2}
-            </span>
-          </div>
-
-          {/* AI Model Selector */}
-          <select
-            value={activeModel}
-            onChange={(e) => setActiveModel(e.target.value)}
-            className="text-xs font-mono bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 cursor-pointer shadow-xs"
-          >
-            <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
-            <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
-          </select>
         </div>
       </header>
 
       {/* Main Conversational Stream Area */}
-      <main className="flex-1 overflow-y-auto">
+      <main ref={mainScrollRef} className="flex-1 overflow-y-auto">
         <div className="py-5 space-y-1">
           {messages.map((msg) => (
             <MessageItem key={msg.id} message={msg} career_mode={careerMode} onActionClick={handleQuickAction} />
           ))}
 
-          {/* Hick's Law Primary Action Starters (Dynamic per Career Track) */}
+          {/* Hick-Hyman Law Primary Action Starters (Glance -> Act) */}
           {messages.length <= 1 && (
             <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-2 pb-6">
               <div className="flex items-center justify-between mb-3">
-                <div className="text-[11px] font-mono uppercase tracking-wider text-slate-400 font-bold">
-                  Suggested Actions for {activeConfig.label} (1-Click):
+                <div className="text-[11px] font-mono uppercase tracking-wider text-content-muted font-bold">
+                  Recommended Actions for {activeConfig.label} (1-Tap):
                 </div>
-                <span className="text-[10px] font-mono text-indigo-600 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded font-medium">
+                <span className="text-[10px] font-mono text-accent bg-accent-subtle border border-indigo-200/60 px-2 py-0.5 rounded font-medium">
                   {activeConfig.badge2}
                 </span>
               </div>
@@ -399,14 +496,15 @@ export const ChatInterface: React.FC = () => {
                   return (
                     <button
                       key={idx}
+                      type="button"
                       onClick={() => handleQuickAction(starter.cmd)}
-                      className={`text-left p-4 rounded-xl bg-white border border-slate-200 ${starter.color} hover:shadow-sm transition-all group cursor-pointer`}
+                      className={`min-touch-target text-left p-4 rounded-xl bg-surface border border-border-subtle ${starter.color} hover:shadow-career-card transition-all group cursor-pointer`}
                     >
                       <div className="flex items-center space-x-2 font-bold text-xs mb-1.5">
                         <Icon className="h-4 w-4 group-hover:scale-110 transition-transform shrink-0" />
                         <span>{starter.label}</span>
                       </div>
-                      <p className="text-xs text-slate-500 leading-snug">
+                      <p className="text-xs text-content-muted leading-snug">
                         {starter.desc}
                       </p>
                     </button>
@@ -416,67 +514,62 @@ export const ChatInterface: React.FC = () => {
             </div>
           )}
 
-          {/* Loading indicator */}
+          {/* Streaming Skeleton Indicator (Exact Dimensions, CLS = 0) */}
           {isLoading && (
-            <div className="py-4 bg-slate-50/50">
+            <div className="py-4 bg-surface-subtle/50">
               <div className="max-w-4xl mx-auto flex items-start space-x-4 px-4 sm:px-6">
-                <div className="h-8 w-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center animate-pulse shadow-sm">
+                <div className="h-8 w-8 rounded-lg bg-accent text-white flex items-center justify-center animate-pulse shadow-xs">
                   <Sparkles className="h-4 w-4" />
                 </div>
-                <div className="flex items-center space-x-2 text-xs text-slate-500 font-mono pt-1.5">
-                  <div className="h-1.5 w-1.5 bg-indigo-600 rounded-full animate-bounce"></div>
-                  <div className="h-1.5 w-1.5 bg-indigo-600 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                  <div className="h-1.5 w-1.5 bg-indigo-600 rounded-full animate-bounce [animation-delay:0.4s]"></div>
-                  <span className="text-indigo-900 font-medium">Synthesizing adversarial dialectic & compiling telemetry...</span>
+                <div className="flex items-center space-x-2 text-xs text-content-muted font-mono pt-1.5">
+                  <div className="h-1.5 w-1.5 bg-accent rounded-full animate-bounce"></div>
+                  <div className="h-1.5 w-1.5 bg-accent rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                  <div className="h-1.5 w-1.5 bg-accent rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                  <span className="text-content-primary font-medium">Synthesizing adversarial dialectic & compiling telemetry...</span>
                 </div>
               </div>
             </div>
           )}
-
-          <div ref={messagesEndRef} />
         </div>
       </main>
 
-      {/* Bottom Fixed Input Deck (Stitch MCP Executive Floating Container) */}
-      <footer className="shrink-0 p-4 pb-6 bg-gradient-to-t from-slate-50 via-slate-50/90 to-transparent">
+      {/* Bottom Fixed Input Deck (Thumb-Zone Natural Reach, pb-safe) */}
+      <footer className="shrink-0 p-4 pb-safe bg-gradient-to-t from-canvas via-canvas/95 to-transparent">
         <div className="max-w-4xl mx-auto space-y-2.5">
-          {/* Quick Action Presets */}
+          {/* Quick Action Presets (1-Tap execution) */}
           <div className="flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5 text-xs">
-            <span className="text-slate-400 text-[10px] font-mono uppercase font-semibold tracking-wider shrink-0">Presets:</span>
+            <span className="text-content-muted text-[10px] font-mono uppercase font-semibold tracking-wider shrink-0">Presets:</span>
             <button
+              type="button"
               onClick={() => handleQuickAction("/evaluate JD_34")}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50/50 hover:text-emerald-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface border border-border-subtle text-content-primary hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer min-h-[32px]"
             >
               <Scale className="h-3 w-3 text-emerald-600" />
               <span>/evaluate JD_34</span>
             </button>
             <button
+              type="button"
               onClick={() => handleQuickAction("/tailor JD_34")}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-indigo-500 hover:bg-indigo-50/50 hover:text-indigo-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface border border-border-subtle text-content-primary hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer min-h-[32px]"
             >
               <FileText className="h-3 w-3 text-indigo-600" />
               <span>/tailor JD_34</span>
             </button>
             <button
+              type="button"
               onClick={() => handleQuickAction("/pipeline")}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-blue-500 hover:bg-blue-50/50 hover:text-blue-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface border border-border-subtle text-content-primary hover:border-blue-500 hover:bg-blue-50 hover:text-blue-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer min-h-[32px]"
             >
               <Briefcase className="h-3 w-3 text-blue-600" />
               <span>/pipeline</span>
             </button>
             <button
+              type="button"
               onClick={() => handleQuickAction("/gap")}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-purple-500 hover:bg-purple-50/50 hover:text-purple-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface border border-border-subtle text-content-primary hover:border-purple-500 hover:bg-purple-50 hover:text-purple-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer min-h-[32px]"
             >
               <Layers className="h-3 w-3 text-purple-600" />
               <span>/gap</span>
-            </button>
-            <button
-              onClick={() => handleQuickAction("/enrich")}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:bg-amber-50/50 hover:text-amber-900 transition-all shrink-0 font-mono text-xs shadow-xs cursor-pointer"
-            >
-              <Sparkles className="h-3 w-3 text-amber-600" />
-              <span>/enrich</span>
             </button>
           </div>
 
@@ -491,8 +584,8 @@ export const ChatInterface: React.FC = () => {
             </div>
           )}
 
-          {/* Stitch MCP Input Container */}
-          <div className="relative rounded-2xl border border-slate-200 bg-white shadow-career-elevated focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-500/20 transition-all">
+          {/* Input Box with Fitts's Law Target Size */}
+          <div className="relative rounded-2xl border border-border-subtle bg-surface shadow-career-elevated focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20 transition-all">
             <textarea
               ref={textareaRef}
               rows={1}
@@ -500,56 +593,74 @@ export const ChatInterface: React.FC = () => {
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               placeholder="Paste any job URL, drop a recruiter email, or type a command (/evaluate, /tailor, /pipeline)..."
-              className="w-full resize-none bg-transparent px-4 pt-3.5 pb-12 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
+              className="w-full resize-none bg-transparent px-4 pt-3.5 pb-12 text-sm text-content-primary placeholder:text-content-muted focus:outline-none"
+              aria-label="CareerOS Prompt Input"
             />
 
-            {/* Input Action Cluster */}
+            {/* Input Action Controls */}
             <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <button
-                  type="button"
-                  onClick={() => setShowCommands(!showCommands)}
-                  className="inline-flex items-center space-x-1 rounded-md px-2 py-1 text-xs font-mono text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-colors cursor-pointer border border-slate-200"
-                  title="Slash Commands Menu"
-                >
-                  <Terminal className="h-3.5 w-3.5 text-indigo-600" />
-                  <span>Commands</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setShowCommands(!showCommands)}
+                className="inline-flex items-center space-x-1 rounded-md px-2 py-1 text-xs font-mono text-content-muted hover:bg-surface-subtle hover:text-content-primary transition-colors cursor-pointer border border-border-subtle"
+                title="Slash Commands Menu"
+              >
+                <Terminal className="h-3.5 w-3.5 text-accent" />
+                <span>Commands</span>
+              </button>
 
-              <div className="flex items-center space-x-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!input.trim() || isLoading) return;
-                    setShowCommands(false);
-                    append({ role: "user", content: input.trim() });
-                    setInput("");
-                  }}
-                  disabled={!input.trim() || isLoading}
-                  className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed shadow-xs cursor-pointer"
-                >
-                  <ArrowUp className="h-4 w-4" />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  if (!input.trim() || isLoading) return;
+                  setShowCommands(false);
+                  append({ role: "user", content: input.trim() });
+                  setInput("");
+                }}
+                disabled={!input.trim() || isLoading}
+                aria-label="Send prompt to CareerOS"
+                className="min-touch-target flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-white hover:bg-accent-hover transition-colors disabled:opacity-40 disabled:cursor-not-allowed shadow-xs cursor-pointer"
+              >
+                <ArrowUp className="h-4 w-4" />
+              </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-between px-1 text-[11px] text-slate-400 font-mono">
-            <div>
-              <span>CareerOS Super-Agent • </span>
-              <span className="text-indigo-600 font-medium">B2C Free / Enterprise Powered</span>
-            </div>
-            <div>
+          {/* Footer with 5-Tap Gesture on Version Label (Per Phase 0/7) */}
+          <div className="flex items-center justify-between px-1 text-[11px] text-content-muted font-mono select-none">
+            <button
+              type="button"
+              onClick={handleVersionTap}
+              className="text-left hover:text-content-primary transition-colors cursor-pointer"
+              title="CareerOS Version (Tap 5 times for Developer Telemetry)"
+            >
+              <span>CareerOS Super-Agent v2.0</span>
+              {tapCount > 1 && (
+                <span className="ml-1 text-[10px] text-accent font-bold">
+                  ({tapCount}/5 taps)
+                </span>
+              )}
+            </button>
+
+            <div className="hidden sm:block">
               <span>Press </span>
-              <kbd className="px-1 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-600 font-semibold">Enter</kbd>
+              <kbd className="px-1 py-0.5 rounded bg-surface-subtle border border-border-subtle text-content-secondary font-semibold">Enter</kbd>
               <span> to send, </span>
-              <kbd className="px-1 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-600 font-semibold">/</kbd>
+              <kbd className="px-1 py-0.5 rounded bg-surface-subtle border border-border-subtle text-content-secondary font-semibold">/</kbd>
               <span> for commands</span>
             </div>
           </div>
         </div>
       </footer>
+
+      {/* Hidden Secret Admin & Telemetry Drawer (Opened via 5-Tap Gesture) */}
+      <AdminSecretDrawer
+        isOpen={showAdminDrawer}
+        onClose={() => setShowAdminDrawer(false)}
+        activeModel={activeModel}
+        onModelChange={(m) => setActiveModel(m)}
+        onOpenRecruiterPortal={() => setShowRecruiterPortal(true)}
+      />
 
       {/* Slide-over Inbound Recruiter Offers Drawer */}
       <InboundOffersDrawer isOpen={showInbound} onClose={() => setShowInbound(false)} />
@@ -559,6 +670,14 @@ export const ChatInterface: React.FC = () => {
 
       {/* B2B Recruiter Requisition Matching Workspace */}
       <RecruiterPortalModal isOpen={showRecruiterPortal} onClose={() => setShowRecruiterPortal(false)} />
+
+      {/* Claim Anonymous Account Modal */}
+      <ClaimAccountModal 
+        isOpen={showClaimModal} 
+        onClose={() => setShowClaimModal(false)} 
+        sessionId={sessionId}
+        activeCV={activeCV}
+      />
     </div>
   );
 };

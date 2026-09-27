@@ -201,5 +201,61 @@
     "verified_composite_score": 86.0,
     "last_evaluated_jd": null,
     "indexed_at": "2026-09-18T16:20:59.565386+00:00"
+  },
+  "cand_2b9b72": {
+    "profile_id": "cand_2b9b72",
+    "anonymized_alias": "Candidate #2B9B \u2014 Senior AI Transformation Director & Enterprise Delivery Lead",
+    "headline": "Senior AI Transformation Director & Enterprise Delivery Lead",
+    "seniority": "Senior / Executive / Lead",
+    "target_roles": [
+      "Senior AI Transformation Director & Enterprise Delivery Lead",
+      "AI Program Director & Operating Model Architect"
+    ],
+    "core_competencies": [
+      "Enterprise Technology",
+      "Banking & Finance",
+      "AI Systems",
+      "Scale Metric",
+      "Governance Metric"
+    ],
+    "governance_tags": [
+      "EU AI Act & Responsible AI"
+    ],
+    "readiness_status": "ACTIVE_VERIFIED",
+    "verified_proof_metrics": [
+      {
+        "label": "Scale Metric",
+        "evidence": "Executive leader with 15+ years delivering mission-critical AI operating models, multi-squad agile transformations,",
+        "category": "Scale"
+      },
+      {
+        "label": "Scale Metric",
+        "evidence": "- Led 8 engineering squads and 60+ engineers delivering generative AI copilot systems.",
+        "category": "Scale"
+      },
+      {
+        "label": "Scale Metric",
+        "evidence": "- Supervised \u20ac45M operating budget with 99.99% system availability.",
+        "category": "Scale"
+      },
+      {
+        "label": "Governance Metric",
+        "evidence": "- Established enterprise EU AI Act & Responsible AI risk compliance framework across European banking units.",
+        "category": "Governance"
+      }
+    ],
+    "target_compensation": {
+      "freelance_tjm": "1100 EUR / day",
+      "permanent_salary": "140k - 160k EUR",
+      "currency": "EUR"
+    },
+    "mobility": {
+      "base_location": "Paris, Hybrid / Remote",
+      "remote_preference": "100% Remote or Flexible Hybrid"
+    },
+    "consent_broadcast_enabled": true,
+    "verified_composite_score": 92.0,
+    "last_evaluated_jd": "JD 02 NG Travel AI Agent Operations Manager",
+    "indexed_at": "2026-09-24T13:27:13.393459+00:00"
   }
 }

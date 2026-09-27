@@ -2,24 +2,20 @@
 
 import React, { useState } from "react";
 import { 
-  AlertTriangle, 
-  CheckCircle2, 
   Scale, 
-  ChevronDown, 
+  ShieldAlert, 
+  TrendingUp, 
+  Copy, 
+  Check, 
+  Mail, 
+  AlertTriangle, 
+  CheckCircle2,
   ChevronRight,
-  ShieldAlert,
-  Zap,
-  TrendingUp,
-  MessageSquare,
-  Copy,
-  Check,
-  FileText,
-  SendHorizontal,
-  Briefcase,
-  Mail,
-  ExternalLink,
-  AtSign
+  ExternalLink
 } from "lucide-react";
+import { SurfaceCard } from "../primitives/SurfaceCard";
+import { TelemetryMetric } from "../primitives/TelemetryMetric";
+import { ProgressiveDrawer } from "../primitives/ProgressiveDrawer";
 
 export interface DebateVerdictCardProps {
   verdict?: string;
@@ -52,10 +48,8 @@ export const DebateVerdictCard: React.FC<DebateVerdictCardProps> = ({
   recruiter_email = "",
   onActionClick
 }) => {
-  const [showPitch, setShowPitch] = useState(false);
-  const [showEmailComposer, setShowEmailComposer] = useState(false);
+  const [showDrawer, setShowDrawer] = useState(false);
   const [pitchCopied, setPitchCopied] = useState(false);
-  const [fullDraftCopied, setFullDraftCopied] = useState(false);
   const [recipientEmail, setRecipientEmail] = useState(recruiter_email);
 
   const isPositive = verdict.includes("ENGAGE") || verdict.includes("GO") || verdict.includes("TOLERATE");
@@ -64,11 +58,10 @@ export const DebateVerdictCard: React.FC<DebateVerdictCardProps> = ({
   const effectivePitch = recruiter_pitch || (
     isHardNo
       ? `Bonjour, merci pour votre proposition concernant le rôle de ${target_role}. Après analyse de mes critères d'alignement stratégique (notamment le travail 100% remote et mon seuil tarifaire), cette opportunité ne correspond pas à mes priorités actuelles. Restons en contact pour de futures collaborations adaptées.`
-      : `Bonjour, merci pour votre prise de contact. Le périmètre de la mission "${target_role}" correspond étroitement à mes réalisations en pilotage de CoE IA et déploiement de produits à fort impact. Mon cadre d'intervention habituel s'articule en full remote (avec déplacements exécutifs ponctuels si nécessaire) pour un TJM indicatif de 950€ HT. Seriez-vous disponible cette semaine pour un court échange afin d'aborder vos enjeux prioritaires ?`
+      : `Bonjour, merci pour votre prise de contact. Le périmètre de la mission "${target_role}" correspond étroitement à mes réalisations en pilotage de CoE IA et déploiement de produits à fort impact. Mon cadre d'intervention habituel s'articule en full remote pour un TJM indicatif de 950€ HT. Seriez-vous disponible cette semaine pour un court échange afin d'aborder vos enjeux prioritaires ?`
   );
 
-  const emailSubject = `Candidature / Positionnement Stratégique — ${target_role} — Alaa Eddine Roucadi`;
-
+  const emailSubject = `Positionnement Stratégique — ${target_role} — Alaa Eddine Roucadi`;
   const mailtoHref = `mailto:${encodeURIComponent(recipientEmail.trim())}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(effectivePitch)}`;
 
   const handleCopyPitch = () => {
@@ -77,280 +70,180 @@ export const DebateVerdictCard: React.FC<DebateVerdictCardProps> = ({
     setTimeout(() => setPitchCopied(false), 2000);
   };
 
-  const handleCopyFullDraft = () => {
-    const fullDraft = `À : ${recipientEmail || "[Email Recruteur]"}\nObjet : ${emailSubject}\n\n${effectivePitch}`;
-    navigator.clipboard.writeText(fullDraft);
-    setFullDraftCopied(true);
-    setTimeout(() => setFullDraftCopied(false), 2000);
-  };
-
   return (
-    <div className="my-4 rounded-xl border border-slate-200 bg-white p-5 shadow-career-card">
-      {/* Header */}
-      <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-        <div className="flex items-center space-x-3">
-          <div className={`flex h-10 w-10 items-center justify-center rounded-lg border ${
-            isHardNo
-              ? "bg-rose-50 text-rose-600 border-rose-200"
-              : "bg-emerald-50 text-emerald-600 border-emerald-200"
-          }`}>
-            <Scale className="h-5 w-5" />
+    <>
+      <SurfaceCard variant={isHardNo ? "default" : "accent"} className="my-3">
+        {/* 1. Context & Eyebrow */}
+        <SurfaceCard.Header>
+          <div className="flex items-center gap-1.5 font-mono text-[11px] font-semibold text-content-muted uppercase tracking-wider">
+            <Scale className="h-3.5 w-3.5 text-accent" />
+            <span>Adversarial Dialectic Arbitration</span>
+            {jd_id && <span className="text-content-primary font-bold">• {jd_id}</span>}
           </div>
-          <div>
-            <div className="text-[10px] font-mono font-semibold text-slate-400 uppercase tracking-wider">
-              Strategic Mandate Arbitration
-            </div>
-            <div className="text-base font-bold text-slate-900 flex items-center space-x-2 mt-0.5">
-              <span>Arbitration Verdict:</span>
-              <span className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold border ${
-                isHardNo
-                  ? "bg-rose-50 text-rose-700 border-rose-200"
-                  : "bg-emerald-50 text-emerald-700 border-emerald-200"
-              }`}>
-                {verdict}
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex items-center space-x-4 text-xs font-mono">
-          <div className="text-right">
-            <span className="text-slate-400 text-[10px] block uppercase font-semibold">Candidate Fit</span>
-            <span className="font-bold text-emerald-600 text-sm">{quality_score}%</span>
-          </div>
-          <div className="text-right border-l border-slate-200 pl-4">
-            <span className="text-slate-400 text-[10px] block uppercase font-semibold">Trap Score</span>
-            <span className="font-bold text-rose-600 text-sm">{trap_score}%</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Rationale */}
-      <div className="mt-3.5 text-xs text-slate-700 leading-relaxed bg-slate-50 p-3.5 rounded-lg border border-slate-200/80">
-        <span className="font-bold text-indigo-700 mr-1.5 font-mono text-[10px] uppercase tracking-wide">ARBITER SYNTHESIS:</span>
-        {decision_rationale}
-      </div>
-
-      {/* Dual Debate Columns */}
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3.5">
-        {/* Advocate Strengths */}
-        <div className="p-3.5 rounded-lg bg-emerald-50/40 border border-emerald-200 text-xs">
-          <div className="font-bold text-emerald-800 flex items-center space-x-1.5 mb-2.5">
-            <TrendingUp className="h-4 w-4 text-emerald-600" />
-            <span className="font-mono text-[10px] uppercase tracking-wide">Advocate Value Levers</span>
-          </div>
-          <ul className="space-y-2 text-emerald-950">
-            {advocate_points.length > 0 ? (
-              advocate_points.slice(0, 3).map((pt, i) => (
-                <li key={i} className="flex items-start space-x-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span className="leading-snug">{pt}</span>
-                </li>
-              ))
-            ) : (
-              <li className="text-emerald-700">High strategic match with candidate telemetry.</li>
-            )}
-          </ul>
-        </div>
-
-        {/* Prosecutor Friction / Dealbreakers */}
-        <div className="p-3.5 rounded-lg bg-rose-50/40 border border-rose-200 text-xs">
-          <div className="font-bold text-rose-800 flex items-center space-x-1.5 mb-2.5">
-            <ShieldAlert className="h-4 w-4 text-rose-600" />
-            <span className="font-mono text-[10px] uppercase tracking-wide">Prosecutor Traps & Friction</span>
-          </div>
-          <ul className="space-y-2 text-rose-950">
-            {dealbreakers.length > 0 ? (
-              dealbreakers.slice(0, 3).map((db, i) => (
-                <li key={i} className="flex items-start space-x-2">
-                  <AlertTriangle className="h-3.5 w-3.5 text-rose-600 shrink-0 mt-0.5" />
-                  <span className="leading-snug">{db}</span>
-                </li>
-              ))
-            ) : (
-              <li className="text-slate-500">Zero fatal dealbreaking constraints detected.</li>
-            )}
-          </ul>
-        </div>
-      </div>
-
-      {/* Binding Conditions */}
-      {binding_conditions.length > 0 && (
-        <div className="mt-4 pt-3 border-t border-slate-100 text-xs">
-          <span className="font-mono text-[10px] uppercase text-slate-500 font-bold block mb-1.5">
-            Non-Negotiable Candidate Conditions:
+          <span
+            className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${
+              isHardNo
+                ? "bg-rose-50 text-rose-700 border-rose-200"
+                : "bg-emerald-50 text-emerald-700 border-emerald-200"
+            }`}
+          >
+            {verdict}
           </span>
-          <div className="flex flex-wrap gap-2">
-            {binding_conditions.map((c, i) => (
-              <span key={i} className="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
-                ✓ {c}
-              </span>
-            ))}
+        </SurfaceCard.Header>
+
+        {/* 2. Hero & Primary Value (Vertical Ceiling Cap = 3 elements) */}
+        <SurfaceCard.Hero>
+          <div className="grid grid-cols-2 gap-3 py-1">
+            <TelemetryMetric
+              label="Quality Score"
+              value={quality_score}
+              unit="/100"
+              statusColor={isHardNo ? "rose" : "emerald"}
+              trend={isHardNo ? "down" : "up"}
+            />
+            <TelemetryMetric
+              label="Trap Risk"
+              value={trap_score}
+              unit="%"
+              statusColor={trap_score > 30 ? "rose" : "slate"}
+            />
           </div>
-        </div>
-      )}
+        </SurfaceCard.Hero>
 
-      {/* Hick's Law 1-Click Action Bar */}
-      <div className="mt-4 pt-3.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2.5">
-        <div className="flex items-center space-x-2">
-          {isPositive ? (
+        {/* 3. Supporting Status & Single Primary Action */}
+        <SurfaceCard.Actions>
+          <div className="flex items-center justify-between w-full">
+            <p className="text-xs text-content-muted line-clamp-1 max-w-[65%]">
+              {decision_rationale}
+            </p>
+
             <button
-              onClick={() => onActionClick?.(`/tailor ${jd_id || target_role}`)}
-              className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs transition-all shadow-xs hover:shadow cursor-pointer"
+              type="button"
+              onClick={() => setShowDrawer(true)}
+              className="min-touch-target inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-accent text-white text-xs font-semibold hover:bg-accent-hover transition-colors shadow-xs"
             >
-              <Zap className="h-3.5 w-3.5" />
-              <span>Compile Tailored CV & PDF</span>
+              <span>Examine Verdict</span>
+              <ChevronRight className="h-3.5 w-3.5" />
             </button>
-          ) : (
-            <button
-              onClick={() => onActionClick?.(`/archive ${jd_id || target_role}`)}
-              className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-lg bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-700 font-semibold text-xs transition-all cursor-pointer"
-            >
-              <ShieldAlert className="h-3.5 w-3.5 text-rose-600" />
-              <span>Archive Mandate (Hard Pass)</span>
-            </button>
-          )}
+          </div>
+        </SurfaceCard.Actions>
+      </SurfaceCard>
 
-          <button
-            onClick={() => {
-              setShowEmailComposer(!showEmailComposer);
-              if (!showEmailComposer) setShowPitch(true);
-            }}
-            className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 text-emerald-800 font-medium text-xs transition-all cursor-pointer shadow-2xs"
-            title="1-Click Recruiter Email Composer (mailto:)"
-          >
-            <Mail className="h-3.5 w-3.5 text-emerald-600" />
-            <span>Email Recruiter (1-Click)</span>
-          </button>
-
-          <button
-            onClick={() => setShowPitch(!showPitch)}
-            className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-700 font-medium text-xs transition-all cursor-pointer"
-          >
-            <MessageSquare className="h-3.5 w-3.5 text-slate-500" />
-            <span>{showPitch ? "Hide Recruiter Pitch" : isHardNo ? "View Decline Pitch" : "Recruiter Counter-Pitch"}</span>
-            {showPitch ? <ChevronDown className="h-3.5 w-3.5 text-slate-400" /> : <ChevronRight className="h-3.5 w-3.5 text-slate-400" />}
-          </button>
-
-          <button
-            onClick={() => onActionClick?.("/pipeline")}
-            className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-700 font-medium text-xs transition-all cursor-pointer"
-            title="View mandate in Freelance Pipeline CRM"
-          >
-            <Briefcase className="h-3.5 w-3.5 text-blue-600" />
-            <span>Pipeline CRM</span>
-          </button>
-        </div>
-
-        <div className="text-[10px] font-mono text-slate-400">
-          Target: <span className="font-bold text-slate-600">{jd_id || target_role}</span>
-        </div>
-      </div>
-
-      {/* Recruiter Pitch & 1-Click Email Composer Drawer */}
-      {(showPitch || showEmailComposer) && (
-        <div className="mt-3 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs animate-in fade-in duration-200">
-          {/* Recruiter & Mailto Toolbar */}
-          <div className="mb-3 p-3 rounded-lg bg-white border border-slate-200 shadow-2xs">
-            <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <div className="flex items-center space-x-2">
-                <div className="p-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
-                  <Mail className="h-3.5 w-3.5" />
-                </div>
-                <div>
-                  <span className="font-mono text-[10px] uppercase font-bold text-slate-500">
-                    1-Click Executive Recruiter Email
-                  </span>
-                  {recruiter_name && (
-                    <div className="text-xs font-semibold text-slate-800">
-                      Target Contact: <span className="text-indigo-600">{recruiter_name}</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <a
-                  href={mailtoHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-all shadow-xs hover:shadow cursor-pointer"
-                  title="Open default email client with pre-filled subject and pitch"
-                >
-                  <Mail className="h-3.5 w-3.5" />
-                  <span>Launch Mail Client (mailto:)</span>
-                  <ExternalLink className="h-3 w-3 opacity-70" />
-                </a>
-
-                <button
-                  onClick={handleCopyFullDraft}
-                  className="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-slate-300 text-slate-700 text-xs font-medium transition-all cursor-pointer shadow-2xs"
-                  title="Copy complete email draft including subject and recipient"
-                >
-                  {fullDraftCopied ? (
-                    <>
-                      <Check className="h-3.5 w-3.5 text-emerald-600" />
-                      <span className="text-emerald-700 font-bold">Draft Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="h-3.5 w-3.5" />
-                      <span>Copy Full Draft</span>
-                    </>
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* Recruiter Email Input & Subject Line */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px]">
-              <div className="flex items-center space-x-1.5 bg-slate-50 px-2.5 py-1.5 rounded border border-slate-200">
-                <AtSign className="h-3.5 w-3.5 text-slate-400 shrink-0" />
-                <input
-                  type="email"
-                  value={recipientEmail}
-                  onChange={(e) => setRecipientEmail(e.target.value)}
-                  placeholder="Recruiter email (e.g. dave.scott@welovesalt.com)..."
-                  className="bg-transparent text-slate-800 placeholder-slate-400 focus:outline-none w-full font-mono text-[11px]"
-                />
-              </div>
-              <div className="flex items-center space-x-1.5 bg-slate-50 px-2.5 py-1.5 rounded border border-slate-200 text-slate-600 overflow-hidden text-ellipsis whitespace-nowrap font-mono">
-                <span className="font-semibold text-slate-400 shrink-0">Subj:</span>
-                <span className="truncate" title={emailSubject}>{emailSubject}</span>
-              </div>
-            </div>
+      {/* Depth 3 Deep-Dive Drawer: Prosecutor Traps + Advocate Levers + Recruiter Outreach */}
+      <ProgressiveDrawer
+        isOpen={showDrawer}
+        onClose={() => setShowDrawer(false)}
+        title={`Dialectic Arbitration: ${target_role}`}
+        subtitle={`Final Recommendation: ${verdict} (Fit: ${quality_score}%, Trap: ${trap_score}%)`}
+        width="wide"
+      >
+        <div className="space-y-4">
+          {/* Executive Rationale */}
+          <div className="p-3.5 bg-surface-subtle rounded-xl border border-border-subtle text-xs text-content-secondary leading-relaxed">
+            <h4 className="font-semibold text-content-primary mb-1">
+              Arbitration Rationale
+            </h4>
+            <p>{decision_rationale}</p>
           </div>
 
-          {/* Message Body Header & Quick Copy */}
-          <div className="flex items-center justify-between mb-1.5">
-            <span className="font-mono text-[10px] uppercase font-bold text-slate-500 flex items-center space-x-1.5">
-              <SendHorizontal className="h-3 w-3 text-indigo-600" />
-              <span>{isHardNo ? "Strategic Polite Decline Pitch:" : "Battle-Tested Recruiter Outreach Pitch:"}</span>
-            </span>
-            <button
-              onClick={handleCopyPitch}
-              className="inline-flex items-center space-x-1 px-2 py-1 rounded bg-white border border-slate-200 hover:border-indigo-400 text-slate-700 hover:text-indigo-600 text-[11px] font-mono transition-all cursor-pointer shadow-2xs"
-            >
-              {pitchCopied ? (
-                <>
-                  <Check className="h-3 w-3 text-emerald-600" />
-                  <span className="text-emerald-700 font-bold">Body Copied!</span>
-                </>
+          {/* Side-by-Side Adversarial Panels */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            {/* Prosecutor Traps */}
+            <div className="p-3.5 rounded-xl border border-rose-200 bg-rose-50/50 space-y-2">
+              <div className="flex items-center gap-1.5 font-bold text-rose-900">
+                <ShieldAlert className="h-4 w-4 text-rose-600" />
+                <span>Prosecutor Traps & Dealbreakers</span>
+              </div>
+              {dealbreakers.length > 0 ? (
+                <ul className="space-y-1.5 pt-1">
+                  {dealbreakers.map((db, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 text-rose-800">
+                      <AlertTriangle className="h-3.5 w-3.5 text-rose-600 shrink-0 mt-0.5" />
+                      <span>{db}</span>
+                    </li>
+                  ))}
+                </ul>
               ) : (
-                <>
-                  <Copy className="h-3 w-3" />
-                  <span>Copy Body Only</span>
-                </>
+                <p className="text-rose-700 italic">No fatal dealbreakers identified.</p>
               )}
-            </button>
+            </div>
+
+            {/* Advocate Levers */}
+            <div className="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50 space-y-2">
+              <div className="flex items-center gap-1.5 font-bold text-emerald-900">
+                <TrendingUp className="h-4 w-4 text-emerald-600" />
+                <span>Advocate Value Levers & Moat</span>
+              </div>
+              {advocate_points.length > 0 ? (
+                <ul className="space-y-1.5 pt-1">
+                  {advocate_points.map((pt, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 text-emerald-800">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-emerald-700 italic">Alignment standard.</p>
+              )}
+            </div>
           </div>
 
-          <p className="text-slate-800 leading-relaxed font-sans bg-white p-3 rounded-lg border border-slate-200/80 whitespace-pre-wrap selection:bg-indigo-100">
-            {effectivePitch}
-          </p>
+          {/* Outbound Strategy & Pitch */}
+          <div className="p-4 rounded-xl border border-border-subtle bg-surface space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-content-primary flex items-center gap-1.5">
+                <Mail className="h-4 w-4 text-accent" />
+                <span>Pre-Drafted Recruiter Response</span>
+              </span>
+              <button
+                type="button"
+                onClick={handleCopyPitch}
+                className="text-xs font-medium text-accent hover:text-accent-hover inline-flex items-center gap-1"
+              >
+                {pitchCopied ? <Check className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
+                <span>{pitchCopied ? "Copied" : "Copy Response"}</span>
+              </button>
+            </div>
+
+            <textarea
+              readOnly
+              rows={4}
+              value={effectivePitch}
+              className="w-full text-xs font-mono bg-surface-subtle p-3 rounded-lg border border-border-subtle text-content-secondary leading-relaxed resize-none focus:outline-none"
+            />
+
+            <div className="flex items-center justify-between pt-1">
+              <div className="flex items-center gap-2">
+                {jd_id && onActionClick && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowDrawer(false);
+                      onActionClick(`/tailor ${jd_id}`);
+                    }}
+                    className="min-touch-target px-3 py-1.5 rounded-lg border border-border-subtle hover:bg-surface-subtle text-xs font-medium text-content-primary transition-colors"
+                  >
+                    Compile Tailored CV
+                  </button>
+                )}
+              </div>
+
+              <a
+                href={mailtoHref}
+                target="_blank"
+                rel="noreferrer"
+                className="min-touch-target inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-accent text-white text-xs font-semibold hover:bg-accent-hover transition-colors shadow-xs"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                <span>Open in Email Client</span>
+              </a>
+            </div>
+          </div>
         </div>
-      )}
-    </div>
+      </ProgressiveDrawer>
+    </>
   );
 };
 

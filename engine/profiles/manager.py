@@ -44,6 +44,10 @@ class ProfileManager:
             if matches:
                 return cls._load_file(matches[0])
 
+            # If identifier is an anonymous session or guest ID, do not fall back to static profile
+            if clean.startswith("anon_") or clean.startswith("guest"):
+                return cls.create_anonymous_profile(clean)
+
         # 2. Check active_profile.json
         active_p = pdir / "active_profile.json"
         if active_p.exists():
@@ -76,6 +80,53 @@ class ProfileManager:
         fname = filename or f"{profile.id}.json"
         target = pdir / fname
         target.write_text(profile.model_dump_json(indent=2), encoding="utf-8")
+
+    @classmethod
+    def create_anonymous_profile(cls, identifier: str = "anon_guest") -> CandidateProfile:
+        """Constructs an anonymous candidate profile for unauthenticated guest sessions."""
+        from .models import (
+            MobilityPolicy,
+            LanguageProficiency,
+            CommercialExpectations,
+            TargetRoleScope,
+            KeyProofMetric
+        )
+        return CandidateProfile(
+            id=identifier,
+            full_name="Guest Candidate",
+            headline="Strategic Professional",
+            resume_file="",
+            contact_email="guest@careeros.local",
+            mobility=MobilityPolicy(
+                base_location="Remote / Global",
+                remote_preference="100% Remote or Flexible Hybrid",
+                travel_tolerance="Periodic milestones",
+                unacceptable_commutes=[]
+            ),
+            languages=LanguageProficiency(
+                fluent_languages=["English (Fluent)", "French (Bilingual)"],
+                blocker_languages=[]
+            ),
+            commercials=CommercialExpectations(
+                freelance_tjm_eur="Negotiable / Market Rate",
+                permanent_salary_eur="Competitive Market Rate",
+                currency="EUR"
+            ),
+            scope=TargetRoleScope(
+                primary_titles=["Strategic Delivery Lead", "AI Transformation Manager", "Program Director"],
+                seniority="Senior / Lead / Executive",
+                anti_roles=["Unsupervised Maintenance"],
+                core_domains=["Enterprise Technology", "Transformation & Delivery"]
+            ),
+            proof_metrics=[
+                KeyProofMetric(
+                    category="Delivery",
+                    label="Core Impact",
+                    evidence="Track record of high-impact strategic program delivery and cross-functional execution.",
+                    keywords=["delivery", "strategy", "impact"]
+                )
+            ]
+        )
 
     @classmethod
     def create_default_alaa_profile(cls) -> CandidateProfile:

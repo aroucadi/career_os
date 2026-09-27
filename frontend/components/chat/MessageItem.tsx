@@ -20,6 +20,7 @@ import DebateVerdictCard from "../generative/DebateVerdictCard";
 import DocumentPreviewCard from "../generative/DocumentPreviewCard";
 import PipelineSummaryCard from "../generative/PipelineSummaryCard";
 import RecruiterMatchSlateCard from "../generative/RecruiterMatchSlateCard";
+import GapAnalysisCard from "../generative/GapAnalysisCard";
 
 interface MessageItemProps {
   message: {
@@ -53,7 +54,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, career_mode =
         <div className="shrink-0 mt-0.5">
           {isUser ? (
             <div className="h-8 w-8 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
-              <span className="font-mono text-xs font-bold text-slate-800">AR</span>
+              <User className="h-4 w-4 text-slate-600" />
             </div>
           ) : (
             <div className="h-8 w-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center shadow-xs border border-indigo-700/20">
@@ -68,7 +69,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, career_mode =
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <span className="text-xs font-bold text-slate-900 tracking-tight">
-                {isUser ? "Alaa Roucadi (Candidate)" : "CareerOS Strategic Agent"}
+                {isUser ? "You (Candidate)" : "CareerOS Strategic Agent"}
               </span>
               {!isUser && (
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200 font-semibold">
@@ -103,11 +104,14 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, career_mode =
               {message.toolInvocations.map((inv) => {
                 const { toolName, args, toolCallId } = inv;
 
-                if (toolName === "TailoredResumeViewer") {
+                if (toolName === "TailoredResumeViewer" || toolName === "TailoredCVCard") {
                   return <TailoredCVCard key={toolCallId} {...args} />;
                 }
                 if (toolName === "DebateVerdictCard" || toolName === "ArbiterScorecard") {
                   return <DebateVerdictCard key={toolCallId} {...args} onActionClick={onActionClick} />;
+                }
+                if (toolName === "GapAnalysisCard") {
+                  return <GapAnalysisCard key={toolCallId} {...args} onActionClick={onActionClick} />;
                 }
                 if (toolName === "ProsecutorIndictmentCard") {
                   return (

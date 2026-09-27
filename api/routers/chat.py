@@ -32,6 +32,7 @@ from engine.pipeline.models import Opportunity, PipelineStage, EvaluationSnapsho
 from engine.memory.store import EpisodicMemoryStore
 from engine.billing.token_ledger import TokenLedgerManager, ActionCost
 from engine.talent_graph.store import TalentLakeStore
+from engine.attachments import UniversalAttachmentEngine
 
 load_dotenv()
 
@@ -244,11 +245,97 @@ async def handle_chat_stream(payload: ChatPayload):
 
         # 3. Detect if user asks to evaluate or debate an opportunity (e.g. "Evaluate JD_30", attached file, or URL)
         m_jd = re.search(r"(?:JD[-_ ]?|job\s+)?(\d+|JD_\d+)", last_user_message, re.IGNORECASE)
+        is_gap = any(w in last_user_message.lower() for w in ["gap", "skill-up", "skillup", "skill up", "remediation", "how to close", "how to fill", "bridge"])
         is_evaluate = any(w in last_user_message.lower() for w in ["eval", "score", "debate", "analyze", "review", "audit"]) or bool(url_match)
         is_tailor = any(w in last_user_message.lower() for w in ["tailor", "cv", "resume", "pdf", "compile"])
 
+        # Case 0: Factual Gap Identification & Skill-Up Bridge
+        if is_gap:
+            route_taken = "GAP_REMEDIATION_EVALUATION"
+            from engine.evaluators.gap_remediation import GapRemediationEngine
+            from pathlib import Path
+
+            cv_text_to_use = ""
+            if attached_cv_data and attached_cv_data.get("text_content"):
+                cv_text_to_use = attached_cv_data["text_content"]
+            else:
+                root_dir = Path(__file__).resolve().parents[2]
+                cv_file = getattr(cand, "resume_file", "")
+                if cv_file:
+                    cv_p = root_dir / cv_file
+                    if not cv_p.is_file():
+                        cv_p = root_dir / "resumes" / cv_file
+                    if cv_p.is_file():
+                        cv_text_to_use = cv_p.read_text(encoding="utf-8", errors="replace")
+                elif not cand.id.startswith("anon_"):
+                    cv_p = root_dir / "Alaa_Eddine_Roucadi_Resume.md"
+                    if cv_p.is_file():
+                        cv_text_to_use = cv_p.read_text(encoding="utf-8", errors="replace")
+
+            if not cv_text_to_use and cand.id.startswith("anon_"):
+                yield format_text_delta(
+                    "📄 **Resume Needed for Gap Remediation**:\n\n"
+                    "To calculate your objective match score, missing credentials, and customized skill-up path, please attach your CV (PDF or Markdown) or click **Import CV** in the header.\n\n"
+                    "*Your CV is processed privately within your local browser session.*"
+                )
+                return
+
+            target_jd_text = ""
+            target_role_title = ""
+
+            if attached_jd_text:
+                target_jd_text = attached_jd_text
+                target_role_title = (attached_jd_name or "Target Position").replace(".md", "").replace(".txt", "").replace("_", " ")
+            elif m_jd:
+                try:
+                    jd_path = resolve_jd_file(m_jd.group(1))
+                    target_jd_text = jd_path.read_text(encoding="utf-8", errors="replace")
+                    target_role_title = jd_path.stem.replace("_", " ")
+                except Exception:
+                    target_role_title = m_jd.group(1)
+                    target_jd_text = f"Target Role: {target_role_title}"
+            else:
+                cleaned_role = re.sub(r"(?i)^(?:what are my\s+)?(?:gaps|skill[\s-]*up|bridge|remediation)\s+(?:for|in|against)\s+", "", last_user_message).strip()
+                if cleaned_role and len(cleaned_role) > 3 and cleaned_role.lower() != last_user_message.lower():
+                    target_role_title = cleaned_role
+                    target_jd_text = f"Target Role: {target_role_title}"
+                else:
+                    root_dir = Path(__file__).resolve().parents[2]
+                    op_jd = root_dir / "OnePoint_Agentic_Delivery_Manager_JD.md"
+                    if op_jd.exists():
+                        target_jd_text = op_jd.read_text(encoding="utf-8", errors="replace")
+                        target_role_title = "OnePoint Agentic & Product Delivery Manager"
+                    else:
+                        target_role_title = "AI Transformation & Delivery Manager"
+                        target_jd_text = f"Target Role: {target_role_title}"
+
+            yield format_text_delta(f"🔍 Analyzing factual gaps & synthesizing Skill-Up bridge for **{target_role_title}**...\n\n")
+
+            report = GapRemediationEngine.evaluate(
+                cv_text=cv_text_to_use,
+                jd_text=target_jd_text,
+                target_role=target_role_title,
+                candidate_name=cand.full_name
+            )
+
+            call_id_gap = f"call_{uuid.uuid4().hex[:8]}"
+            yield format_tool_call(
+                tool_call_id=call_id_gap,
+                tool_name="GapAnalysisCard",
+                args=report.model_dump()
+            )
+            yield format_tool_result(tool_call_id=call_id_gap, result={"rendered": True})
+            emitted_tools.append("GapAnalysisCard")
+
+            yield format_text_delta(
+                f"\n✓ **Gap Analysis Complete**: Match Fit is **{report.match_score}%** ({report.fit_label}).\n"
+                f"Identified **{len(report.fatal_gaps)} critical gaps**, **{len(report.skill_up_path)} recommended credentials**, "
+                f"and **{len(report.capstone_projects)} capstone proof blueprints**.\n\n"
+                f"👉 *Click **'Remediation Roadmap'** in the card above to inspect the complete 5-part bridge.*"
+            )
+
         # Case A: Evaluate/Debate attached or URL-scraped JD
-        if attached_jd_text and (is_evaluate or "debate" in last_user_message.lower()):
+        elif attached_jd_text and (is_evaluate or "debate" in last_user_message.lower()):
             route_taken = "ATTACHED_JD_DEBATE"
             emitted_tools = ["ProsecutorIndictmentCard", "AdvocateDefenseCard", "ArbiterScorecard"]
             jd_title = attached_jd_name.replace(".md", "").replace(".txt", "").replace("_", " ")
@@ -761,11 +848,85 @@ async def handle_chat_stream(payload: ChatPayload):
                 emitted_tools.append("RecruiterMatchSlateCard")
                 yield format_text_delta(f"Found **{len(slate)} pre-audited candidates** matching criteria. Double Opt-In privacy gate active.\n")
 
-            elif cmd in ("/gap", "/gap-report"):
-                yield format_text_delta(f"📊 **Multi-JD Gap Analysis** for **{cand.full_name}**:\n\n")
-                yield format_text_delta(f"- **Core Strengths**: Enterprise Architecture, Agentic AI, Delivery Leadership, TJM Anchor (€{cand.commercials.freelance_tjm_eur}/day)\n")
-                yield format_text_delta(f"- **High-Frequency Market Demand**: FastAPI, LangGraph, Azure AI, Governance Frameworks\n")
-                yield format_text_delta(f"- **Strategic Alignment**: 92% coverage on senior transformation leadership roles.\n")
+            elif cmd in ("/gap", "/gap-report", "/skillup", "/remediation"):
+                from engine.evaluators.gap_remediation import GapRemediationEngine
+                from pathlib import Path
+
+                # Resolve CV text: if attached_cv_data exists, use it. Otherwise use candidate's resume_file.
+                cv_text_to_use = ""
+                if attached_cv_data and attached_cv_data.get("text_content"):
+                    cv_text_to_use = attached_cv_data["text_content"]
+                else:
+                    root_dir = Path(__file__).resolve().parents[2]
+                    cv_file = getattr(cand, "resume_file", "")
+                    if cv_file:
+                        cv_p = root_dir / cv_file
+                        if not cv_p.exists():
+                            cv_p = root_dir / "resumes" / cv_file
+                        if cv_p.exists():
+                            cv_text_to_use = cv_p.read_text(encoding="utf-8", errors="replace")
+                    elif not cand.id.startswith("anon_"):
+                        cv_p = root_dir / "Alaa_Eddine_Roucadi_Resume.md"
+                        if cv_p.exists():
+                            cv_text_to_use = cv_p.read_text(encoding="utf-8", errors="replace")
+
+                if not cv_text_to_use and cand.id.startswith("anon_"):
+                    yield format_text_delta(
+                        "📄 **Resume Needed for Gap Remediation**:\n\n"
+                        "To calculate your objective match score, missing credentials, and customized skill-up path, please attach your CV (PDF or Markdown) or click **Import CV** in the header.\n\n"
+                        "*Your CV is processed privately within your local browser session.*"
+                    )
+                    return
+
+                # Resolve JD text / target role
+                target_jd_text = ""
+                target_role_title = cmd_arg or "Target Position"
+                
+                # Check if cmd_arg matches a file or URL
+                if attached_jd_text:
+                    target_jd_text = attached_jd_text
+                    target_role_title = (attached_jd_name or "Target Position").replace(".md", "").replace(".txt", "").replace("_", " ")
+                elif cmd_arg:
+                    try:
+                        jd_path = resolve_jd_file(cmd_arg)
+                        target_jd_text = jd_path.read_text(encoding="utf-8", errors="replace")
+                        target_role_title = jd_path.stem.replace("_", " ")
+                    except Exception:
+                        target_jd_text = f"Target Role: {cmd_arg}"
+                else:
+                    # Default: check target JDs (e.g. OnePoint or first target JD)
+                    root_dir = Path(__file__).resolve().parents[2]
+                    op_jd = root_dir / "OnePoint_Agentic_Delivery_Manager_JD.md"
+                    if op_jd.exists():
+                        target_jd_text = op_jd.read_text(encoding="utf-8", errors="replace")
+                        target_role_title = "OnePoint Agentic & Product Delivery Manager"
+                    else:
+                        target_jd_text = "Target Role: AI Transformation & Delivery Manager"
+
+                yield format_text_delta(f"🔍 Analyzing factual gaps & synthesizing Skill-Up bridge for **{target_role_title}**...\n\n")
+
+                report = GapRemediationEngine.evaluate(
+                    cv_text=cv_text_to_use,
+                    jd_text=target_jd_text,
+                    target_role=target_role_title,
+                    candidate_name=cand.full_name
+                )
+
+                call_id_gap = f"call_{uuid.uuid4().hex[:8]}"
+                yield format_tool_call(
+                    tool_call_id=call_id_gap,
+                    tool_name="GapAnalysisCard",
+                    args=report.model_dump()
+                )
+                yield format_tool_result(tool_call_id=call_id_gap, result={"rendered": True})
+                emitted_tools.append("GapAnalysisCard")
+
+                yield format_text_delta(
+                    f"\n✓ **Gap Analysis Complete**: Match Fit is **{report.match_score}%** ({report.fit_label}).\n"
+                    f"Identified **{len(report.fatal_gaps)} critical gaps**, **{len(report.skill_up_path)} recommended credentials**, "
+                    f"and **{len(report.capstone_projects)} capstone proof blueprints**.\n\n"
+                    f"👉 *Click **'Remediation Roadmap'** in the card above to inspect the complete 5-part bridge.*"
+                )
 
             elif cmd in ("/debate", "/eval", "/evaluate"):
                 target_jd_text = None
@@ -1049,12 +1210,22 @@ async def handle_chat_stream(payload: ChatPayload):
                 error_occurred = str(e)
                 logger.warning(f"[{req_id}] Gemini streaming exception: {e}")
                 # Intelligent fallback
-                unacceptable = ", ".join(cand.mobility.unacceptable_commutes)
-                yield format_text_delta(
-                    f"Bonjour {cand.full_name}. Je suis votre Agent Exécutif CareerOS 2.0.\n\n"
-                    f"Je suis synchronisé avec vos **{len(repo.list_all())} opportunités actives**, vos contraintes de mobilité ({unacceptable}) et votre TJM cible de {cand.commercials.freelance_tjm_eur}.\n\n"
-                    f"Comment puis-je vous assister aujourd'hui ? Vous pouvez m'attacher une nouvelle offre (JD), me demander d'analyser un mandat avec le débat contradictoire (*ex: 'Debate JD_30'*), ou préparer votre pitch de négociation."
-                )
+                if cand.id.startswith("anon_") or cand.id == "guest":
+                    yield format_text_delta(
+                        f"👋 **Welcome to CareerOS Studio (Anonymous Session)**\n\n"
+                        f"I am your strategic career agent. You can:\n"
+                        f"- 📎 **Drop your CV & target JD** to instantly calculate ATS match score & gap remediation\n"
+                        f"- ⚡ Run `/gap` to see tailored certifications, capstone projects, and honest bullet reframings\n"
+                        f"- ⚖️ Run `/evaluate` or `/debate` to pressure-test an opportunity before responding\n\n"
+                        f"*Your session data stays private in your browser.* What role or job description are we targeting today?"
+                    )
+                else:
+                    unacceptable = ", ".join(cand.mobility.unacceptable_commutes)
+                    yield format_text_delta(
+                        f"Bonjour {cand.full_name}. Je suis votre Agent Exécutif CareerOS 2.0.\n\n"
+                        f"Je suis synchronisé avec vos **{len(repo.list_all())} opportunités actives**, vos contraintes de mobilité ({unacceptable}) et votre TJM cible de {cand.commercials.freelance_tjm_eur}.\n\n"
+                        f"Comment puis-je vous assister aujourd'hui ? Vous pouvez m'attacher une nouvelle offre (JD), me demander d'analyser un mandat avec le débat contradictoire (*ex: 'Debate JD_30'*), ou préparer votre pitch de négociation."
+                    )
 
         duration_ms = (time.perf_counter() - start_time) * 1000
         AuditLogger.log_interaction(

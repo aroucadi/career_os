@@ -9,11 +9,12 @@ import {
   X, 
   Sparkles, 
   Layers, 
-  ArrowRight,
-  ShieldCheck,
-  Building2,
-  FileCheck
+  ArrowRight, 
+  ShieldCheck, 
+  Building2, 
+  FileCheck 
 } from "lucide-react";
+import { storeCV } from "@/lib/session";
 
 interface UploadCVModalProps {
   isOpen: boolean;
@@ -62,7 +63,7 @@ export const UploadCVModal: React.FC<UploadCVModalProps> = ({ isOpen, onClose, o
         formData.append("file", selectedFile);
         formData.append("preferred_mode", preferredMode);
 
-        const res = await fetch("http://127.0.0.1:8000/api/candidates/upload-cv", {
+        const res = await fetch("/api/candidates/upload-cv", {
           method: "POST",
           body: formData,
         });
@@ -74,6 +75,15 @@ export const UploadCVModal: React.FC<UploadCVModalProps> = ({ isOpen, onClose, o
 
         const data = await res.json();
         setParsedResult(data);
+        storeCV({
+          filename: selectedFile.name,
+          textContent: data.headline || data.full_name || "",
+          charCount: selectedFile.size,
+          parsedAt: new Date().toISOString(),
+          profileId: data.profile_id,
+          fullName: data.full_name,
+          headline: data.headline
+        });
       } else {
         if (!pastedText.trim() || pastedText.trim().length < 50) {
           setError("Please paste comprehensive resume text (minimum 50 characters).");
@@ -81,7 +91,7 @@ export const UploadCVModal: React.FC<UploadCVModalProps> = ({ isOpen, onClose, o
           return;
         }
 
-        const res = await fetch("http://127.0.0.1:8000/api/candidates/upload-cv-json", {
+        const res = await fetch("/api/candidates/upload-cv-json", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -98,6 +108,15 @@ export const UploadCVModal: React.FC<UploadCVModalProps> = ({ isOpen, onClose, o
 
         const data = await res.json();
         setParsedResult(data);
+        storeCV({
+          filename: "pasted_resume.txt",
+          textContent: pastedText.trim(),
+          charCount: pastedText.length,
+          parsedAt: new Date().toISOString(),
+          profileId: data.profile_id,
+          fullName: data.full_name,
+          headline: data.headline
+        });
       }
     } catch (err: any) {
       setError(err.message || "Failed to process resume. Please try again.");

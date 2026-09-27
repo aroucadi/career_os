@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "last_synced_at": "2026-09-18T17:20:55.113495",
-  "total_count": 41,
+  "last_synced_at": "2026-09-24T13:27:13.348428",
+  "total_count": 42,
   "opportunities": {
     "JD_01": {
       "id": "JD_01",
@@ -101,10 +101,10 @@
       "source": "radar",
       "url": "",
       "discovered_at": "2026-09-08T11:00:32.093347",
-      "last_updated_at": "2026-09-08T11:00:32.093351",
+      "last_updated_at": "2026-09-24T13:27:13.346657",
       "next_follow_up": null,
       "evaluation": {
-        "overall_score": 58.0,
+        "overall_score": 92.0,
         "scores": {
           "change_management_adoption": 18.0,
           "agentic_ai_automation": 11.0,
@@ -2187,8 +2187,8 @@
       "id": "JD_35",
       "jd_filename": "JD_35_Salt_Head_of_AI_Adoption_Abu_Dhabi.md",
       "job_title": "Head of AI Adoption",
-      "company": "Salt Middle East (Client: Abu Dhabi Govt / Leading Org)",
-      "location": "Abu Dhabi, UAE (Expat / Relocation / Hub)",
+      "company": "12-Month Extendable Contract - Abu Dhabi",
+      "location": "Abu Dhabi, UAE (Sur site / On-site)",
       "employment_type": "12-Month Extendable Contract",
       "stage": "QUALIFIED",
       "source": "radar",
@@ -2545,6 +2545,59 @@
         }
       },
       "history": [],
+      "tags": []
+    },
+    "JD_36": {
+      "id": "JD_36",
+      "jd_filename": "JD_36_Agile_Transformation_Coach_Brussels.md",
+      "job_title": "Agile Transformation Coach",
+      "company": "EITS Brussels",
+      "location": "Brussels, VLG Belgium (Hybrid)",
+      "employment_type": "13 months with possible extension (Contract / Freelance)",
+      "stage": "DISCOVERED",
+      "source": "radar",
+      "url": "",
+      "discovered_at": "2026-09-24T10:22:42.846795",
+      "last_updated_at": "2026-09-24T10:22:42.846834",
+      "next_follow_up": null,
+      "evaluation": null,
+      "persona_intel": {
+        "candidate": {
+          "pitch_hook": "",
+          "negotiation_leverage": "MEDIUM",
+          "target_rate_eur": "850-1000 EUR/day",
+          "counter_proposal_needed": false,
+          "strategic_advice": ""
+        },
+        "recruiter": {
+          "executive_summary_3bullets": [],
+          "rate_feasibility": "Within budget",
+          "availability_status": "Immediate / 2-3 weeks",
+          "screening_checklist": []
+        },
+        "hiring_manager": {
+          "top_5_interview_questions": [],
+          "risk_scorecard": {},
+          "team_impact_assessment": ""
+        },
+        "career_pivot": {
+          "current_role_x": "Agile Delivery Manager / Technical PM",
+          "target_role_y": "AI Delivery Manager / AI CoE Lead",
+          "skill_delta_matrix": {},
+          "prioritized_upskilling_roadmap": [],
+          "transferable_assets": []
+        }
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-24T10:22:42.846929",
+          "from_stage": null,
+          "to_stage": "DISCOVERED",
+          "actor": "user",
+          "notes": "Discovered & indexed from 07_TARGET_JDS",
+          "follow_up_date": null
+        }
+      ],
       "tags": []
     }
   }

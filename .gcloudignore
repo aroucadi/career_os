@@ -1,0 +1,32 @@
+.gcloudignore
+.git
+.gitignore
+
+# Secrets & Local credentials
+.env
+.env.*
+!.env.cloud.example
+gcp_credentials.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+cache/
+logs/
+*.log
+
+# Node & Next.js
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Local media / screenshots
+designs/screenshots/
+frontend/public/screenshots/
+brag-output/
