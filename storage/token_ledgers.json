@@ -5,10 +5,10 @@
     "max_credits": 100,
     "total_consumed": 0,
     "created_at": "2026-09-17T16:19:47.178472+00:00",
-    "last_updated": "2026-09-18T16:21:11.862149+00:00",
+    "last_updated": "2026-09-27T19:12:19.869477+00:00",
     "transactions": [
       {
-        "timestamp": "2026-09-18T16:21:11.862221+00:00",
+        "timestamp": "2026-09-27T19:12:19.869508+00:00",
         "action": "BONUS",
         "amount": 10,
         "balance_after": 110,
@@ -20,9 +20,9 @@
     "user_id": "alaa_roucadi",
     "balance_credits": 84,
     "max_credits": 100,
-    "total_consumed": 730,
+    "total_consumed": 776,
     "created_at": "2026-09-17T16:19:53.241806+00:00",
-    "last_updated": "2026-09-18T16:20:54.939920+00:00",
+    "last_updated": "2026-09-27T19:12:01.673466+00:00",
     "transactions": [
       {
         "timestamp": "2026-09-17T16:19:53.248485+00:00",
@@ -597,6 +597,48 @@
         "amount": -5,
         "balance_after": 84,
         "details": "Debate on JD 01 Equancy Data AI Delivery Manager"
+      },
+      {
+        "timestamp": "2026-09-27T19:11:48.569920+00:00",
+        "action": "fast_heuristic_debate",
+        "amount": -5,
+        "balance_after": 79,
+        "details": "Debate on JD 30 Transformation Coach AI Agile"
+      },
+      {
+        "timestamp": "2026-09-27T19:11:48.794077+00:00",
+        "action": "tailor_resume",
+        "amount": -25,
+        "balance_after": 75,
+        "details": "Tailor CV for JD 30 Transformation Coach AI Agile"
+      },
+      {
+        "timestamp": "2026-09-27T19:12:00.558021+00:00",
+        "action": "general_chat_turn",
+        "amount": -1,
+        "balance_after": 99,
+        "details": "Agentic Goal: Evaluate JD_30 and check for dealbreakers"
+      },
+      {
+        "timestamp": "2026-09-27T19:12:00.632463+00:00",
+        "action": "fast_heuristic_debate",
+        "amount": -5,
+        "balance_after": 94,
+        "details": "Agent debate on JD_30"
+      },
+      {
+        "timestamp": "2026-09-27T19:12:01.440858+00:00",
+        "action": "fast_heuristic_debate",
+        "amount": -5,
+        "balance_after": 89,
+        "details": "Debate on JD 03 Retailer IT AI Delivery Senior Manager"
+      },
+      {
+        "timestamp": "2026-09-27T19:12:01.673484+00:00",
+        "action": "fast_heuristic_debate",
+        "amount": -5,
+        "balance_after": 84,
+        "details": "Debate on JD 01 Equancy Data AI Delivery Manager"
       }
     ]
   },
@@ -604,9 +646,9 @@
     "user_id": "test_chat_metering_user",
     "balance_credits": 0,
     "max_credits": 100,
-    "total_consumed": 16,
+    "total_consumed": 17,
     "created_at": "2026-09-17T17:03:08.142720+00:00",
-    "last_updated": "2026-09-18T16:20:59.613036+00:00",
+    "last_updated": "2026-09-27T19:12:04.389659+00:00",
     "transactions": [
       {
         "timestamp": "2026-09-17T17:03:08.168059+00:00",
@@ -715,6 +757,13 @@
       },
       {
         "timestamp": "2026-09-18T16:20:59.613067+00:00",
+        "action": "general_chat_turn",
+        "amount": -1,
+        "balance_after": 99,
+        "details": "Testing 1 EC deduction"
+      },
+      {
+        "timestamp": "2026-09-27T19:12:04.389682+00:00",
         "action": "general_chat_turn",
         "amount": -1,
         "balance_after": 99,

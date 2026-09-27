@@ -60,7 +60,7 @@ export const ClaimAccountModal: React.FC<ClaimAccountModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/65 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="flex flex-col bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="flex flex-col bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg max-h-[90vh] overflow-hidden animate-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="h-16 shrink-0 border-b border-slate-200 bg-white px-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -85,7 +85,7 @@ export const ClaimAccountModal: React.FC<ClaimAccountModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-5">
+        <div className="p-6 space-y-5 overflow-y-auto flex-1">
           {!submitted ? (
             <>
               {/* Session Context Banner */}

@@ -418,11 +418,11 @@ export const ChatInterface: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowClaimModal(true)}
-            className="min-touch-target hidden sm:flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200/80 text-emerald-800 text-xs font-mono transition-colors cursor-pointer shadow-xs"
+            className="min-touch-target flex items-center space-x-1.5 px-2 sm:px-2.5 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200/80 text-emerald-800 text-xs font-mono transition-colors cursor-pointer shadow-xs"
             title="Anonymous local session. Click to save across devices."
           >
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="font-semibold">{activeCV ? "Session Active" : "Guest Mode"}</span>
+            <span className="font-semibold hidden sm:inline">{activeCV ? "Session Active" : "Guest Mode"}</span>
             {activeCV ? (
               <span className="text-[11px] text-emerald-700 max-w-[100px] truncate hidden lg:inline">
                 ({activeCV.filename})
