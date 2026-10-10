@@ -212,6 +212,29 @@ Return ONLY valid JSON with this exact structure:
 }}"""
 
     @classmethod
+    def _extract_candidate_bullets(cls, cv_text: str) -> List[str]:
+        """Extracts genuine bullet points or meaningful achievement sentences directly from candidate CV."""
+        lines = [line.strip() for line in cv_text.splitlines() if line.strip()]
+        bullets = []
+
+        for line in lines:
+            # Match standard bullet characters or numbered lists
+            cleaned = re.sub(r"^[\s*•\-–—►▪◦\d+.]+", "", line).strip()
+            # Must be a substantive line (avoid headers or single words)
+            if 25 <= len(cleaned) <= 220 and not cleaned.startswith("#"):
+                bullets.append(cleaned)
+
+        if not bullets:
+            # Fallback to chunking sentences from paragraphs
+            sentences = re.split(r"(?<=[.!?])\s+", cv_text)
+            for s in sentences:
+                s_clean = s.strip()
+                if 25 <= len(s_clean) <= 200 and not s_clean.startswith("#"):
+                    bullets.append(s_clean)
+
+        return bullets[:10]
+
+    @classmethod
     def _evaluate_heuristic(
         cls,
         cv_text: str,
@@ -219,25 +242,33 @@ Return ONLY valid JSON with this exact structure:
         target_role: str,
         candidate_name: str
     ) -> GapRemediationReport:
-        """Deterministic heuristic analysis when LLM is unavailable."""
+        """Deterministic heuristic analysis grounded strictly in the candidate's actual CV text."""
         cv_lower = cv_text.lower()
         jd_lower = jd_text.lower()
+
+        # Extract genuine lines from CV for Truth Guard compliance
+        actual_cv_bullets = cls._extract_candidate_bullets(cv_text)
 
         # Domain term checks
         tech_terms = [
             "agentic", "multi-agent", "llm", "finops", "eu ai act", "azure ai",
             "langchain", "langgraph", "docker", "fastapi", "safe", "scrum",
-            "delivery", "governance", "microservices", "aws", "kubernetes"
+            "delivery", "governance", "microservices", "aws", "kubernetes", "python", "rag"
         ]
 
         present = [t for t in tech_terms if t in jd_lower and t in cv_lower]
         missing = [t for t in tech_terms if t in jd_lower and t not in cv_lower]
 
-        overlap_ratio = len(present) / max(len(present) + len(missing), 1)
-        score = int(50 + (overlap_ratio * 45))
-        score = max(45, min(95, score))
+        # Calculate proportional match score based on verified overlap
+        total_required = max(len(present) + len(missing), 1)
+        overlap_ratio = len(present) / total_required
+        
+        # Grounded scoring scale: starts from 35% baseline for relevant experience up to 92%
+        base_score = 35 if len(cv_text.strip()) > 100 else 15
+        score = int(base_score + (overlap_ratio * 55))
+        score = max(25, min(92, score))
 
-        fit_label = "Strong Match" if score >= 80 else ("Moderate Fit" if score >= 65 else "High Gap")
+        fit_label = "Strong Match" if score >= 80 else ("Moderate Fit" if score >= 60 else "High Gap")
 
         # Top fatal gaps
         fatal_gaps = []
@@ -317,28 +348,38 @@ Return ONLY valid JSON with this exact structure:
             )
         ]
 
-        # Honest reframings
-        honest_reframings = [
-            HonestReframingItem(
-                current_bullet="Coached squads on adopting AI tools and modern agile delivery practices.",
-                reframed_bullet=f"Piloted AI-augmented SDLC transformation across cross-functional squads, establishing prompt hygiene, human-in-the-loop validation, and cycle-time measurement.",
-                target_alignment="Shifts perception from passive coaching to active transformation architecture.",
-                truth_guard_note="Grounds existing coaching experience in modern SDLC terminology without claiming unperformed engineering."
-            ),
-            HonestReframingItem(
-                current_bullet="Facilitated cross-team synchronization and dependency management across tribes.",
-                reframed_bullet="Architected cross-squad flow governance and delivery telemetry, standardizing Definition of Ready gates and eliminating release bottlenecks.",
-                target_alignment="Emphasizes structural operating model ownership.",
-                truth_guard_note="Reflects actual delivery lead responsibilities using executive impact framing."
-            )
-        ]
+        # Truth Guard: Ground honest reframings strictly in actual extracted CV text
+        honest_reframings = []
+        if actual_cv_bullets:
+            bullet_1 = actual_cv_bullets[0]
+            honest_reframings.append(HonestReframingItem(
+                current_bullet=bullet_1,
+                reframed_bullet=f"Steered delivery and adoption around '{bullet_1[:80]}...', translating operating models into governed execution metrics for {target_role}.",
+                target_alignment=f"Elevates verified baseline experience directly to {target_role} terminology.",
+                truth_guard_note="Grounds directly in verified candidate CV sentence without fabricating technical roles."
+            ))
+            if len(actual_cv_bullets) > 1:
+                bullet_2 = actual_cv_bullets[1]
+                honest_reframings.append(HonestReframingItem(
+                    current_bullet=bullet_2,
+                    reframed_bullet=f"Architected cross-functional flow and quality checkpoints for '{bullet_2[:80]}...', ensuring risk alignment and cross-squad velocity.",
+                    target_alignment="Emphasizes structural transformation and leadership ownership.",
+                    truth_guard_note="Direct translation of actual CV bullet into executive impact language."
+                ))
+        else:
+            honest_reframings.append(HonestReframingItem(
+                current_bullet=cv_text.strip()[:100] if cv_text.strip() else "General Professional Background",
+                reframed_bullet=f"Leverages professional domain background to lead strategic program delivery and cross-functional execution for {target_role}.",
+                target_alignment="Aligns candidate scope with target mandate expectations.",
+                truth_guard_note="Safe baseline reframing using candidate summary."
+            ))
 
         # Interview shield
         interview_shield = [
             InterviewQuestionItem(
-                question=f"You come from a strong delivery and coaching background. How do you handle deep technical nuances when steering an {target_role} initiative?",
+                question=f"You come from a proven delivery background. How do you handle deep technical nuances when steering an {target_role} mandate?",
                 interviewer_intent="Testing whether you are purely process-oriented or can legitimately interface with senior architects.",
-                star_talking_points="Acknowledge engineering roots. Detail hands-on experience building tooling and agentic workflows. Emphasize that your superpower is translating technical capabilities into governed, high-adoption business outcomes."
+                star_talking_points="Acknowledge your core operational strengths. Detail hands-on experience orchestrating complex workflows. Emphasize that your superpower is translating technical capabilities into governed, high-adoption business outcomes."
             ),
             InterviewQuestionItem(
                 question="How do you manage the risk of hallucinations and non-deterministic behavior in production AI workflows?",
@@ -357,7 +398,7 @@ Return ONLY valid JSON with this exact structure:
             candidate_name=candidate_name,
             match_score=score,
             fit_label=fit_label,
-            executive_summary=f"Strong foundational delivery leadership. Primary gaps center on explicit multi-agent architecture citations and formal cloud AI credentials for {target_role}.",
+            executive_summary=f"Grounded Assessment for {target_role}: Found {len(present)} aligned keywords and {len(missing)} missing competencies. Match score calibrated to verified CV evidence.",
             fatal_gaps=fatal_gaps,
             skill_up_path=skill_up,
             capstone_projects=capstones,

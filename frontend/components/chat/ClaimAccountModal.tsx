@@ -30,32 +30,47 @@ export const ClaimAccountModal: React.FC<ClaimAccountModalProps> = ({
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [claimType, setClaimType] = useState<string>("");
 
   if (!isOpen) return null;
 
   const handleLinkedInClaim = () => {
-    // LinkedIn OAuth claim flow
-    // In production, triggers LinkedIn OAuth with state=sessionId
-    const clientId = process.env.NEXT_PUBLIC_LINKEDIN_CLIENT_ID || "careeros_auth";
-    const redirectUri = typeof window !== "undefined" ? `${window.location.origin}/api/auth/linkedin/callback` : "";
-    const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${sessionId}&scope=r_liteprofile%20r_emailaddress`;
-    
-    // For now, simulate claim or open oauth
     setIsSubmitting(true);
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem("careeros_claim_reservation", JSON.stringify({
+          sessionId,
+          type: "linkedin",
+          reservedAt: new Date().toISOString()
+        }));
+      } catch (e) {}
+    }
     setTimeout(() => {
       setIsSubmitting(false);
+      setClaimType("LinkedIn");
       setSubmitted(true);
-    }, 1200);
+    }, 600);
   };
 
   const handleEmailClaim = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
     setIsSubmitting(true);
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem("careeros_claim_reservation", JSON.stringify({
+          sessionId,
+          type: "email",
+          email,
+          reservedAt: new Date().toISOString()
+        }));
+      } catch (e) {}
+    }
     setTimeout(() => {
       setIsSubmitting(false);
+      setClaimType(email);
       setSubmitted(true);
-    }, 900);
+    }, 600);
   };
 
   return (
@@ -166,10 +181,10 @@ export const ClaimAccountModal: React.FC<ClaimAccountModalProps> = ({
               </div>
               <div className="space-y-1">
                 <h4 className="text-sm font-bold text-slate-900">
-                  Account Claim Link Generated!
+                  Account Claim Reserved!
                 </h4>
                 <p className="text-xs text-slate-600 max-w-sm mx-auto">
-                  Your session <strong>{sessionId}</strong> is securely mapped. When you log in from any device, your custom CV telemetry and debate transcripts will be ready.
+                  Your local session <strong>{sessionId}</strong> is marked for priority sync via <strong>{claimType || "selected provider"}</strong>. Your calibrated CV telemetry, debate records, and gap remediation remain permanently safe in this browser.
                 </p>
               </div>
 

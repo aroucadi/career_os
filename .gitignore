@@ -1,4 +1,4 @@
-﻿# Environment & Secrets
+# Environment & Secrets
 .env
 .env.*
 !.env.cloud.example
@@ -30,6 +30,10 @@ cache/
 # SQLite WAL temporary files
 *.db-wal
 *.db-shm
+*.db
+storage/*.db
+storage/*.json
+pipeline_state.json
 storage/backups/
 
 # Node & Next.js

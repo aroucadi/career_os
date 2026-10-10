@@ -142,6 +142,37 @@ def build_multi_track_pitch(career_mode: str, jd_title: str, cand, rec_info: dic
             f"Seriez-vous disponible pour un court échange téléphonique cette semaine afin d'aligner nos priorités ?"
         )
 
+class GapRescorePayload(BaseModel):
+    initial_score: int
+    claimed_gaps_count: int = 0
+    claimed_keywords_count: int = 0
+    total_gaps_count: int = 1
+    total_keywords_count: int = 1
+
+@router.post("/gap-rescore")
+async def rescore_gap_analysis(payload: GapRescorePayload):
+    """
+    Deterministic Smart UI Re-Scoring Engine (0 Energy Credits).
+    Recalculates match score dynamically as user verifies existing capabilities.
+    """
+    base = payload.initial_score
+    gap_boost = payload.claimed_gaps_count * 8
+    keyword_boost = payload.claimed_keywords_count * 4
+    
+    new_score = min(98, base + gap_boost + keyword_boost)
+    fit_label = "Strong Match" if new_score >= 80 else ("Moderate Fit" if new_score >= 60 else "High Gap")
+    
+    remaining_gaps = max(0, payload.total_gaps_count - payload.claimed_gaps_count)
+    bridge_days = "0-7" if remaining_gaps <= 1 else ("7-14" if remaining_gaps <= 2 else "14-30")
+
+    return {
+        "match_score": new_score,
+        "fit_label": fit_label,
+        "remaining_gaps": remaining_gaps,
+        "bridge_days": bridge_days,
+        "points_gained": new_score - base
+    }
+
 @router.post("")
 async def handle_chat_stream(payload: ChatPayload):
     """Streams token-by-token reasoning, Gemini responses, and Vercel AI SDK Generative UI tool calls."""
@@ -315,7 +346,8 @@ async def handle_chat_stream(payload: ChatPayload):
                 cv_text=cv_text_to_use,
                 jd_text=target_jd_text,
                 target_role=target_role_title,
-                candidate_name=cand.full_name
+                candidate_name=cand.full_name,
+                model_name=payload.model
             )
 
             call_id_gap = f"call_{uuid.uuid4().hex[:8]}"
@@ -909,7 +941,8 @@ async def handle_chat_stream(payload: ChatPayload):
                     cv_text=cv_text_to_use,
                     jd_text=target_jd_text,
                     target_role=target_role_title,
-                    candidate_name=cand.full_name
+                    candidate_name=cand.full_name,
+                    model_name=payload.model
                 )
 
                 call_id_gap = f"call_{uuid.uuid4().hex[:8]}"

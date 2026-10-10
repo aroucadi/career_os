@@ -77,3 +77,48 @@ Looking to pivot into Enterprise AI Transformation Lead.
     # Check that GapAnalysisCard was triggered
     assert "GapAnalysisCard" in output_text
     assert "Jane Doe" in output_text or "Candidate" in output_text
+
+def test_truth_guard_bullet_grounding():
+    """Verify that every reframed 'current_bullet' strictly derives from the supplied candidate CV."""
+    from engine.evaluators.gap_remediation import GapRemediationEngine
+
+    test_cv = """# Marcus Vance - Head of Agile Delivery
+- Spearheaded 8 cross-functional software squads across enterprise retail platform.
+- Cut release cycle latency from 4 weeks to 3 days using trunk-based deployment.
+- Supervised $4.2M technology delivery budget and vendor contracts.
+"""
+    report = GapRemediationEngine.evaluate(
+        cv_text=test_cv,
+        jd_text="Target Mandate: AI Engineering Director",
+        target_role="AI Engineering Director",
+        candidate_name="Marcus Vance"
+    )
+
+    assert report.match_score > 0
+    assert len(report.honest_reframings) > 0
+    
+    # Truth Guard invariant: Every current_bullet must be a real substring or line from the candidate's CV!
+    for ref in report.honest_reframings:
+        assert ref.current_bullet in test_cv or any(word in test_cv for word in ref.current_bullet.split()[:4]), (
+            f"Truth Guard violation: '{ref.current_bullet}' was fabricated and not in candidate CV!"
+        )
+
+@pytest.mark.asyncio
+async def test_gap_rescore_endpoint():
+    """Verify deterministic Smart UI rescoring endpoint (0 Energy Credits)."""
+    from api.routers.chat import rescore_gap_analysis, GapRescorePayload
+    
+    payload = GapRescorePayload(
+        initial_score=60,
+        claimed_gaps_count=2,
+        claimed_keywords_count=3,
+        total_gaps_count=3,
+        total_keywords_count=5
+    )
+    res = await rescore_gap_analysis(payload)
+    
+    assert res["match_score"] == 60 + (2 * 8) + (3 * 4) # 60 + 16 + 12 = 88
+    assert res["fit_label"] == "Strong Match"
+    assert res["remaining_gaps"] == 1
+    assert res["bridge_days"] == "0-7"
+

@@ -14,7 +14,10 @@ import {
   Award,
   Layers,
   ArrowRight,
-  ShieldCheck
+  ShieldCheck,
+  Sparkles,
+  CheckSquare,
+  Square
 } from "lucide-react";
 import { SurfaceCard } from "../primitives/SurfaceCard";
 import { TelemetryMetric } from "../primitives/TelemetryMetric";
@@ -91,9 +94,29 @@ export const GapAnalysisCard: React.FC<GapAnalysisCardProps> = ({
   const [showDrawer, setShowDrawer] = useState(false);
   const [activeTab, setActiveTab] = useState<"gaps" | "skillup" | "capstone" | "reframing" | "interview">("gaps");
 
-  const isHighFit = match_score >= 80;
-  const isCriticalGap = match_score < 60;
+  // Smart UI: Local Interactive Verification Checklist State
+  const [claimedGaps, setClaimedGaps] = useState<Record<number, boolean>>({});
+  const [claimedKeywords, setClaimedKeywords] = useState<Record<string, boolean>>({});
+
+  const claimedGapsCount = Object.values(claimedGaps).filter(Boolean).length;
+  const claimedKeywordsCount = Object.values(claimedKeywords).filter(Boolean).length;
+  const pointsGained = (claimedGapsCount * 8) + (claimedKeywordsCount * 4);
+  const currentScore = Math.min(98, match_score + pointsGained);
+
+  const isHighFit = currentScore >= 80;
+  const isCriticalGap = currentScore < 60;
   const statusColor = isHighFit ? "emerald" : isCriticalGap ? "rose" : "slate";
+  const currentFitLabel = isHighFit ? "Strong Match" : isCriticalGap ? "High Gap" : "Moderate Fit";
+  const remainingGapsCount = Math.max(0, (fatal_gaps.length || 3) - claimedGapsCount);
+  const bridgeDays = remainingGapsCount <= 1 ? "0-7" : remainingGapsCount <= 2 ? "7-14" : (skill_up_path.length > 0 ? "14-30" : "7-14");
+
+  const toggleGapClaim = (idx: number) => {
+    setClaimedGaps(prev => ({ ...prev, [idx]: !prev[idx] }));
+  };
+
+  const toggleKeywordClaim = (kw: string) => {
+    setClaimedKeywords(prev => ({ ...prev, [kw]: !prev[kw] }));
+  };
 
   return (
     <>
@@ -106,17 +129,24 @@ export const GapAnalysisCard: React.FC<GapAnalysisCardProps> = ({
             <span className="text-content-primary font-bold">• {target_role}</span>
           </div>
 
-          <span
-            className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${
-              isHighFit
-                ? "bg-emerald-50 text-emerald-700 border-emerald-200"
-                : isCriticalGap
-                ? "bg-rose-50 text-rose-700 border-rose-200"
-                : "bg-amber-50 text-amber-700 border-amber-200"
-            }`}
-          >
-            {fit_label}
-          </span>
+          <div className="flex items-center gap-1.5">
+            {pointsGained > 0 && (
+              <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300 animate-pulse">
+                +{pointsGained} pts verified
+              </span>
+            )}
+            <span
+              className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${
+                isHighFit
+                  ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                  : isCriticalGap
+                  ? "bg-rose-50 text-rose-700 border-rose-200"
+                  : "bg-amber-50 text-amber-700 border-amber-200"
+              }`}
+            >
+              {currentFitLabel}
+            </span>
+          </div>
         </SurfaceCard.Header>
 
         {/* 2. Hero & Primary Value (Vertical Ceiling Cap <= 3 elements) */}
@@ -124,20 +154,20 @@ export const GapAnalysisCard: React.FC<GapAnalysisCardProps> = ({
           <div className="grid grid-cols-3 gap-2 py-1">
             <TelemetryMetric
               label="Match Score"
-              value={match_score}
+              value={currentScore}
               unit="/100"
               statusColor={statusColor}
               trend={isHighFit ? "up" : "down"}
             />
             <TelemetryMetric
               label="Critical Gaps"
-              value={fatal_gaps.length || 3}
+              value={remainingGapsCount}
               unit="Items"
-              statusColor={fatal_gaps.length > 2 ? "rose" : "emerald"}
+              statusColor={remainingGapsCount > 2 ? "rose" : "emerald"}
             />
             <TelemetryMetric
               label="Bridge Time"
-              value={skill_up_path.length > 0 ? "14-30" : "7-14"}
+              value={bridgeDays}
               unit="Days"
               statusColor="slate"
             />
@@ -252,30 +282,77 @@ export const GapAnalysisCard: React.FC<GapAnalysisCardProps> = ({
           {/* TAB 1: CRITICAL GAPS */}
           {activeTab === "gaps" && (
             <div className="space-y-3">
-              {fatal_gaps.map((gap, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl border border-rose-200 bg-rose-50/50 space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-xs text-rose-900 flex items-center gap-1.5">
-                      <AlertTriangle className="h-4 w-4 text-rose-600" />
-                      {gap.title}
-                    </span>
-                    <span className="text-[10px] font-mono uppercase font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-300">
-                      {gap.severity} • {gap.category}
-                    </span>
-                  </div>
-                  <p className="text-xs text-rose-800 leading-relaxed">{gap.impact}</p>
+              <div className="p-2.5 rounded-lg bg-indigo-50/70 text-indigo-950 border border-indigo-200 text-xs flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-accent shrink-0" />
+                  <span><strong>Interactive Checklist:</strong> Already possess any of these? Check them to update your match score dynamically.</span>
                 </div>
-              ))}
+                {pointsGained > 0 && (
+                  <span className="font-mono font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[11px]">
+                    +{pointsGained} pts
+                  </span>
+                )}
+              </div>
+
+              {fatal_gaps.map((gap, idx) => {
+                const isClaimed = !!claimedGaps[idx];
+                return (
+                  <div 
+                    key={idx} 
+                    onClick={() => toggleGapClaim(idx)}
+                    className={`p-3.5 rounded-xl border transition-all cursor-pointer space-y-2 ${
+                      isClaimed 
+                        ? "border-emerald-300 bg-emerald-50/70 shadow-xs" 
+                        : "border-rose-200 bg-rose-50/50 hover:border-rose-300"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className={`font-bold text-xs flex items-center gap-2 ${isClaimed ? "text-emerald-950 line-through" : "text-rose-900"}`}>
+                        {isClaimed ? (
+                          <CheckSquare className="h-4 w-4 text-emerald-600 shrink-0" />
+                        ) : (
+                          <Square className="h-4 w-4 text-rose-500 shrink-0" />
+                        )}
+                        <span>{gap.title}</span>
+                      </span>
+                      <span className={`text-[10px] font-mono uppercase font-bold px-2 py-0.5 rounded border ${
+                        isClaimed
+                          ? "bg-emerald-100 text-emerald-800 border-emerald-300"
+                          : "bg-rose-100 text-rose-800 border-rose-300"
+                      }`}>
+                        {isClaimed ? "✓ CLAIMED / VERIFIED" : `${gap.severity} • ${gap.category}`}
+                      </span>
+                    </div>
+                    <p className={`text-xs leading-relaxed ${isClaimed ? "text-emerald-800" : "text-rose-800"}`}>{gap.impact}</p>
+                  </div>
+                );
+              })}
 
               {keywords_missing.length > 0 && (
                 <div className="p-3.5 rounded-xl border border-border-subtle bg-surface space-y-2">
-                  <div className="text-xs font-bold text-content-primary">Missing High-Frequency Keywords:</div>
+                  <div className="flex items-center justify-between text-xs font-bold text-content-primary">
+                    <span>Missing Keywords (Tap to mark known):</span>
+                    <span className="text-[10px] font-mono font-normal text-content-muted">Tap to toggle</span>
+                  </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {keywords_missing.map((kw, i) => (
-                      <span key={i} className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
-                        {kw}
-                      </span>
-                    ))}
+                    {keywords_missing.map((kw, i) => {
+                      const isClaimed = !!claimedKeywords[kw];
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => toggleKeywordClaim(kw)}
+                          className={`text-[11px] font-mono px-2 py-1 rounded-md border transition-all cursor-pointer flex items-center gap-1 ${
+                            isClaimed
+                              ? "bg-emerald-100 text-emerald-800 border-emerald-300 font-bold"
+                              : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+                          }`}
+                        >
+                          <span>{isClaimed ? "✓" : "+"}</span>
+                          <span>{kw}</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}
