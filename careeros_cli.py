@@ -516,6 +516,41 @@ def cmd_server(args):
     uvicorn.run("api.main:app", host=args.host, port=args.port, reload=args.reload)
 
 
+def cmd_mcp(args):
+    """Starts the CareerOS Model Context Protocol (MCP) server over standard I/O (stdio)."""
+    from engine.mcp.server import run_stdio
+    console.print(Panel(
+        "[bold cyan]Starting CareerOS MCP Server over stdio...[/]\n"
+        "• Transport:  [green]stdio[/]\n"
+        "• Compatible: [magenta]Claude Desktop, Cursor, Antigravity, Cline[/]\n"
+        "• Tools:      [yellow]gap_analysis, tailor_resume, evaluate_mandate, pipeline_status, ingest_cv, radar_scan, list_commands[/]",
+        title="CareerOS MCP Server",
+        border_style="cyan"
+    ))
+    run_stdio()
+
+
+def cmd_exec(args):
+    """Executes any CareerOS command via the unified CommandRegistry."""
+    import json
+    from engine.commands.registry import execute_command
+    kwargs = {}
+    if args.args:
+        try:
+            kwargs = json.loads(args.args)
+        except Exception as e:
+            console.print(f"[bold red]Error parsing JSON args:[/] {e}")
+            sys.exit(1)
+
+    result = execute_command(args.command_name, **kwargs)
+    if result.get("status") == "success":
+        console.print(Panel(f"[bold green]Command '{args.command_name}' succeeded![/]", title="Command Engine", border_style="green"))
+        console.print(json.dumps(result["data"], indent=2, ensure_ascii=False))
+    else:
+        console.print(Panel(f"[bold red]Command '{args.command_name}' failed:[/] {result.get('error')}", title="Command Engine Error", border_style="red"))
+        sys.exit(1)
+
+
 def cmd_logs(args):
     """Displays recent CareerOS interaction audit logs and server traces."""
     from api.logger import AuditLogger
@@ -671,6 +706,14 @@ def main():
     p_logs = subparsers.add_parser("logs", help="Inspect recent agent audit logs and interaction telemetry")
     p_logs.add_argument("-n", "--limit", type=int, default=15, help="Number of records to display (default: 15)")
 
+    # MCP Server subcommand
+    p_mcp = subparsers.add_parser("mcp", help="Start CareerOS Model Context Protocol (MCP) server over stdio")
+
+    # Command Execution subcommand
+    p_exec = subparsers.add_parser("exec", help="Execute any registered CareerOS command directly")
+    p_exec.add_argument("command_name", help="Name of registered command (e.g. gap_analysis, tailor_resume, pipeline_status)")
+    p_exec.add_argument("--args", "-a", default="{}", help="JSON dictionary of keyword arguments")
+
     args = parser.parse_args()
     if not args.command:
         parser.print_help()
@@ -706,6 +749,10 @@ def main():
         cmd_server(args)
     elif args.command == "logs":
         cmd_logs(args)
+    elif args.command == "mcp":
+        cmd_mcp(args)
+    elif args.command == "exec":
+        cmd_exec(args)
 
 if __name__ == "__main__":
     main()

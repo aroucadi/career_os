@@ -1,4 +1,4 @@
-﻿# CareerOS 2.0 - Production Cloud Run Requirements
+# CareerOS 2.0 - Production Cloud Run Requirements
 fastapi>=0.115.0
 uvicorn[standard]>=0.30.0
 sse-starlette>=2.1.3
@@ -18,3 +18,5 @@ rich>=13.8.0
 click>=8.1.7
 pytest>=8.3.0
 pytest-asyncio>=0.24.0
+mcp>=1.3.0
+anyio>=4.0.0

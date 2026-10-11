@@ -11,7 +11,7 @@ Production backend for CareerOS agentic decision engine, offering:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.routers import chat, pipeline, memory, documents, tokens, recruiter, candidates
+from api.routers import chat, pipeline, memory, documents, tokens, recruiter, candidates, commands
 from engine.storage.migrator import run_migrations
 
 # Run automatic SQLite schema initialization & JSON state migration
@@ -50,6 +50,7 @@ app.include_router(tokens.router)
 app.include_router(recruiter.router)
 app.include_router(recruiter.candidate_router)
 app.include_router(candidates.router)
+app.include_router(commands.router)
 
 @app.get("/health", tags=["System"])
 @app.get("/api/health", tags=["System"])

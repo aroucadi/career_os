@@ -1155,8 +1155,29 @@ async def handle_chat_stream(payload: ChatPayload):
                 async for chunk in agent.execute_goal_stream(goal=goal):
                     yield chunk
 
+            elif cmd in ("/command", "/cmd", "/exec"):
+                from engine.commands.registry import execute_command
+                import json
+                subparts = cmd_arg.split(maxsplit=1)
+                c_name = subparts[0] if subparts else ""
+                c_args_raw = subparts[1] if len(subparts) > 1 else "{}"
+                try:
+                    c_args = json.loads(c_args_raw) if c_args_raw else {}
+                except Exception:
+                    c_args = {}
+
+                if not c_name:
+                    yield format_text_delta("⚠️ Please specify a command name, e.g.: `/command pipeline_status {\"limit\": 5}` or `/command list_commands`")
+                else:
+                    res = execute_command(c_name, **c_args)
+                    if res.get("status") == "success":
+                        yield format_text_delta(f"⚡ **Command `{c_name}` Executed Successfully**:\n\n```json\n{json.dumps(res['data'], indent=2, ensure_ascii=False)}\n```\n")
+                    else:
+                        yield format_text_delta(f"❌ **Command `{c_name}` Failed**: {res.get('error')}\n")
+
             elif cmd in ("/help", "/commands"):
-                yield format_text_delta("🛠️ **Available CareerOS Slash Commands**:\n\n")
+                yield format_text_delta("🛠️ **Available CareerOS Slash Commands & Control Channel**:\n\n")
+                yield format_text_delta("- `/command [name] [json_args]` — Dispatch any registered command via Unified Command Engine\n")
                 yield format_text_delta("- `/agent [goal]` — Launch Autonomous ReAct Agent with dynamic tool planning\n")
                 yield format_text_delta("- `/debate [JD or URL]` — Run Dual-Agent Dialectic Debate (Advocate vs Prosecutor)\n")
                 yield format_text_delta("- `/tailor [JD or URL]` — Synthesize tailored CV and compile pixel-perfect A4 PDF\n")
