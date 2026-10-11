@@ -54,9 +54,8 @@ steps:
       - "--max-instances"
       - "10"
       - "--set-env-vars"
-      - "DEFAULT_MODEL=gemini-3.7-flash,NODE_ENV=production"
-      - "--set-secrets"
-      - "GEMINI_API_KEY=GEMINI_API_KEY:latest,CAREEROS_SECRET_KEY=CAREEROS_SECRET_KEY:latest"
+      - "DEFAULT_MODEL=gemini-2.5-pro,NODE_ENV=production,GOOGLE_GENAI_USE_VERTEXAI=True"
+      - "--clear-secrets"
 
 images:
   - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE_NAME}:${_TAG}"

@@ -119,6 +119,21 @@
   --status-success-bg: rgba(16, 185, 129, 0.15);
   --status-warning-bg: rgba(245, 158, 11, 0.15);
   --status-danger-bg: rgba(244, 63, 94, 0.15);
+
+  /* -------------------------------------------------------------
+     LAYER 3: MOTION TOKENS (Replacing Adjectives with Specs)
+     - Entrances: ease-out-quint (fast start, gentle settle)
+     - Exits: ease-in-expo (40-50% shorter)
+     - Spring Damping: zeta = 0.82 (restrained, zero wobble)
+     ------------------------------------------------------------- */
+  --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-exit: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-move: cubic-bezier(0.76, 0, 0.24, 1);
+  --ms-feedback: 120ms;
+  --ms-move: 350ms;
+  --ms-hero: 750ms;
+  --ms-exit: 180ms;
+  --stagger-item: 50ms;
 }
 
 html,

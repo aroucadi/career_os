@@ -1226,7 +1226,7 @@ async def handle_chat_stream(payload: ChatPayload):
                 
                 prompt_content = f"{system_instruction}\n\n" + "\n\n".join(contents) + f"\n\nUSER: {last_user_message}\nASSISTANT:"
 
-                model_name = payload.model or os.getenv("DEFAULT_MODEL", "gemini-3.8-flash")
+                model_name = payload.model or os.getenv("DEFAULT_MODEL", "gemini-2.5-pro")
                 llm_model = model_name
 
                 stream = client.models.generate_content_stream(

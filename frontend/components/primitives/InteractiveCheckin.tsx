@@ -43,7 +43,7 @@ export const InteractiveCheckin: React.FC<InteractiveCheckinProps> = ({
     }
 
     setAnimating(true);
-    setTimeout(() => setAnimating(false), 250);
+    setTimeout(() => setAnimating(false), 120);
 
     const nextStatus: CheckinStatus = status === "completed" ? "pending" : "completed";
     setStatus(nextStatus);
@@ -65,11 +65,11 @@ export const InteractiveCheckin: React.FC<InteractiveCheckinProps> = ({
       }}
       onClick={toggle}
       className={cn(
-        "min-touch-target group flex items-center justify-between gap-3 p-3 rounded-xl border transition-all cursor-pointer select-none",
+        "min-touch-target group flex items-center justify-between gap-3 p-3 rounded-xl border transition-transform duration-[120ms] ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer select-none",
         isCompleted
           ? "bg-emerald-50/70 border-emerald-200/80 text-emerald-950"
           : "bg-surface border-border-subtle hover:border-border-interactive text-content-primary",
-        animating ? "scale-[0.98]" : "scale-100",
+        animating ? "scale-[0.97]" : "scale-100",
         className
       )}
     >

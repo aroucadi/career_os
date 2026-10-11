@@ -1,115 +1,67 @@
-# CareerOS Experience Charter & Cognitive Architecture
+# CareerOS: Universal Experience Architecture & Design Charter
 
-## 1. Executive Summary & Vision
+## 1. Executive Vision & Mandate
+CareerOS is an elite AI Career Strategy engine and autonomous job intelligence workspace designed to give candidates unassailable positioning, ATS immunity, and measurable compensation leverage.
 
-CareerOS is an elite AI Career Strategy engine and autonomous job intelligence workspace. It bridges the chasm between raw candidate experience and the reality of modern hiring algorithms, recruiter psychology, and compensation leverage.
-
-This charter establishes the human-centric cognitive architecture, design system contracts, perceptual guardrails, and usability budgets that govern every interface, component, and interaction within CareerOS.
-
----
-
-## 2. Core Experience Foundation (Phase 0 Diagnostic Realities)
-
-### The Wedge & Core Job-to-be-Done (JTBD)
-- **Primary Wedge**: **Instant JD-to-Resume Gap Score + 1-Click Diff Fix (< 15 seconds)**.
-- **Value Delivery**: Within 10 seconds of landing, the candidate receives an objective, unvarnished match score against their target mandate with actionable, 1-click bullet upgrades using the Google XYZ formula ($\text{Accomplished [X]} \text{ as measured by [Y]} \text{ by doing [Z]}$).
-
-### The Anchor Paradigm
-- **Intent-Driven Generative Stream**: The primary workspace is anchored by a conversational prompt deck that generates **stateful, morphing interactive cards** governed by 3-depth progressive disclosure. It eliminates static dashboards, endless dead-end menus, and sprawling forms.
-
-### The "3 Feeling Words"
-Every interaction, micro-copy string, and visual state must evoke:
-1. **Surgically Prepared**: Unshakable confidence that candidate bullets and positioning withstand recruiter scrutiny and ATS parsing.
-2. **Confident**: Total clarity on value levers, compensation leverage, and mandate trade-offs.
-3. **Unburdened**: Cognitive ease through radical reduction of friction, zero paperwork overhead, and $\le 2$ taps to execute any critical action.
-
-### Anti-Goals (Categorically Blocked Architecture)
-- ❌ **No Generic Cover Letter Spam**: We refuse to build generic LLM text-fillers or multi-page questionnaire fluff.
-- ❌ **No Unsegmented Monoliths**: We refuse to dump 5+ metric dashboards, pipeline tables, and forms into a single endless vertical scroll.
-- ❌ **No Raw Markdown AI Dumps**: When an action is possible, the AI outputs structured, interactive cards with smart defaults rather than walls of text.
-- ❌ **No Viewport Action Overload (Hick-Hyman Law)**: Never present more than 3 options or 1 primary CTA per viewport.
+This document codifies the **Universal Product Experience Reinvention** protocol across all phases.
 
 ---
 
-## 3. The 3-Depth Progressive Disclosure Model
+## 2. The Anchor & North Star
 
-```mermaid
-graph TD
-    subgraph D1["DEPTH 1: GLANCE (0 to 3s)"]
-        G1[Role Title & Match Indicator]
-        G2[Composite Score & High-Impact Gap]
-        G3[Single Dominant CTA: Review & Apply Diff]
-    end
+### 2.1 The Anchor: The Target Mandate (The Mandate Room)
+- **Anchor Definition**: The Mandate / Career Pipeline. Every interaction enters through the user's active target role or contract.
+- **The Core Question**: *"Where do I stand against my target role today, and what is my highest-leverage move?"*
+- **Runners-Up Evaluation**:
+  - *The Chat Wall (rejected)*: Degenerates into prompt engineering fatigue and unstructured generic LLM hallucination.
+  - *The Sprawling Dashboard (rejected)*: Overwhelms users with empty vanity charts before any value is delivered.
+  - *The Document Canvas (rejected)*: Treats resume writing as a word-processing chore rather than strategic positioning.
 
-    subgraph D2["DEPTH 2: ACT (3 to 10s)"]
-        A1[1-Tap Diff Approval / Reject]
-        A2[Target Track Switcher: Freelance / Full-Time / Pivot]
-        A3[1-Tap Command Presets: /gap, /tailor, /evaluate]
-    end
+### 2.2 North Star
+> *"Open CareerOS, inspect your target role match in 3 seconds, execute a grounded high-leverage upgrade in 2 taps, and walk into every recruiter round unassailable."*
 
-    subgraph D3["DEPTH 3: DEEP-DIVE (Slide-Up Sheet)"]
-        DD1[Multi-Agent Dialectic: Prosecutor vs Advocate Debate]
-        DD2[Model Provenance & Prompt Telemetry]
-        DD3[Full A4 PDF Preview & Line-by-Line ATS Breakdown]
-    end
+### 2.3 The Three Feeling Words
+1. **Capable**: Total agency over value levers, compensation benchmarks, and career narrative.
+2. **Grounded**: Zero hallucinations. Every bullet point is anchored in verifiable candidate facts.
+3. **Unassailable**: Ironclad confidence that candidate positioning withstands recruiter scrutiny and algorithmic ATS filters.
 
-    D1 -->|1 Tap on Card| D2
-    D2 -->|Tap 'Inspect Provenance' or 'Deep Dive'| D3
-```
+### 2.4 Anti-Goals
+- ❌ **No Prompt Engineering**: The candidate never has to invent prompts. Tactical intents are triggered via 1-tap commands (`/gap`, `/tailor`, `/evaluate`).
+- ❌ **No Hallucinated Fluff**: We never generate fictional certifications or ungrounded claims.
+- ❌ **No Metric Walls**: No more than 3 high-signal telemetry metrics per glanceable view.
+- ❌ **No Form Fatigue**: Day-0 begins with immediate anonymous CV ingestion or 1-tap mandate evaluation without signup walls.
 
-### Depth 1: Glance (0 to 3 Seconds)
-- What the user sees without touching the screen.
-- Restricted to:
-  1. *Context Eyebrow*: Track indicator (e.g., `Freelance • €950/d`) and active status.
-  2. *Hero Metric / Core State*: The composite score (e.g., `88/100 ATS Match`) formatted with `tabular-nums`.
-  3. *Primary Action*: Exactly ONE high-contrast primary CTA button (e.g., `[Apply 3 Upgrades]`).
-
-### Depth 2: Act (3 to 10 Seconds)
-- High-velocity tactile micro-interactions:
-  - 1-click bullet replacement toggles.
-  - Binary forks for ambiguous attributes (Option A vs Option B).
-  - Track-switching dropdown with immediate preset recalculation.
-
-### Depth 3: Deep-Dive / Learn (Non-Blocking Slide-Up Sheet)
-- Accessible, swipe-to-dismiss bottom/side drawer:
-  - Multi-agent debate transcripts (Prosecutor vs Advocate).
-  - Explainability & model provenance ("Why was this suggested?").
-  - Full-screen headless A4 PDF preview.
-  - **Rule**: Depth 3 details never contaminate Depth 1 glanceability.
+### 2.5 Voice & Tone
+- Crisp, strategic, verb-first, executive confidence (~12 words per guidance line).
+- **Approved Examples**:
+  - *"Match score increased from 71% to 88% across 4 verified competencies."*
+  - *"Quantified latency reduction to 35% using Google XYZ structure."*
+  - *"Adversarial scrutiny passed: No recruiter traps detected."*
+  - *"Anonymous session active. Your data stays local until claimed."*
+  - *"1 high-impact gap identified. Tap to apply verified upgrade."*
+- **Forbidden Examples**:
+  - *"Hello! I am your friendly AI Career Coach, how can I assist you today?"*
+  - *"Let's optimize your synergy to unlock synergistic opportunities!"*
+  - *"Please fill out this 10-step profile onboarding form before starting."*
+  - *"I'm thinking... please wait while I think about your resume."*
+  - *"You haven't logged in for 3 days, don't miss out on jobs!"*
 
 ---
 
-## 4. Information Architecture & Navigation Schema
+## 3. The 12 Core Laws Implementation in CareerOS
 
-The application is structured into a streamlined 4-destination model. Every secondary state renders in non-blocking overlay sheets:
-
-| Destination | Primary Role | Core Primitives Used |
-| :--- | :--- | :--- |
-| **1. Strategic Studio (Stream)** | Main conversational command center & generative card stream. | `<GenerativeCard>`, `<SurfaceCard>`, `<InteractiveCheckin>` |
-| **2. Role Gap Studio** | Side-by-side JD analysis, match scoring, and bullet optimization. | `<SurfaceCard>`, `<TelemetryMetric>`, `<ProgressiveDrawer>` |
-| **3. Mandate Pipeline** | Active pipeline, rate benchmarks, and status cards. | `<SurfaceCard>`, `<InteractiveCheckin>` |
-| **4. Career Vault** | Master profile, verified skills, and compiled PDF artifacts. | `<TelemetryMetric>`, `<ProgressiveDrawer>` |
-
-### Hidden Persona & Administrative Controls
-- Per Phase 0 protocol: Developer telemetry, AI model switcher, `EnergyCreditBadge`, and the B2B Recruiter Portal are relocated away from the main viewport.
-- Accessible via a hidden **5-tap gesture on the version label in the footer** (`CareerOS Super-Agent v2.0`).
-
----
-
-## 5. Usability & Touch Budgets
-
-| Metric | Target Specification | Enforcement Mechanism |
-| :--- | :--- | :--- |
-| **Core Loop Tap Budget** | $\le 2$ taps from landing to diff execution | Pre-filled smart defaults + 1-tap accept. |
-| **Touch Target Dimensions** | $\ge 44 \times 44\text{px}$ on all interactive elements | Apple HIG & WCAG 2.2 SC 2.5.8 compliance. |
-| **Touch Separation** | $\ge 8\text{px}$ minimum margin between hit targets | Layout spacing tokens. |
-| **Thumb-Zone Placement** | High-frequency actions in bottom 40% of viewport | Floating bottom action deck with `pb-safe`. |
-| **Keyboard Accessibility** | Full navigation via `Tab`, `Enter`, and `Cmd+K` / `/` | Focus rings with 2px offset + explicit ARIA. |
-
----
-
-## 6. Visual Balance & Token Rules (60-30-10)
-
-- **60% Neutral Surface**: Obsidian / deep slate canvas (`#090D14`, `#0F172A`) or clean architectural paper (`#F8FAFC`).
-- **30% Structural Contrast**: Elevated cards (`bg-white` or `bg-slate-900/60`), subtle borders (`border-slate-200` or `border-slate-800`), muted typography (`text-slate-500` or `text-slate-400`).
-- **10% Purposeful Accent**: High-contrast Indigo/Cyan (`#4F46E5`, `#06B6D4`) and Emerald (`#10B981`) reserved strictly for active states, generative progress bars, and the single primary CTA.
+1. **One Anchor, Many Rooms**: The Mandate Stream is home. Detailed evaluations, PDF previews, and gap matrices open in non-blocking drawers.
+2. **Moments, Not Features**: Day-0 surfaces Instant Gap Score. Habit surfaces Active Pipeline. Transition surfaces Compensation Debates.
+3. **One Shared Brain**: Skills verified during Gap Analysis automatically update the Tailored Resume and feed Recruiter inbound matching.
+4. **Intent First**: 1-tap intent chips (`/gap`, `/tailor`, `/evaluate`, `/pipeline`) eliminate taxonomy hunting.
+5. **AI as Connective Tissue**: Core features work deterministically. AI explains ("Why?"), compares, and generates structured upgrades.
+6. **Three Depths Everywhere**:
+   - *Glance (0-3s)*: Eyebrow + Match score + Single dominant CTA.
+   - *Act (3-10s)*: 1-click bullet replacement toggles and interactive checkboxes.
+   - *Learn (Deep-Dive)*: Adversarial dialectic debates, prompt provenance, and PDF breakdown in `<ProgressiveDrawer>`.
+7. **Same Primitives Everywhere**: Standardized on `<SurfaceCard>`, `<GenerativeCard>`, `<InteractiveCheckin>`, `<TelemetryMetric>`, and `<ProgressiveDrawer>`.
+8. **Calm by Default**: $\le 3$ visual groups per card. Max 1 primary CTA button per card.
+9. **Earn the Complexity**: Anonymous instant mode $\rightarrow$ Saved session $\rightarrow$ Inbound Recruiter Portal.
+10. **Effort Budget**: Instant Gap Analysis $\le 1$ tap. Commit Bullet Upgrade $\le 2$ taps.
+11. **Show Reasoning, Keep Control**: Every bullet diff has an interactive checkbox and "Why?" inspect sheet; user can accept, edit, or reject.
+12. **Privacy as Foundation**: Local-storage anonymous session by default, zero forced account registration.
